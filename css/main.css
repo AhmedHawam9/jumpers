@@ -397,7 +397,7 @@ ul {
 .login form .submit_login {
   font-family: "semibold";
   background-color: var(--color-third);
-  color: var(--color-light);
+  color: var(--color-white);
   margin: 1.5rem 0;
   width: 100%;
   border-radius: 10px;
