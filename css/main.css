@@ -192,6 +192,14 @@ ul {
   background-color: var(--color-light);
 }
 
+.darkmode .navbar .navbar-toggler{
+  border: 1px solid #fff;
+}
+
+.darkmode .navbar .navbar-toggler .navbar-toggler-icon{
+  filter: invert(1);
+}
+
 .navbar .navbar-brand {
   width: 15%;
 }
