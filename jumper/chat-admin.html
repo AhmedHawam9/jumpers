@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> شات الأدارة </title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- main css -->
+    <!-- responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- responsive -->
+    <!-- dark mood -->
+    <link rel="stylesheet" href="css/style-dark.css">
+    <!-- dark mood -->
+    <!-- animation -->
+    <link rel="stylesheet" href="css/aos-anmite.css" />
+    <!-- animation -->
+    <!-- ? Favicon -->
+    <link rel="icon" href="./image/logo.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body>
+    <!---------------------- start loader -------------------------------------------->
+    <div id="preloader"></div>
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+    <!---------------------- start dark && light mood -------------------------------------------->
+    <div id="toggle">
+        <span class="light " id="light">
+            <i class="bi bi-brightness-high"></i>
+        </span>
+        <span class="dark" id="dark">
+            <i class="bi bi-moon-fill "></i>
+        </span>
+
+    </div>
+    <!---------------------- finish dark && light mood -------------------------------------------->
+    <!---------------------- start navbar -------------------------------------------->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
+                    <img id="logoDark" src="image/logo-dark.png" alt="dark">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html"> الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"> تواصل معنا</a>
+                    </li>
+                </ul>
+                <!-- lang dropdown -->
+                <div class="dropdown dropdown-lang">
+                    <a class=" dropdown-toggle lang-menu" href="#" role="button" id="dropdownMenuLink5"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="content">
+                            <h6> العربية</h6>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu selected-lang" aria-labelledby="dropdownMenuLink5">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="content">
+                                    <h6>English</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- lang dropdown -->
+                <!-- sign up -->
+                <!-- <div class="btn-sign trans">
+                <a href="login.html">تسجيل الدخول</a>
+            </div> -->
+                <!-- في حالة تم تسجيل الدخول -->
+                <div class="dropdown dropdown-sign">
+                    <a class=" dropdown-toggle sign" href="#" role="button" id="dropdownMenuLink5"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="content">
+                            <h6>أحمد ابراهيم</h6>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu selected-sign" aria-labelledby="dropdownMenuLink5">
+                        <li>
+                            <a class="dropdown-item" href="account.html">
+                                <div class="content">
+                                    <i class="bi bi-person-circle"></i>
+                                    <h6>حسابي</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="all-order.html">
+                                <div class="content">
+                                    <i class="bi bi-view-list"></i>
+                                    <h6>طلباتي</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="content">
+                                    <i class="bi bi-box-arrow-left"></i>
+                                    <h6>تسجيل الخروج</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- في حالة تم تسجيل الدخول -->
+                <!-- sign up -->
+            </div>
+        </div>
+    </nav>
+    <!---------------------- finish navbar -------------------------------------------->
+    <!---------------------- start order -------------------------------------------->
+    <section class="order">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-5 col-12">
+                    <!-- strat side bar -->
+                    <div class="sidebar">
+                        <header>
+                            <img src="image/order.png" alt="order">
+                            <h6>الشركة السعودية للعلوم
+                                والتكنولوجيا</h6>
+                            <p>مؤسسات حكومية >> قطاع خيري</p>
+                        </header>
+                        <ul class="menu-side-bar">
+                            <li class="side-item">
+                                <a class="side-link " href="main.html">
+                                    <i class="bi bi-house-door"></i>
+                                    الرئيسية
+                                </a>
+                            </li>
+                            <li class="side-item">
+                                <a class="side-link" href="account.html">
+                                    <i class="bi bi-person-circle"></i>
+                                    حسابي
+                                </a>
+                            </li>
+                            <li class="side-item  ">
+                                <button class="dropdown-btn btn">
+                                    <i class="bi bi-view-list"></i>
+                                    الطلبات
+                                    <span>
+                                        <i class="bi bi-chevron-left"></i>
+                                    </span>
+                                </button>
+                                <!-- drop-menu -->
+                                <div class="dropdown-container">
+                                    <a class="side-link" href="order.html">انشاء طلب جديد</a>
+                                    <a class="side-link " href="all-order.html">كل الطلبات </a>
+                                    <a class="side-link" href="new-order.html">الطلبات الجديدة</a>
+                                    <a class="side-link " href="old-order.html">الطلبات المنتهية</a>
+                                </div>
+                                <!-- drop-menu -->
+                            </li>
+                            <li class="side-item">
+                                <a class="side-link" href="favourit.html">
+                                    <i class="bi bi-heart"></i>
+                                    المفضلة
+                                </a>
+                            </li>
+                            <li class="side-item">
+                                <button class="dropdown-btn btn actives">
+                                    <i class="bi bi-chat-dots"></i>
+                                    الدردشة
+                                    <span>
+                                        <i class="bi bi-chevron-left"></i>
+                                    </span>
+                                </button>
+                                <!-- drop-menu -->
+                                <div class="dropdown-container">
+                                    <a class="side-link active" href="chat-admin.html"> تواصل مع الادارة</a>
+                                    <a class="side-link" href="chat-room.html"> غرف الدردشة</a>
+
+                                </div>
+                                <!-- drop-menu -->
+                            </li>
+                            <li class="side-item">
+                                <button class="dropdown-btn btn">
+                                    <i class="bi bi-bounding-box-circles"></i>
+                                    الموظفين
+                                    <span>
+                                        <i class="bi bi-chevron-left"></i>
+                                    </span>
+                                </button>
+                                <!-- drop-menu -->
+                                <div class="dropdown-container">
+                                    <a class="side-link " href="clerk.html"> الموظفين الحاليين </a>
+                                    <a class="side-link " href="ex-clerk.html"> الموظفين السابقين</a>
+                                    <!-- drop-menu -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- strat side bar -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-12">
+                    <h2 class="head-categ">
+                        التواصل مع الادارة
+                    </h2>
+                    <div class="contact-pepole">
+                        <div class="pepole">
+
+                            <ul>
+                                <li class="active">
+                                    <img src="image/logo-chat.png" alt="chat">
+                                    <h6> إدارة جمبرز</h6>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-4 col-12">
+                    <!-- في حالة عدم وجود  رسائل -->
+                    <!-- <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
+                        <lottie-player src="json/lf30_editor_cpd3ogma.json" background="transparent" speed="1"
+                            style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+                        <h6> عذرا ! ليس لديك رسائل بعد </h6>
+                        <p>لم تقم بعمل دردشة الى الآن , يمكنك اختيار من تريد التحدث معه
+                            واجراء الدردشة الآن</p>
+                    </div> -->
+                    <!-- في حالة عدم وجود  رسائل -->
+                    <!-- في حالة  وجود  رسائل -->
+                    <div class="container">
+                        <div class="chat">
+                            <div class="head">
+                                <div class="chat-header">
+                                    <div class="profile">
+                                        <div class="lft">
+                                            <i class="bi bi-arrow-right"></i>
+                                            <img src="image/pp.png" class="pp">
+                                            <h2>ايهاب</h2>
+                                            <span>online</span>
+                                        </div>
+                                        <div class="rgt">
+                                            <i class="bi bi-telephone "></i>
+                                            <i class="bi bi-camera-video "></i>
+                                            <i class="bi bi-three-dots-vertical "></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-box">
+                                    <div class="chat-r" data-aos="fade-up" data-aos-duration="1000">
+                                        <div class="sp"></div>
+                                        <div class="mess mess-r">
+                                            <p>
+                                                السلام عليكم
+                                            </p>
+                                            <div class="check">
+                                                <span>4:00 PM</span>
+                                                <i class="bi bi-check2-all"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-l">
+                                        <div class="mess">
+                                            <p>
+                                                وعليكم السلام أومر ياااجميل
+                                            </p>
+                                            <div class="check">
+                                                <span>4:30 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="sp"></div>
+                                    </div>
+
+                                    <div class="chat-r">
+                                        <div class="sp"></div>
+                                        <div class="mess mess-r">
+                                            <p>
+                                                ازاي حضرتك عاملين اية
+                                            </p>
+                                            <div class="check">
+                                                <span>4:80 PM</span>
+                                                <i class="bi bi-check2-all"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-l">
+                                        <div class="mess">
+                                            <p>الحمد لله ماشية</p>
+                                            <div class="check">
+                                                <span>4:20 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="sp"></div>
+                                    </div>
+                                    <div class="chat-r">
+                                        <div class="sp"></div>
+                                        <div class="mess mess-r">
+                                            <p>
+                                                عاوز اقولكم شركه crazy idea شركة جميلة جدا
+                                            </p>
+                                            <div class="check">
+                                                <span>4:22 PM</span>
+                                                <i class="bi bi-check2-all"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-l">
+                                        <div class="mess">
+                                            <p>
+                                                تسلم ياذوق والله
+                                            </p>
+                                            <div class="check">
+                                                <span>4:40 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="sp"></div>
+                                    </div>
+
+                                    <div class="chat-r">
+                                        <div class="sp"></div>
+                                        <div class="mess mess-r">
+                                            <img src="image/voice.png" class="img_chat">
+                                            <div class="check">
+                                                <span>4:00 PM</span>
+                                                <i class="bi bi-check2-all"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-l">
+                                        <div class="mess">
+                                            <p>
+                                                تسلم <i class="bi bi-heart-fill " style="color: red;"></i>
+                                            </p>
+                                            <div class="check">
+                                                <span>4:30 PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="sp"></div>
+                                    </div>
+                                    <div class="chat-r">
+                                        <div class="sp"></div>
+                                        <div class="mess mess-r">
+                                            <p>
+                                                تمام شكرا جزيلا لحضرتك! 😊😊
+                                            </p>
+                                            <div class="check">
+                                                <span>4:40 PM</span>
+                                                <i class="bi bi-check2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="chat-footer">
+                                        <i class="bi bi-emoji-smile emo"></i>
+                                        <textarea placeholder="أكتب رسالتك ..."></textarea>
+                                        <div class="icons">
+                                            <i class="bi bi-paperclip "></i>
+                                            <i class="bi bi-camera "></i>
+                                        </div>
+                                        <i class="bi bi-mic mic"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- في حالة  وجود  رسائل -->
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!---------------------- finish order -------------------------------------------->
+    <!---------------------- start footer -------------------------------------------->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-12">
+                    <ul>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="condition.html">الشروط والاحكام</a></li>
+                        <li><a href="common.html">الاسألة الشائعة</a></li>
+                        <li><a href="printer.html">شركاء النجاح</a></li>
+                        <li><a href="section.html"> القطاعات</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div class="slug">
+                        <p>© 2021 All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!---------------------- finish footer -------------------------------------------->
+
+
+    <!-- main js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- main js -->
+    <!-- animation -->
+    <script src="js/aos-anmite.js"></script>
+    <script>
+        AOS.init({ disable: 'mobile' });
+    </script>
+    <!-- animation -->
+    <!-- loottie -->
+    <script src="js/lottie.js"></script>
+    <!-- loottie -->
+    <!-- sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- sweetalert -->
+    <!-- sidebar -->
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "flex") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "flex";
+                    // dropdownContent.animate([{ opacity: '0.0' }, { opacity: '1.0' }],
+                    //     { duration: 1500, fill: 'forwards' })
+                }
+            });
+        }
+    </script>
+    <!-- sidebar -->
+    <script>
+        function deleteAlert() {
+            Swal.fire({
+                title: 'Are you sure rebuy this order?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, rebuy it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'rebuy!',
+                        'Your order has been rebuied.',
+                        'success'
+                    )
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

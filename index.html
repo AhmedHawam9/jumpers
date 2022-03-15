@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- ? Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- ? Required meta tags -->
+
+    <!-- ? Main CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/dark.css" /> -->
+    <!-- ? Main CSS -->
+
+    <!-- ? Custom CSS -->
+    <link rel="stylesheet" href="css/hover-min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="css/aos.min.css" />
+    <link rel="stylesheet" href="css/sweet-alert.css" />
+    <!-- ? Custom CSS -->
+
+    <!-- ? Main JavaScript -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/fontawesome.min.js"></script>
+    <!-- ? Main JavaScript -->
+
+    <!-- ? Custom JavaScript -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/aos.min.js"></script>
+    <script src="js/sweet-alert.min.js"></script>
+    <!-- ? Custom JavaScript -->
+
+    <!-- ? Title -->
+    <title>Jumpers</title>
+    <!-- ? Title -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="logo.ico" type="image" />
+    <!-- ? Favicon -->
+
+    <script>
+        console.log(
+            "%c <== 7w7w++ ==>  ",
+            "background: #FFD100; color: #3A3838; padding-left:10px; border-radius: 20px; font-weight: bold;"
+        );
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" class="body">
+    <div id="preloader"></div>
+    <div id="toggle">
+        <span class="light" id="light">
+            <i class="fa-solid fa-sun"></i>
+        </span>
+        <span class="dark" id="dark">
+            <i class="fa-solid fa-moon"></i>
+        </span>
+        <div class="indicator">
+        </div>
+    </div>
+
+    <!-- =========== ? NavBar =========== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="media/image/logo.png" id="logoLight" alt="logo">
+                <img src="media/image/logo-dark.png" id="logoDark" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">تواصل معنا</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        العربية
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">عربي</a></li>
+                        <li><a class="dropdown-item" href="#">أنجليزي</a></li>
+                    </ul>
+                </div>
+                <a href="login.html" class="btn login-button">تسجيل الدخول</a>
+            </div>
+        </div>
+    </nav>
+    <!-- =========== ? NavBar =========== -->
+
+    <!-- ? ======= home =========== -->
+    <section class="home">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-3 p-0 sidebar">
+                    <div
+                        class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100 side_width">
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                            id="menu">
+                            <div class="personal_data">
+                                <img src="media/image/person.jpg" alt="person">
+                                <p class="name">أحمد السيد</p>
+                                <p class="title">جرافيك ديزاينر</p>
+                            </div>
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link align-middle">
+                                    <img src="media/icon/home.svg" alt="icon"> <span
+                                        class="d-none d-sm-inline">الرئيسية</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="account.html" class="nav-link align-middle">
+                                    <img src="media/icon/account.svg" alt="icon"> <span
+                                        class="d-none d-sm-inline">حسابي</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="work_offers.html" class="nav-link align-middle">
+                                    <img src="media/icon/bag.svg" alt="icon"> <span class="d-none d-sm-inline">عروض
+                                        العمل</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#submenu1" data-bs-toggle="collapse"
+                                    class="nav-link accordion-button align-middle">
+                                    <img src="media/icon/order.svg" alt="icon"> <span
+                                        class="d-none d-sm-inline">الطلبات</span> </a>
+                                <ul class="collapse flex-column" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="order.html" class="nav-link px-0"> <span>كل الطلبات</span></a>
+                                    </li>
+                                    <li class="w-100">
+                                        <a href="new_order.html" class="nav-link px-0"> <span>الطلبات الجديدة</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="completed_order.html" class="nav-link px-0"> <span>الطلبات
+                                                المنتهية</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="favourite.html" class="nav-link align-middle">
+                                    <img src="media/icon/favourite.svg" alt="icon"> <span
+                                        class="d-none d-sm-inline">المفضلة</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link align-middle">
+                                    <img src="media/icon/chat.svg" alt="icon"> <span
+                                        class="d-none d-sm-inline">الدردشة</span></a>
+                            </li>
+                        </ul>
+                        <div class="complete_data">
+                            <h5>استكمال البيانات</h5>
+                            <div class="progress">
+                                <div class="progress-done" data-done="70">
+                                    70%
+                                </div>
+                            </div>
+                            <script>
+                                const progress = document.querySelector('.progress-done');
+                                progress.style.width = progress.getAttribute('data-done') + '%';
+                                progress.style.opacity = 1;
+                            </script>
+                            <a href="#" class="data">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <span>أضف سيرتك الذاتية</span>
+                                <span>+10%</span>
+                            </a>
+                            <a href="#" class="data">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <span>أضف شهادات</span>
+                                <span>+10%</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="index_cards">
+                        <div class="welcome_card">
+                            <h3>مرحبا بك في <h2> جمبرز 😄</h2>
+                            </h3>
+                            <div class="row m-0">
+                                <div class="col-lg-4 col-12">
+                                    <div class="card_static d-flex align-items-center mt-3">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </div>
+                                        <div class="static_number">
+                                            <p>اجمالى عدد الطلبات</p>
+                                            <h6><span class="counter">20</span> طلب</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <div class="card_static d-flex align-items-center mt-3">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </div>
+                                        <div class="static_number">
+                                            <p>الطلبات المقبولة</p>
+                                            <h6><span class="counter">15</span> طلب</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <div class="card_static d-flex align-items-center mt-3">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-arrow-trend-up"></i>
+                                        </div>
+                                        <div class="static_number">
+                                            <p>الطلبات الغير مكتملة</p>
+                                            <h6><span class="counter">5</span> طلب</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new_order">
+                            <div class="d-flex justify-content-between align-items-center mb-5">
+                                <h4>الطلبات الجديدة</h4>
+                                <a href="order.html" class="btn">عرض الكل</a>
+                            </div>
+                            <!-- for loop this new order -->
+                            <div class="new_order_card">
+                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
+                                <div class="d-flex">
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span>مدة العمل</span>
+                                        <h6>: شهرين</h6>
+                                    </div>
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                        <span> التكلفة المفترضة</span>
+                                        <h6>: 15ريال بالساعة</h6>
+                                    </div>
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>موقع العمل</span>
+                                        <h6>: الرياض</h6>
+                                    </div>
+                                </div>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+                                    من مولد
+                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
+                                    إضافة إلى
+                                    زيادة <a href="details_offers.html">عرض المزيد</a></p>
+                                <div class="tags d-flex">
+                                    <a href="#" class="tag">Responsive grid</a>
+                                    <a href="#" class="tag">Figma</a>
+                                    <a href="#" class="tag">Mobile app ui design</a>
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn accept">قبول</button>
+                                    <button class="btn reject">رفض</button>
+                                </div>
+                            </div>
+                            <!-- for loop this new order -->
+                            <!-- for loop this new order -->
+                            <div class="new_order_card">
+                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
+                                <div class="d-flex">
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span>مدة العمل</span>
+                                        <h6>: شهرين</h6>
+                                    </div>
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                        <span> التكلفة المفترضة</span>
+                                        <h6>: 15ريال بالساعة</h6>
+                                    </div>
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>موقع العمل</span>
+                                        <h6>: الرياض</h6>
+                                    </div>
+                                </div>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+                                    من مولد
+                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
+                                    إضافة إلى
+                                    زيادة <a href="details_offers.html">عرض المزيد</a></p>
+                                <div class="tags d-flex">
+                                    <a href="#" class="tag">Responsive grid</a>
+                                    <a href="#" class="tag">Figma</a>
+                                    <a href="#" class="tag">Mobile app ui design</a>
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn accept">قبول</button>
+                                    <button class="btn reject">رفض</button>
+                                </div>
+                            </div>
+                            <!-- for loop this new order -->
+                            <!-- for loop this new order -->
+                            <div class="new_order_card">
+                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
+                                <div class="d-flex">
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span>مدة العمل</span>
+                                        <h6>: شهرين</h6>
+                                    </div>
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                        <span> التكلفة المفترضة</span>
+                                        <h6>: 15ريال بالساعة</h6>
+                                    </div>
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>موقع العمل</span>
+                                        <h6>: الرياض</h6>
+                                    </div>
+                                </div>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+                                    من مولد
+                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
+                                    إضافة إلى
+                                    زيادة <a href="details_offers.html">عرض المزيد</a></p>
+                                <div class="tags d-flex">
+                                    <a href="#" class="tag">Responsive grid</a>
+                                    <a href="#" class="tag">Figma</a>
+                                    <a href="#" class="tag">Mobile app ui design</a>
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn accept">قبول</button>
+                                    <button class="btn reject">رفض</button>
+                                </div>
+                            </div>
+                            <!-- for loop this new order -->
+                            <!-- for loop this new order -->
+                            <div class="new_order_card">
+                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
+                                <div class="d-flex">
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span>مدة العمل</span>
+                                        <h6>: شهرين</h6>
+                                    </div>
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                        <span> التكلفة المفترضة</span>
+                                        <h6>: 15ريال بالساعة</h6>
+                                    </div>
+                                    <div class="info_order">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>موقع العمل</span>
+                                        <h6>: الرياض</h6>
+                                    </div>
+                                </div>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+                                    من مولد
+                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
+                                    إضافة إلى
+                                    زيادة <a href="details_offers.html">عرض المزيد</a></p>
+                                <div class="tags d-flex">
+                                    <a href="#" class="tag">Responsive grid</a>
+                                    <a href="#" class="tag">Figma</a>
+                                    <a href="#" class="tag">Mobile app ui design</a>
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn accept">قبول</button>
+                                    <button class="btn reject">رفض</button>
+                                </div>
+                            </div>
+                            <!-- for loop this new order -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ? ======= home =========== -->
+
+    <!-- ? ======= footer =========== -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                    <li><a href="#">الشروط والاحكام</a></li>
+                    <li><a href="#">الاسألة الشائعة</a></li>
+                    <li><a href="#">شركاء النجاح</a></li>
+                    <li><a href="#">القطاعات</a></li>
+                </ul>
+                <span>© 2021 All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ? ======= footer =========== -->
+
+    <script>
+        AOS.init({ disable: "mobile" });
+    </script>
+    <script src="js/lottiefiles.js"></script>
+    <script src="js/dark.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script>
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    </script>
+</body>
+
+</html>

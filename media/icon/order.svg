@@ -1,0 +1,12 @@
+<svg id="vuesax_linear_chart-success" data-name="vuesax/linear/chart-success" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="chart-success">
+    <path id="Vector" d="M20,11V7c0-5-2-7-7-7H7C2,0,0,2,0,7v6c0,5,2,7,7,7h4" transform="translate(2 2)" fill="none" stroke="#5c5a61" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-2" data-name="Vector" d="M20,11V7c0-5-2-7-7-7H7C2,0,0,2,0,7v6c0,5,2,7,7,7h4" transform="translate(2 2)" fill="none" stroke="#5c5a61" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-3" data-name="Vector" d="M20,11V7c0-5-2-7-7-7H7C2,0,0,2,0,7v6c0,5,2,7,7,7h4" transform="translate(2 2)" fill="none" stroke="#5c5a61" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-4" data-name="Vector" d="M0,2.43,1.58,4,5,0" transform="translate(16 17)" fill="none" stroke="#5c5a61" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-5" data-name="Vector" d="M0,0V3" transform="translate(7 10.5)" fill="none" stroke="#5c5a61" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-6" data-name="Vector" d="M0,0V3" transform="translate(12 10.5)" fill="none" stroke="#5c5a61" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-7" data-name="Vector" d="M0,0V3" transform="translate(17 10.5)" fill="none" stroke="#5c5a61" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-8" data-name="Vector" d="M0,0H24V24H0Z" fill="none" opacity="0"/>
+  </g>
+</svg>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ملف الموظف</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- main css -->
+    <!-- responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- responsive -->
+    <!-- dark mood -->
+    <link rel="stylesheet" href="css/style-dark.css">
+    <!-- dark mood -->
+    <!-- animation -->
+    <link rel="stylesheet" href="css/aos-anmite.css" />
+    <!-- animation -->
+    <!-- swiper -->
+    <link rel="stylesheet" href="css/swiper-demos.css">
+    <!-- swiper -->
+    <!-- sweet alert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- sweet alert -->
+    <!-- ? Favicon -->
+    <link rel="icon" href="./image/logo.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body>
+    <!---------------------- start loader -------------------------------------------->
+    <div id="preloader"></div>
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+    <!---------------------- start dark && light mood -------------------------------------------->
+    <div id="toggle">
+        <span class="light " id="light">
+            <i class="bi bi-brightness-high"></i>
+        </span>
+        <span class="dark" id="dark">
+            <i class="bi bi-moon-fill "></i>
+        </span>
+        <div class="indicator">
+        </div>
+    </div> 
+    <!---------------------- finish dark && light mood -------------------------------------------->
+    <!---------------------- start navbar -------------------------------------------->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <div class="logo">
+                <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
+                    <img id="logoDark" src="image/logo-dark.png" alt="dark">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html"> الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"> تواصل معنا</a>
+                    </li>
+                </ul>
+                <!-- lang dropdown -->
+                <div class="dropdown dropdown-lang">
+                    <a class=" dropdown-toggle lang-menu" href="#" role="button" id="dropdownMenuLink5"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="content">
+                            <h6> العربية</h6>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu selected-lang" aria-labelledby="dropdownMenuLink5">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="content">
+                                    <h6>English</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- lang dropdown -->
+                <!-- sign up -->
+                <!-- <div class="btn-sign trans">
+                    <a href="login.html">تسجيل الدخول</a>
+                </div> -->
+                <!-- في حالة تم تسجيل الدخول -->
+                <div class="dropdown dropdown-sign">
+                    <a class=" dropdown-toggle sign" href="#" role="button" id="dropdownMenuLink5"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="content">
+                            <h6>أحمد ابراهيم</h6>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu selected-sign" aria-labelledby="dropdownMenuLink5">
+                        <li>
+                            <a class="dropdown-item" href="account.html">
+                                <div class="content">
+                                    <i class="bi bi-person-circle"></i>
+                                    <h6>حسابي</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="all-order.html">
+                                <div class="content">
+                                    <i class="bi bi-view-list"></i>
+                                    <h6>طلباتي</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="content">
+                                    <i class="bi bi-box-arrow-left"></i>
+                                    <h6>تسجيل الخروج</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- في حالة تم تسجيل الدخول -->
+                <!-- sign up -->
+            </div>
+        </div>
+    </nav>
+    <!---------------------- finish navbar -------------------------------------------->
+    <!---------------------- start order -------------------------------------------->
+    <section class="order">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-5 col-12">
+                    <!-- strat side bar -->
+                    <div class="sidebar">
+                        <header>
+                            <img src="image/order.png" alt="order">
+                            <h6>الشركة السعودية للعلوم
+                                والتكنولوجيا</h6>
+                            <p>مؤسسات حكومية >> قطاع خيري</p>
+                        </header>
+                        <ul class="menu-side-bar">
+                            <li class="side-item">
+                                <a class="side-link " href="main.html">
+                                    <i class="bi bi-house-door"></i>
+                                    الرئيسية
+                                </a>
+                            </li>
+                            <li class="side-item">
+                                <a class="side-link" href="account.html">
+                                    <i class="bi bi-person-circle"></i>
+                                    حسابي
+                                </a>
+                            </li>
+                            <li class="side-item ">
+                                <button class="dropdown-btn btn">
+                                    <i class="bi bi-view-list"></i>
+                                    الطلبات
+                                    <span>
+                                        <i class="bi bi-chevron-left"></i>
+                                    </span>
+                                </button>
+                                <!-- drop-menu -->
+                                <div class="dropdown-container">
+                                    <a class="side-link" href="create-order.html">انشاء طلب جديد</a>
+                                    <a class="side-link  " href="all-order.html">كل الطلبات </a>
+                                    <a class="side-link" href="new-order.html">الطلبات الجديدة</a>
+                                    <a class="side-link" href="old-order.html">الطلبات المنتهية</a>
+                                </div>
+                                <!-- drop-menu -->
+                            </li>
+                            <li class="side-item">
+                                <a class="side-link" href="favourit.html">
+                                    <i class="bi bi-heart"></i>
+                                    المفضلة
+                                </a>
+                            </li>
+                            <li class="side-item">
+                                <button class="dropdown-btn btn">
+                                    <i class="bi bi-chat-dots"></i>
+                                    الدردشة
+                                    <span>
+                                        <i class="bi bi-chevron-left"></i>
+                                    </span>
+                                </button>
+                                <!-- drop-menu -->
+                                <div class="dropdown-container">
+                                    <a class="side-link" href="chat-admin.html"> تواصل مع الادارة</a>
+                                    <a class="side-link" href="chat-room.html"> غرف الدردشة</a>
+
+                                </div>
+                                <!-- drop-menu -->
+                            </li>
+                            <li class="side-item">
+                                <button class="dropdown-btn btn actives">
+                                    <i class="bi bi-bounding-box-circles"></i>
+                                    الموظفين
+                                    <span>
+                                        <i class="bi bi-chevron-left"></i>
+                                    </span>
+                                </button>
+                                <!-- drop-menu -->
+                                <div class="dropdown-container">
+                                    <a class="side-link active" href="clerk.html"> الموظفين الحاليين </a>
+                                    <a class="side-link" href="ex-clerk.html"> الموظفين السابقين</a>
+                                </div>
+                                <!-- drop-menu -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- strat side bar -->
+                </div>
+                <div class="col-lg-9 col-md-7 col-12">
+                    <div class="clark-section">
+                        <div class="container">
+                            <div class="head" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="info">
+                                    <img src="image/cand1.png" alt="person">
+                                    <div class="text">
+                                        <h6>أحمد السيد محمد</h6>
+                                        <p>موظف فرونت ايند ديفيلوبر</p>
+                                        <span>مصري الجنسية</span>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <button class="btn first" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal-1">تمديد</button>
+                                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                        class="btn finish">انهاء العمل</button>
+                                    <button id="sweetalert" onclick="acceptAlert()" class="btn second">اضف
+                                        للمفضلة</button>
+                                </div>
+                            </div>
+                            <div class="about" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small">عن الموظف</h6>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى
+                                    زيادة عدد الحروف التى يولدها التطبيق.
+                                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
+                                    تريد، النص لن يبدو</p>
+                            </div>
+                            <div class="skills" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="card">
+                                                <i class="bi bi-phone"></i>
+                                                <div class="text">
+                                                    <h6 class="head-small"> رقم الجوال</h6>
+                                                    <p> 0101010101</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="card">
+                                                <i class="bi bi-envelope"></i>
+                                                <div class="text">
+                                                    <h6 class="head-small"> البريد الالكتروني</h6>
+                                                    <p>someone@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="card">
+                                                <i class="bi bi-geo-alt"></i>
+                                                <div class="text">
+                                                    <h6 class="head-small"> الموقع</h6>
+                                                    <p> ...الرياض,شارع السيدة عائ</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="card">
+                                                <i class="bi bi-briefcase"></i>
+                                                <div class="text">
+                                                    <h6 class="head-small">الخدمة المقدمة</h6>
+                                                    <p>سنيور فرونت ايند ديفلوبر</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="card">
+                                                <i class="bi bi-bookmark-check"></i>
+                                                <div class="text">
+                                                    <h6 class="head-small"> المهارات</h6>
+                                                    <p>...الإنجليزية,البرمجة,الرسم </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="card">
+                                                <i class="bi bi-clock"></i>
+                                                <div class="text">
+                                                    <h6 class="head-small"> عدد ساعات العمل</h6>
+                                                    <p> 72ساعة</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="certfication skills" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small">شهادات </h6>
+                                <div class="card">
+                                    <i class="bi bi-bookmark-check"></i>
+                                    <div class="text">
+                                        <h6 class="head-small"> ماركتنج ومحاسبة</h6>
+                                        <p> جامعة المنصوره - جيد جدا</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <i class="bi bi-bookmark-check"></i>
+                                    <div class="text">
+                                        <h6 class="head-small"> فرونت ايند ادفانسيد</h6>
+                                        <p> جامعة المنصوره - جيد جدا</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="download">
+                                <h6 class="head-small">روابط للتحميل</h6>
+                                <div class="content">
+                                    <p>CV-ENG-Front-end Developer.pdf</p>
+                                    <button class="btn second">تحميل</button>
+                                </div>
+                                <div class="content">
+                                    <p>كورس فرونت ايند ادفانسد</p>
+                                    <button class="btn second">تحميل</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------- start team work -------------------------------------------->
+                    <div class="team-work" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="container px-0j ">
+                            <h4 class="head-categ"> متقدمين اخرين </h4>
+                            <div class="swiper mySwiper-1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="content">
+                                            <div class="img d-flex justify-content-between w-100">
+                                                <img src="./image/per1.png" alt="person">
+                                                <a href="profile-clerk.html"> <i class="bi bi-three-dots"></i></a>
+                                            </div>
+                                            <h6>Mohamed Tark</h6>
+                                            <span>فلاتر ديفيلوبر</span>
+                                            <p> <i class="bi bi-geo-alt"></i>
+                                                الرياض , شارع السيدة عائشة
+                                                , عمارة الدالى
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="content">
+                                            <div class="img d-flex justify-content-between w-100">
+                                                <img src="./image/per1.png" alt="person">
+                                                <a href="profile-clerk.html"> <i class="bi bi-three-dots"></i></a>
+                                            </div>
+                                            <h6>Mohamed Tark</h6>
+                                            <span>فلاتر ديفيلوبر</span>
+                                            <p> <i class="bi bi-geo-alt"></i>
+                                                الرياض , شارع السيدة عائشة
+                                                , عمارة الدالى
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="content">
+                                            <div class="img d-flex justify-content-between w-100">
+                                                <img src="./image/per1.png" alt="person">
+                                                <a href="profile-clerk.html"> <i class="bi bi-three-dots"></i></a>
+                                            </div>
+                                            <h6>Mohamed Tark</h6>
+                                            <span>فلاتر ديفيلوبر</span>
+                                            <p> <i class="bi bi-geo-alt"></i>
+                                                الرياض , شارع السيدة عائشة
+                                                , عمارة الدالى
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="content">
+                                            <div class="img d-flex justify-content-between w-100">
+                                                <img src="./image/per1.png" alt="person">
+                                                <a href="profile-clerk.html"> <i class="bi bi-three-dots"></i></a>
+                                            </div>
+                                            <h6>Mohamed Tark</h6>
+                                            <span>فلاتر ديفيلوبر</span>
+                                            <p> <i class="bi bi-geo-alt"></i>
+                                                الرياض , شارع السيدة عائشة
+                                                , عمارة الدالى
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="content">
+                                            <div class="img d-flex justify-content-between w-100">
+                                                <img src="./image/per1.png" alt="person">
+                                                <a href="profile-clerk.html"> <i class="bi bi-three-dots"></i></a>
+                                            </div>
+                                            <h6>Mohamed Tark</h6>
+                                            <span>فلاتر ديفيلوبر</span>
+                                            <p> <i class="bi bi-geo-alt"></i>
+                                                الرياض , شارع السيدة عائشة
+                                                , عمارة الدالى
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="content">
+                                            <div class="img d-flex justify-content-between w-100">
+                                                <img src="./image/per1.png" alt="person">
+                                                <a href="profile-clerk.html"> <i class="bi bi-three-dots"></i></a>
+                                            </div>
+                                            <h6>Mohamed Tark</h6>
+                                            <span>فلاتر ديفيلوبر</span>
+                                            <p> <i class="bi bi-geo-alt"></i>
+                                                الرياض , شارع السيدة عائشة
+                                                , عمارة الدالى
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-pagination"></div> -->
+                                <!-- <div class="swiper-button-next"> </div>
+                                <div class="swiper-button-prev"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------- finish team work -------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------- finish order -------------------------------------------->
+    <!---------------------- start footer -------------------------------------------->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-12">
+                    <ul>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="condition.html">الشروط والاحكام</a></li>
+                        <li><a href="common.html">الاسألة الشائعة</a></li>
+                        <li><a href="printer.html">شركاء النجاح</a></li>
+                        <li><a href="section.html"> القطاعات</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div class="slug">
+                        <p>© 2021 All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!---------------------- finish footer -------------------------------------------->
+    <!-- modal finish work -->
+    <div class="modal fade modal-remove" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!---------------------- start confirm -------------------------------------------->
+                    <form class="form-remove">
+                        <div class="container">
+                            <!-- first step -->
+                            <div class="form-step-remove form-step-remove-active ">
+                                <div class="show text-center">
+                                    <lottie-player src="json/lf30_editor_tv0a4st4.json" background="transparent"
+                                        speed=".5" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                                    <h6> هل انت حقا تريد انهاء العمل مع هذا الموظف ؟</h6>
+                                    <div class="py-3 full text-center">
+                                        <a class="btn btn-next-remove first" href="#"> نعم </a>
+                                        <button type="button" class="btn second" data-bs-dismiss="modal">لا</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first step -->
+                            <!-- second step -->
+                            <div class="form-step-remove ">
+                                <div class="show text-center">
+                                    <lottie-player src="json/lf30_editor_tv0a4st4.json" background="transparent"
+                                        speed=".5" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                                    <h6> هل انت حقا تريد انهاء العمل مع هذا الموظف ؟</h6>
+                                    <input required type="text" class="form-control" placeholder="أدخل السبب "></input>
+                                    <div class="py-3 full text-center">
+                                        <button class="btn first"> ارسال </button>
+                                        <button type="button" class="btn second" data-bs-dismiss="modal">لا</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second step -->
+                        </div>
+                    </form>
+                    <!---------------------- finish confirm -------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal finish work -->
+    <!-- modal extension work -->
+    <div class="modal fade modal-extension" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!---------------------- start confirm -------------------------------------------->
+                    <form class="form-extension">
+                        <div class="container">
+                            <!-- first step -->
+                            <div class="form-step-extension form-step-extension-active ">
+                                <div class="show ">
+                                    <h6> من فضلك قم باستكمال البيانات التالية لتمديد
+                                        العمل للموظف </h6>
+                                    <div class="input-group">
+                                        <label for="duration" class="form-label">المدة المضافة</label>
+                                        <input required type="text" id="duration" class="form-control">
+                                        <span class="icon"> <i class="bi bi-clock"></i></span>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label"> نوع الدوام</label>
+                                        <select required class="form-select" aria-label="Default select example">
+                                            <option selected>اختر نوع الدوام</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <span class="icon"> <i class="bi bi-clock"></i></span>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label"> وقت الدوام</label>
+                                        <div class="col-lg-6 col-12 my-3">
+                                            <select required class="form-select" aria-label="Default select example">
+                                                <option selected> من</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-12 my-sm-3">
+                                            <select required class="form-select" aria-label="Default select example">
+                                                <option selected> الي</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="py-3 full text-center">
+                                        <a class="btn btn-next-extension first" href="#"> حفظ </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first step -->
+                            <!-- second step -->
+                            <div class="form-step-extension ">
+                                <div class="show text-center">
+                                    <lottie-player src="json/lf30_editor_kaucmnli.json" background="transparent"
+                                        speed=".5" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                                    <h6> تم تمديد العمل للموظف بنجاح </h6>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <p><i class="bi bi-clock"></i>
+                                            <span> المدة المضافة</span>
+                                            : 4أيام
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p><i class="bi bi-briefcase"></i>
+                                            <span> نوع الدوام</span>
+                                            : دوام متقطع
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p><i class="bi bi-clock"></i>
+                                            <span> وقت الدوام</span>
+                                            : صباحا 8 - 4مساءا
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="info">
+                                    <h6>ايام الدوام</h6>
+                                    <ul>
+                                        <li><span>Mon</span>
+                                            <p>يوليو6</p>
+                                        </li>
+                                        <li><span>Mon</span>
+                                            <p>يوليو6</p>
+                                        </li>
+                                        <li><span>Mon</span>
+                                            <p>يوليو6</p>
+                                        </li>
+                                        <li><span>Mon</span>
+                                            <p>يوليو6</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="py-3 full text-center w-100">
+                                    <button type="submit" class="btn first"> حفظ </button>
+                                </div>
+                            </div>
+                            <!-- second step -->
+                        </div>
+                    </form>
+                    <!---------------------- finish confirm -------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal extension work -->
+    <!-- main js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- main js -->
+    <!-- slider -->
+    <script src="js/swiper-demos.js"></script>
+    <!-- slider -->
+    <!-- lottie -->
+    <script src="js/lottie.js"></script>
+    <!-- lottie -->
+    <!-- animation -->
+    <script src="js/aos-anmite.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- animation -->
+    <!-- sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- sweet alert -->
+    <!-- sidebar -->
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "flex") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "flex";
+                    // dropdownContent.animate([{ opacity: '0.0' }, { opacity: '1.0' }],
+                    //     { duration: 1500, fill: 'forwards' })
+                }
+            });
+        }
+    </script>
+    <!-- sidebar -->
+    <!-- sweet alert for add favorit -->
+    <script>
+        function acceptAlert() {
+            Swal.fire({
+                title: 'Your order has been add to favourit',
+                icon: 'success',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                },
+                showConfirmButton: false,
+                timer: 1500
+            })
+        };
+    </script>
+    <!-- sweet alert for add favorit -->
+    <!-- form withard for remove clerk -->
+    <script>
+        const prevBtns = document.querySelectorAll(".btn-prev-remove");
+        const nextBtns = document.querySelectorAll(".btn-next-remove");
+        const formSteps = document.querySelectorAll(".form-step-remove");
+        let formStepsNum = 0;
+
+        nextBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNum++;
+                updateFormSteps();
+                // updateProgressbar();
+            });
+        });
+        prevBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNum--;
+                updateFormSteps();
+                // updateProgressbar();
+            });
+        });
+        function updateFormSteps() {
+            formSteps.forEach((formStep) => {
+                formStep.classList.contains("form-step-remove-active") &&
+                    formStep.classList.remove("form-step-remove-active");
+            });
+            formSteps[formStepsNum].classList.add("form-step-remove-active");
+        }
+    </script>
+    <!-- form withard for remove clerk -->
+    <!-- form withard for extension clerk -->
+    <script>
+        const prevBtnsex = document.querySelectorAll(".btn-prev-extension");
+        const nextBtnsex = document.querySelectorAll(".btn-next-extension");
+        const formStepsex = document.querySelectorAll(".form-step-extension");
+        let formStepsNumss = 0;
+
+        nextBtnsex.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNumss++;
+                updateformStepsex();
+                // updateProgressbar();
+            });
+        });
+        prevBtnsex.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNumss--;
+                updateformStepsex();
+                // updateProgressbar();
+            });
+        });
+        function updateformStepsex() {
+            formStepsex.forEach((formStep) => {
+                formStep.classList.contains("form-step-extension-active") &&
+                    formStep.classList.remove("form-step-extension-active");
+            });
+            formStepsex[formStepsNumss].classList.add("form-step-extension-active");
+        }
+    </script>
+    <!-- form withard for extension clerk -->
+    <!-- slider team work -->
+    <script>
+        var swiper = new Swiper(".mySwiper-1", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                340: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- slider team work -->
+</body>
+
+</html>
