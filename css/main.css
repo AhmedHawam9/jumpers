@@ -202,7 +202,7 @@ ul {
 
 .navbar .login-button {
   background-color: var(--color-third);
-  color: var(--color-light);
+  color: var(--color-white);
   font-family: "semibold";
   font-size: 0.8rem;
   margin: 0 1rem;
