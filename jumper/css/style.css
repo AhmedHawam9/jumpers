@@ -12,12 +12,14 @@
   --color-dark: #00332a;
   --foreground: var(--color-secound);
   --background: var(--color-light);
-  --background2: rgba(255, 255, 255, .5);
+  --background2: rgba(255, 255, 255, 0.5);
   --backgroundfirstbtn: var(--color-third);
   --colorfirstbtn: #fff;
   --iconcolor: #2e2c34;
   --colorsecondbtn: var(--color-third);
   --backgroundsecondbtn: #fff;
+  --cardshadow: 0px 12px 48px rgba(0, 0, 0, 0.05);
+
 }
 .darkmode {
   --color-light: #0c1321;
@@ -30,12 +32,13 @@
   --color-seven: #fff;
   --foreground: #fff;
   --background: var(--color-dark);
-  --background2: rgba(36, 38, 41, .5);
+  --background2: rgba(36, 38, 41, 0.5);
   --backgroundfirstbtn: var(--color-third);
   --colorfirstbtn: #fff;
   --iconcolor: #bf8c6d;
   --backgroundsecondbtn: #050505;
   --colorsecondbtn: #fff;
+  --cardshadow: 0px 12px 48px rgba(225, 225, 225, 0.05);
 }
 @font-face {
   font-family: "light";
@@ -93,7 +96,7 @@ body.active-body {
   background: black;
 }
 
-body::after{
+body::after {
   content: "";
   background-image: url(../../media/image/5555.svg);
   position: fixed;
@@ -253,7 +256,7 @@ input::-webkit-inner-spin-button {
   background-color: rgba(38, 165, 101, 0.1);
 }
 .revision {
-  color:white;
+  color: white;
   background-color: rgba(27, 49, 46, 0.1);
 }
 .new {
@@ -513,7 +516,7 @@ input::-webkit-inner-spin-button {
   border-top: none;
   justify-content: center;
 }
-.btn-close{
+.btn-close {
   color: var(--color-fifth) !important;
 }
 /* modal */
@@ -3150,7 +3153,8 @@ table {
 }
 /* finish common page */
 /* data table */
-#tableOrder_filter,#tableOrder_length{
+#tableOrder_filter,
+#tableOrder_length {
   padding: 5% 1%;
 }
 #tableOrder_filter label,
@@ -3204,3 +3208,315 @@ table.dataTable.no-footer {
   color: white !important;
 }
 /* data table */
+
+/* =========================================== modifaction */
+/* navbar */
+.navbar .notify {
+  border: 1px solid var(--color-secound);
+  padding: 2px 4px;
+  border-radius: 5px;
+  transition: 0.25s all ease;
+}
+.navbar .notify:hover {
+  background-color: var(--color-secound);
+  color: var(--color-fourth);
+}
+.navbar .notify:hover i {
+  color: var(--color-fourth);
+}
+/* navbar */
+/* start index page */
+.main-section {
+  position: relative;
+  background-color: var(--background);
+  padding: 50px 0;
+}
+.main-section .content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 1% 8%;
+}
+.main-section h2 {
+  font-family: "bold";
+  color: var(--color-secound);
+  font-size: 3rem;
+}
+.main-section p {
+  color: var(--color-fifth);
+  font-size: 1.25rem;
+  font-family: "regular";
+  line-height: 1.7;
+  padding-top: 4%;
+}
+.main-section .button {
+  padding: 4% 0;
+}
+.main-section .btn {
+  padding: 2% 5%;
+}
+.main-section .img {
+  background-color: var(--color-fourth);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-section .img img {
+  width: 80%;
+  padding: 5% 0;
+}
+.main-section .img .ball {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+}
+.main-section .img .ball1 {
+  top: 0;
+  left: 0;
+}
+.main-section .img .ball2 {
+  bottom: 0;
+  right: 0;
+}
+/* counter section */
+.counter-rang {
+  position: relative;
+  padding: 50px 0;
+  background-color: var(--background2);
+}
+.counter-rang .boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.counter-rang .boxes h4 {
+  font-size: 1.125rem;
+  color: var(--color-secound);
+  font-family: "regular";
+}
+.counter-rang .boxes .counter {
+  font-size: 2.375rem;
+  color: var(--color-third);
+  font-family: "bold";
+  display: inline-block;
+}
+.counter-rang .boxes i {
+  color: var(--color-third);
+  font-size: 25px;
+  font-family: "bold";
+}
+/* counter section */
+/* know-us section */
+.know-us {
+  position: relative;
+  background-color: var(--background);
+}
+.know-us span {
+  font-size: 0.875rem;
+  color: var(--color-fourth);
+  font-family: "regular";
+}
+.know-us .button {
+  width: 100%;
+}
+.know-us .button .btn {
+  width: 50%;
+}
+.know-us .img .main {
+  width: 310.92px;
+  height: 313px;
+  padding: 5% 2%;
+}
+.know-us .shape {
+  position: absolute;
+}
+.know-us .shape.ball3 {
+  width: 45%;
+  height: 43%;
+  left: -91px;
+  top: -30px;
+  padding: 0;
+}
+.know-us .shape.ball4 {
+  width: 50%;
+  height: 50%;
+  bottom: -21px;
+  right: -138px;
+  padding: 0;
+}
+/* know-us section */
+/* our service section */
+* start chooce */ .choose-us {
+  padding: 30px 0;
+}
+.choose-us .card {
+  padding: 5px 10px;
+  background-color: var(--background2);
+  overflow: hidden;
+  border-radius: 10px;
+  border: none;
+  margin: 30px 0;
+  box-shadow: 0px 0px 77px rgb(136 136 136 / 7%);
+}
+.choose-us .card .contents {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 3;
+  margin: auto;
+  text-align: center;
+  transition: 0.3s;
+}
+.choose-us .card:hover {
+  box-shadow: 0 34px 47px rgba(255, 87, 0, 0.2);
+}
+.choose-us .card .content {
+  position: relative;
+  z-index: 3;
+  margin: auto;
+  text-align: center;
+  transition: 0.3s;
+}
+.choose-us .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  background-color: var(--color-fourth);
+  z-index: 1;
+  transition: 0.5s;
+}
+.choose-us .card:hover::before {
+  bottom: 0;
+}
+.choose-us .card h6 {
+  font-size: 21px;
+  color: var(--color-secound);
+  font-family: bold;
+  padding-top: 3%;
+  padding-bottom: 4%;
+}
+.choose-us .card:hover h6 {
+  color: var(--color-light);
+}
+.choose-us .card .icons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background2);
+}
+.choose-us .card .icons i {
+  color: var(--color-fourth);
+  font-size: 20px;
+}
+.choose-us .card p {
+  font-size: 15px;
+  font-family: "light";
+  color: var(--color-secound);
+}
+.choose-us .card:hover p {
+  color: var(--color-light);
+}
+/* our service section */
+/* testimonies section */
+.testimpnies{
+  padding: 50px 0;
+  position: relative;
+  background-color: var(--background2);
+}
+.testimpnies .tell span{
+  font-size: 0.875rem;
+  color: var(--color-fourth);
+  font-family: "regular";
+}
+.testimpnies .tell h2{
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  font-family: 'bold';
+  padding-top: 5%;
+
+}
+
+.testimpnies .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.testimpnies  .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+    background-color: transparent;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.testimpnies  .swiper-slide .contentx{
+  padding: 5% 1%;
+  margin: 8% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: var(--cardshadow);
+}
+.testimpnies  .swiper-slide .contentx img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding-bottom: 4%;
+}
+.testimpnies  .swiper-slide .contentx i{
+  font-size: 25px;
+  color: var(--color-fourth);
+}
+.testimpnies  .swiper-slide .contentx h6{
+  color: var(--color-primary);
+  font-size: 'bold';
+  font-size: 1.25rem;
+  padding: 3% 0 1%;
+}
+.testimpnies  .swiper-slide .contentx  span{
+  font-size: .8rem;
+  color: var(--color-primary);
+  font-family: 'meduim';
+}
+.testimpnies  .swiper-slide .contentx p{
+  font-size: 1rem;
+  color: var(--color-fifth);
+  font-family: 'regular';
+  padding: 5% 2% 1%;
+}
+.swiper-button-prev:after,.swiper-button-next:after{
+  opacity: 0;
+}
+/* swiper */
+/* testimonies section */
+
+/* finish index page */
+/* =========================================== modifaction */
