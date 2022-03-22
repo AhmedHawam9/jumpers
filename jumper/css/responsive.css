@@ -7,6 +7,13 @@
     margin: 0;
     padding: 0;
   }
+  #navbar.change {
+    width: 100%;
+  }
+  #navbar .navbar-brand img {
+    width: 70px;
+    height: 100px;
+  }
   .navbar .dropdown-lang,
   .navbar .btn-sign,
   .navbar .dropdown-sign {
@@ -479,7 +486,7 @@
     left: 6px;
   }
   .navbar .dropdown-lang .dropdown-menu[data-bs-popper] {
-    left: -28px;
+    left: -9px;
   }
   /* finish navbar */
   /* start data complete */
@@ -588,14 +595,45 @@
   }
   /* index page */
   /* counter section */
-  .counter-rang .boxes{
+  .counter-rang .boxes {
     flex-direction: column;
     justify-content: center;
   }
-  .counter-rang .boxes .box{
+  .counter-rang .boxes .box {
     margin-bottom: 4%;
   }
   /* counter section */
+  .about-app .img img {
+    width: 100%;
+  }
+  .about-app .head h2 {
+    font-size: 2rem;
+  }
+  .know-us .shape {
+    display: none;
+  }
+  .main-section .content{
+    padding-top: 5%;
+  }
+  .sections-content h2 ,.head h2{
+    font-size: 2rem;
+  }
+  .about-app .head{
+    width: 90%;
+  }
+  .testimpnies .tell h2{
+    font-size: 2rem;
+  }
+  .sections-content .main-img ,.sections-content .collect img{
+    height: 200px;
+   margin-bottom: 3%;
+  }
+  .sections-content .collect{
+    max-height: unset;
+  }
+  .choose-us .card h6{
+    padding-bottom: 0;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
   /* navbar */
@@ -607,7 +645,18 @@
     text-align: center;
   }
   /* index page */
-
+  .know-us .shape {
+    display: none;
+  }
+  .main-section h2,.sections-content h2,.testimpnies .tell h2 ,.head h2{
+  font-size: 2.5rem;
+  }
+  .sections-content .collect img{
+    height: 134px;
+  }
+  .about-app .head{
+    width: 100%;
+  }
   /* index page */
 }
 @media (min-width: 1023.98px) and (max-width: 1200px) {
@@ -630,6 +679,15 @@
     top: 12px;
   }
   /* navbar */
+  /* index-page */
+  .know-us .shape.ball4{
+    right: -72px;
+  }
+  .about-app .img img {
+    width: 100%;
+  }
+    /* index-page */
+
 }
 
 /* =========================================== modifaction */
