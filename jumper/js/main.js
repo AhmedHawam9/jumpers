@@ -5,18 +5,20 @@ window.addEventListener('load', function () {
 });
 //loader
 //  scroll-up 
+var navbar = $('#navbar');
+var image = $('#navbar .navbar-brand img');
 var btn = $('#button');
-var image = $('.navbar-light .navbar-brand img');
-var link = $('.navbar-light .nav-item .nav-link');
+
 $(window).scroll(function () {
-  if ($(window).scrollTop() > 100) {
+  if ($(window).scrollTop() > 75) {
     btn.addClass('show');
-    image.css('width', '50%');
-    link.addClass('change');
+    navbar.addClass('change');
+    image.addClass('resize');
+
   } else {
     btn.removeClass('show');
-    image.css('width', '70%');
-    link.removeClass('change');
+    navbar.removeClass('change');
+    image.removeClass('resize');
   }
 });
 btn.on('click', function (e) {
@@ -45,18 +47,18 @@ const logoDark = document.getElementById('logoDark');
 const enableDarkMode = () => {
   // 1. Add the class to the body
   document.body.classList.add('darkmode');
-   // 2. toggle classes
+  // 2. toggle classes
   dark.style.display = "none";
   light.style.display = "block";
   // 3. Update darkMode in localStorage
   localStorage.setItem('darkMode', 'enabled');
- 
-  
+
+
 }
 const disableDarkMode = () => {
   // 1. Remove the class from the body
   document.body.classList.remove('darkmode');
-       // 2. toggle classes
+  // 2. toggle classes
 
   light.style.display = "none";
   dark.style.display = "block";

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,9 +19,6 @@
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
-    <!-- sweet alert -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- sweet alert -->
     <!-- hover -->
     <link rel="stylesheet" href="css/hover-min.css">
     <!-- hover -->
@@ -51,7 +47,7 @@
     </div>
     <!---------------------- finish dark && light mood -------------------------------------------->
     <!---------------------- start navbar -------------------------------------------->
-    <nav class="navbar navbar-expand-lg ">
+    <nav id="navbar" class="navbar navbar-expand-lg ">
         <div class="container-fluid">
             <div class="logo">
                 <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
@@ -69,16 +65,16 @@
                         <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">من نحن</a>
+                        <a class="nav-link" href="#about">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service.html"> الخدمات</a>
+                        <a class="nav-link" href="#service"> الخدمات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="printer.html">شركاء النجاح</a>
+                        <a class="nav-link" href="#printer">شركاء النجاح</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html"> أخر الأخبار</a>
+                        <a class="nav-link" href="#blog"> أخر الأخبار</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html"> تواصل معنا</a>
@@ -215,7 +211,7 @@
     </section>
     <!---------------------- finish counter -------------------------------------------->
     <!---------------------- start know-us -------------------------------------------->
-    <section class="know-us main-section" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+    <section id="about" class="know-us main-section" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-12">
@@ -244,7 +240,7 @@
     </section>
     <!---------------------- finish know-us -------------------------------------------->
     <!---------------------- start our-service -------------------------------------------->
-    <section class="our-service main-section know-us" data-aos="fade-up" data-aos-duration="1000"
+    <section id="service" class="our-service main-section know-us" data-aos="fade-up" data-aos-duration="1000"
         data-aos-easing="linear">
         <div class="container">
             <div class="row">
@@ -327,7 +323,7 @@
     </section>
     <!---------------------- finish our-service -------------------------------------------->
     <!---------------------- start testimonies -------------------------------------------->
-    <section class="testimpnies">
+    <section class="testimpnies" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-12">
@@ -360,7 +356,150 @@
         </div>
     </section>
     <!---------------------- finish testimonies -------------------------------------------->
+    <!---------------------- start app -------------------------------------------->
+    <section class="about-app" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+        <div class="container">
+            <div class="head">
+                <span>وجهات التطبيق</span>
+                <h2>تعرف الآن على جميع الوجهات الخاصة بجمبر</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="face">
+                        <h6>
+                            واجهة الشركة أو المؤسسة
+                        </h6>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
+                            يولدها
+                            التطبيق.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="img">
+                        <img src="image/app.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="face">
+                        <h6>
+                            واجهة الجمبر
+                        </h6>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
+                            يولدها
+                            التطبيق.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="img">
+                        <img src="image/app2.png" alt="">
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </section>
+    <!---------------------- finish app -------------------------------------------->
+    <!---------------------- start blog -------------------------------------------->
+    <section id="blog" class="blog" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+        <div class="container">
+            <div class="head text-center w-100">
+                <span>وجهات التطبيق</span>
+                <h2>منشورات جمبر المحدثة المنتظمة دائما</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 py-3">
+                    <div class="content">
+                        <div class="over">
+                            <img src="image/ins1.png" alt="" />
+                        </div>
+                        <a href="#">
+                             <span>موضة | نساء</span></a>
+                        <h4>
+                            لوكات عصرية بكلفة مقبولة! تصاميم بأقلّ من 200 دولار، اعتمدتها
+                            النجمات والفاشينيستا في نوفمبر 2021
+                        </h4>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                            التى يولدها التطبيق.
+                        </p>
+                        <a href="single-blog.html" class="btn first">
+                            اقرأ المزيد
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 py-3">
+                    <div class="content">
+                        <div class="over">
+                            <img src="image/ins4.png" alt="" />
+                        </div>
+                        <a href="#"> <span>موضة | نساء</span></a>
+                        <h4>
+                            لوكات عصرية بكلفة مقبولة! تصاميم بأقلّ من 200 دولار، اعتمدتها
+                            النجمات والفاشينيستا في نوفمبر 2021
+                        </h4>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                            التى يولدها التطبيق.
+                        </p>
+                        <a href="single-blog.html" class=" btn first">
+                            اقرأ المزيد
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 py-3">
+                    <div class="content">
+                        <div class="over">
+                            <img src="image/ins2.png" alt="" />
+                        </div>
+                        <a href="#"> <span>موضة | نساء</span></a>
+                        <h4>
+                            لوكات عصرية بكلفة مقبولة! تصاميم بأقلّ من 200 دولار، اعتمدتها
+                            النجمات والفاشينيستا في نوفمبر 2021
+                        </h4>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                            التى يولدها التطبيق.
+                        </p>
+                        <a href="single-blog.html" class=" btn first">
+                            اقرأ المزيد
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------- finish blog -------------------------------------------->
+    <!---------------------- finish parnter -------------------------------------------->
+    <section class="parnter-sucess" id="printer" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear">
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="image/par1.png" alt="parenter">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/par2.png" alt="parenter">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/par3.png" alt="parenter">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/par4.png" alt="parenter">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/par5.png" alt="parenter">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------- finish parnter -------------------------------------------->
     <!---------------------- start footer -------------------------------------------->
     <footer>
         <div class="container">
@@ -396,13 +535,7 @@
         AOS.init();
     </script>
     <!-- animation -->
-    <!-- lottie -->
-    <script src="js/lottie.js"></script>
-    <!-- lottie -->
-    <!-- sweet alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- sweet alert -->
-    <!-- counter -->
+    <!--counter -->
     <script>
         const counters = document.querySelectorAll('.counter');
         counters.forEach(counter => {
@@ -454,6 +587,33 @@
         });
     </script>
     <!-- slider testimonies -->
-</body>
+    <!-- slider parenter -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+                340: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+            loop: true,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
 
+        });
+    </script>
+    <!-- slider parnter -->
+</body>
 </html>
