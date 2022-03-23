@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,9 +14,6 @@
     <!-- responsive -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- responsive -->
-    <!-- dark mood -->
-    <link rel="stylesheet" href="css/style-dark.css">
-    <!-- dark mood -->
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
@@ -44,10 +42,10 @@
         </span>
         <div class="indicator">
         </div>
-    </div> 
+    </div>
     <!---------------------- finish dark && light mood -------------------------------------------->
     <!---------------------- start navbar -------------------------------------------->
-    <nav class="navbar navbar-expand-lg ">
+    <nav id="navbar" class="navbar navbar-expand-lg ">
         <div class="container-fluid">
             <div class="logo">
                 <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
@@ -244,7 +242,7 @@
                             <div class="row">
                                 <div class="col-lg-4 col-md-6 col-12">
                                     <div class="card">
-                                        <img src="image/card1.png" alt="card1">
+                                        <img src="image/main1.png" alt="card1">
                                         <div class="text">
                                             <h5>اجمالى عدد الطلبات</h5>
                                             <h6><span class="counter">20</span> طلب</h6>
@@ -253,7 +251,7 @@
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-12">
                                     <div class="card">
-                                        <img src="image/card2.png" alt="card2">
+                                        <img src="image/main 2.png" alt="card2">
                                         <div class="text">
                                             <h5> الطلبات المكتملة</h5>
                                             <h6><span class="counter">15</span> طلب</h6>
@@ -262,15 +260,53 @@
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-12">
                                     <div class="card">
-                                        <img src="image/card3.png" alt="card3">
+                                        <img src="image/main3.png" alt="card3">
                                         <div class="text">
-                                            <h5>الطلبات المرفوضة</h5>
+                                            <h5> الطلبات الغير مكتملة</h5>
                                             <h6><span class="counter">5</span> طلب</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card">
+                                        <img src="image/main4.png" alt="card3">
+                                        <div class="text">
+                                            <h5> الطلبات المعلقة</h5>
+                                            <h6><span class="counter">10</span> طلب</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card">
+                                        <img src="image/main5.png" alt="card3">
+                                        <div class="text">
+                                            <h5> الطلبات قيد المراجعة</h5>
+                                            <h6><span class="counter">15</span> طلب</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card">
+                                        <img src="image/main6.png" alt="card3">
+                                        <div class="text">
+                                            <h5> اجمالى عدد الموظفين</h5>
+                                            <h6><span class="counter">25</span> طلب</h6>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- في حالة عدم وجود طلبات -->
+                        <!-- <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
+                                <lottie-player src="json/lf30_editor_boyshymo.json" background="transparent" speed="1"
+                                    style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                                <h6>عذرا ! ليس لديك طلبات بعد </h6>
+                                <p>
+                                 لم تقم بعمل أي طلبات بعد ! هي ابدأ الآن بانشاء  أول طلب للتوظيف على منصة جمبرز واكتب مواصفات طلب  </p>
+                                <a class="btn first mt-4" href="order.html">انشاء طلب جديد</a>
+                            </div>  -->
+                        <!-- في حالة عدم وجود طلبات -->
+                        <!-- في حالة  وجود طلبات -->
                         <div class="statistics">
                             <div class="row text-center">
                                 <div class="col-12 ">
@@ -288,7 +324,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6  col-12 py-5">
-                                    <div class="chart"data-aos="zoom-in-right" data-aos-duration="1000" >
+                                    <div class="chart" data-aos="zoom-in-right" data-aos-duration="1000">
                                         <h6> الطلبات غير المكتملة </h6>
                                         <p> <img src="image/arrow2.png" alt="inc">طلبات غير مكتملة مؤخرا
                                             <span>1.5%</span>
@@ -296,6 +332,73 @@
                                         <canvas id="myChart2"></canvas>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- في حالة  وجود طلبات -->
+                    </div>
+                    <div class="last-activet">
+                        <div class="container">
+                            <h4 class="head-categ"> أخر النشاطات </h4>
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="box">
+                                            <img src="image/per1.png" alt="">
+                                            <div class="text">
+                                                <p>أحمد ابراهيم</p>
+                                                <p>مصور فوتوجرافي</p>
+                                                <p>6 PM , الثاني جمادي 12</p>
+                                            </div>
+                                            <div class="indection success">  تسجيل حضور</div>                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="box">
+                                            <img src="image/per1.png" alt="">
+                                            <div class="text">
+                                                <p>أحمد ابراهيم</p>
+                                                <p>مصور فوتوجرافي</p>
+                                                <p>6 PM , الثاني جمادي 12</p>
+                                            </div>
+                                            <div class="indection success">  تسجيل حضور</div>                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="box">
+                                            <img src="image/per1.png" alt="">
+                                            <div class="text">
+                                                <p>أحمد ابراهيم</p>
+                                                <p>مصور فوتوجرافي</p>
+                                                <p>6 PM , الثاني جمادي 12</p>
+                                            </div>
+                                            <div class="indection success">  تسجيل حضور</div>                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="box">
+                                            <img src="image/per1.png" alt="">
+                                            <div class="text">
+                                                <p>أحمد ابراهيم</p>
+                                                <p>مصور فوتوجرافي</p>
+                                                <p>6 PM , الثاني جمادي 12</p>
+                                            </div>
+                                            <div class="indection success">  تسجيل حضور</div>                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="box">
+                                            <img src="image/per1.png" alt="">
+                                            <div class="text">
+                                                <p>أحمد ابراهيم</p>
+                                                <p>مصور فوتوجرافي</p>
+                                                <p>6 PM , الثاني جمادي 12</p>
+                                            </div>
+                                            <div class="indection success">  تسجيل حضور</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-pagination"></div> -->
+                                <!-- <div class="swiper-button-next"> </div>
+                                <div class="swiper-button-prev"></div> -->
                             </div>
                         </div>
                     </div>
@@ -411,8 +514,6 @@
                         <li><a href="privacy.html">سياسة الخصوصية</a></li>
                         <li><a href="condition.html">الشروط والاحكام</a></li>
                         <li><a href="common.html">الاسألة الشائعة</a></li>
-                        <li><a href="printer.html">شركاء النجاح</a></li>
-                        <li><a href="section.html"> القطاعات</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-5 col-12">
@@ -438,6 +539,9 @@
         AOS.init();
     </script>
     <!-- animation -->
+    <!-- lottie -->
+    <script src="js/lottie.js"></script>
+    <!-- lottie -->
     <!-- chart tabel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <!-- chart tabel -->
@@ -687,6 +791,41 @@
         const myChart4 = new Chart(z, config4);
     </script>
     <!--chart tabel2-->
+    <!-- slider last-activity -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                340: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- slider last-activity -->
     <!-- slider team work -->
     <script>
         var swiper = new Swiper(".mySwiper-1", {
