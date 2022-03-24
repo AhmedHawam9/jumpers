@@ -14,10 +14,6 @@
     <!-- responsive -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- responsive -->
-    <!-- dark mood -->
-    <link rel="stylesheet" href="css/style-dark.css">
-    <!-- dark mood -->
-
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
@@ -40,17 +36,18 @@
     <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
     <!---------------------- finish scroll-up -------------------------------------------->
     <!---------------------- start dark && light mood -------------------------------------------->
-     <div id="toggle">
+    <div id="toggle">
         <span class="light " id="light">
             <i class="bi bi-brightness-high"></i>
         </span>
         <span class="dark" id="dark">
             <i class="bi bi-moon-fill "></i>
         </span>
-    </div> 
+    </div>
     <!---------------------- finish dark && light mood -------------------------------------------->
     <!---------------------- start navbar -------------------------------------------->
- <nav id="navbar" class="navbar navbar-expand-lg ">        <div class="container-fluid">
+    <nav id="navbar" class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
             <div class="logo">
                 <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
                     <img id="logoDark" src="image/logo-dark.png" alt="dark">
@@ -347,22 +344,26 @@
                                         <span class="icon"> <img src="image/img6.png" alt=""></span>
                                     </div>
                                     <div class="col-lg-6 col-12">
-                                        <label class="form-label" for="service"> مكان العمل</label>
+                                        <label class="form-label" for="service"> اللغات المتقنة</label>
                                         <select required class="form-select" aria-label="Default select example">
-                                            <option selected>مكان العمل </option>
-                                            <option value="1">ذكر</option>
-                                            <option value="2">أنثي</option>
+                                            <option selected> حدد اللغات </option>
+                                            <option value="1">عربي</option>
+                                            <option value="2">تركي</option>
                                         </select>
-                                        <span class="icont"> <img src="image/img7.png" alt=""></span>
+                                        <span class="icont"> <img src="image/img3.png" alt=""></span>
                                     </div>
                                 </div>
                                 <!-- finish input group -->
                                 <!-- start input group -->
                                 <div class="input-group">
                                     <div class="col-lg-11 col-12">
-                                        <label class="form-label" for="adress"> العنوان بالتفصيل</label>
-                                        <input required type="text" class="form-control" id="adress"
-                                            placeholder="أدخل العنوان بالتفصيل">
+                                        <label class="form-label" for="service"> مكان العمل</label>
+                                        <select required class="form-select" aria-label="Default select example">
+                                            <option selected> اختر المدينة </option>
+                                            <option value="1">الرياض</option>
+                                            <option value="2">السعودية</option>
+                                        </select>
+                                        <span class="icon"> <img src="image/img7.png" alt=""></span>
                                     </div>
                                     <div class="col-lg-1 col-4">
                                         <div class="share">
@@ -372,8 +373,18 @@
                                     </div>
                                 </div>
                                 <!-- finish input group -->
-                                <div class="py-3 full">
-                                    <a class="btn first btn-next" href="#"> التالي </a>
+                                <!-- start input group -->
+                                <div class="input-group">
+                                    <div class="col-12">
+                                        <label class="form-label" for="adress"> العنوان بالتفصيل</label>
+                                        <textarea required type="text" class="form-control" id="adress"
+                                            placeholder="أدخل العنوان بالتفصيل"></textarea>
+                                    </div>
+                                </div>
+                                <!-- finish input group -->
+
+                                <div class="py-3 full w-100">
+                                    <a class="btn first btn-next w-100" href="#"> التالي </a>
                                 </div>
                             </div>
                             <!-- first step -->
@@ -391,9 +402,9 @@
                                         <span class="icon"> <img src="image/img8.png" alt=""></span>
                                     </div>
                                     <div class="col-lg-6 col-12">
-                                        <label class="form-label" for="account"> نوع الحساب</label>
+                                        <label class="form-label" for="account"> مدة العمل</label>
                                         <input required type="number" id="account" class="form-control">
-                                        <span class="icont"> <img src="image/img8.png" alt=""></span>
+                                        <span class="icont"> <img src="image/img9.png" alt=""></span>
                                     </div>
                                 </div>
                                 <!-- finish input group -->
@@ -402,12 +413,12 @@
                                     <div class="col-lg-6 col-12">
                                         <label class="form-label" for="date"> تاريخ بداية العمل</label>
                                         <input required type="date" id="date" class="form-control">
-                                        <span class="icon"> <img src="image/img9.png" alt=""></span>
+                                        <span class="icon"> <img src="image/img10.png" alt=""></span>
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <label class="form-label" for="date1"> تاريخ نهاية العمل</label>
                                         <input required type="date" id="date1" class="form-control">
-                                        <span class="icont"> <img src="image/img9.png" alt=""></span>
+                                        <span class="icont"> <img src="image/img10.png" alt=""></span>
                                     </div>
                                 </div>
                                 <!-- finish input group -->
@@ -415,13 +426,30 @@
                                 <div class="input-group">
                                     <div class="col-lg-6 col-12">
                                         <label class="form-label" for="mahara"> نوع الدوام</label>
-                                        <select onchange="choose_duration(this)" class="form-select" required
+                                        <select onchange="choose_duration(this)" onmouseover="showDailouge()"
+                                            onmouseleave="hideDailouge()" class="form-select" required
                                             aria-label="Default select example">
                                             <option selected> نوع الدوام </option>
                                             <option value="10">دوام منتظم</option>
                                             <option value="20"> دوام متقطع</option>
                                         </select>
                                         <span class="icon icons"> <img src="image/img6.png" alt=""></span>
+                                      <div id="dialouge" class="info">
+                                        <ul>
+                                            <li><span>Mon</span>
+                                                <p>يوليو6</p>
+                                            </li>
+                                            <li><span>Mon</span>
+                                                <p>يوليو6</p>
+                                            </li>
+                                            <li><span>Mon</span>
+                                                <p>يوليو6</p>
+                                            </li>
+                                            <li><span>Mon</span>
+                                                <p>يوليو6</p>
+                                            </li>
+                                        </ul>
+                                      </div>
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <label class="form-label " for="service"> وقت الدوام</label>
@@ -449,8 +477,18 @@
                                 <!-- start input group -->
                                 <div class="input-group">
                                     <label class="form-label" for="coast"> التكلفة المفترضة</label>
-                                    <input type="number" id="coast" class="form-control" required>
-                                    <span class="icon iconx"> <img src="image/img6.png" alt=""></span>
+                                    <div class="col-lg-9">
+                                        <input type="number" id="coast" class="form-control" required>
+                                        <span class="icon iconx"> <img src="image/img6.png" alt=""></span>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>الكل</option>
+                                            <option value="1"></option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="input-group">
                                     <label class="form-label"> وصف العمل</label>
@@ -467,12 +505,13 @@
                                 </div>
                                 <!-- finish input group -->
                                 <!-- start button -->
-                                <div class="py-3 full">
-                                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn first">
-                                        حسنا </button>
-                                    <a class="btn second btn-prev" href="#"> رجوع </a>
-                                    <button onclick="successAlertPending()" id="sweetalert" class="btn pend">
-                                        تعليق</button>
+                                <div class="py-3 full w-100">
+                                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                        class="btn first w-100">
+                                        نشر الطلب الآن </button>
+                                    <a class="btn second btn-prev w-100" href="#"> رجوع </a>
+                                    <button onclick="successAlertPending()" id="sweetalert" class="btn pend w-100">
+                                        تعليق الطلب مؤقتا</button>
                                 </div>
                                 <!-- finish button -->
 
@@ -494,8 +533,7 @@
                         <li><a href="privacy.html">سياسة الخصوصية</a></li>
                         <li><a href="condition.html">الشروط والاحكام</a></li>
                         <li><a href="common.html">الاسألة الشائعة</a></li>
-                        <li><a href="printer.html">شركاء النجاح</a></li>
-                        <li><a href="section.html"> القطاعات</a></li>
+
                     </ul>
                 </div>
                 <div class="col-lg-5 col-12">
@@ -541,12 +579,14 @@
                 </div>
                 <div class="modal-body">
                     <div class="non-exist">
-                        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_sb8d3ngn.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
-                      <h6>تم ارسال الطلب بنجاح</h6>
+                        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_sb8d3ngn.json"
+                            background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay>
+                        </lottie-player>
+                        <h6>تم ارسال الطلب بنجاح</h6>
                         <p>هانينا ! لقد أكملت انشاء طلبك الجديد وتم ارسالة الآن الى الإدارة
                             برجاء التنبه الى الاشعارات لتلقي الطلبات من الجمبرز</p>
                         <div class="py-3 w-75 full text-center">
-                            <a href="all-order.html" class="btn first w-75" >عرض تفاصيل الطلب</a>
+                            <a href="all-order.html" class="btn first w-75">عرض تفاصيل الطلب</a>
                         </div>
                     </div>
                 </div>
@@ -560,7 +600,8 @@
             <div class="celander">
                 <div class="head">
                     <h6>تحديد أيام الدوام</h6>
-                    <button onclick="closeAnimate() " id="close" type="button" class="btn-close" aria-label="Close"></button>
+                    <button onclick="closeAnimate() " id="close" type="button" class="btn-close"
+                        aria-label="Close"></button>
                 </div>
                 <!-- start month -->
                 <div class="month">
@@ -699,15 +740,15 @@
     <!-- sweetalert for pending order -->
     <!-- show celander -->
     <script>
-        function test(){
+        function test() {
             document.querySelector(".pop-celander").style.display = "none";
         }
-        function closeAnimate(){
-    
+        function closeAnimate() {
+
             document.querySelector(".pop-celander").classList.add('close-animate')
-           setTimeout( test, 1000)  
-       
-    }
+            setTimeout(test, 1000)
+
+        }
         function choose_duration(sels) {
             var ids = sels.value;
             if (ids == 20) {
@@ -715,7 +756,7 @@
                 document.querySelector(".pop-celander").classList.remove('close-animate');
 
             }
-            else{
+            else {
                 document.querySelector(".pop-celander").style.display = "none";
             }
         }
@@ -825,6 +866,18 @@
         };
     </script>
     <!-- sweetalert for celander -->
+    <!-- show && hide diouge -->
+    <script>
+        function showDetials() {
+            $(`#dialouge`).css({ "display": "flex"})
+
+        }
+        function hideDailouge(id) {
+            $(`#dialouge`).css("display", "none");
+        }
+    </script>
+    <!-- show && hide diouge -->
+
 
 </body>
 

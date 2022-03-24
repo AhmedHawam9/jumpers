@@ -26,6 +26,8 @@
     <!-- sweet alert -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- sweet alert -->
+    <!-- notify -->
+    <link rel="stylesheet" href="css/tostify.css">
     <!-- data table -->
     <link rel="stylesheet" href="css/data-table.css">
     <!-- data table -->
@@ -246,7 +248,11 @@
                 </div>
                 <div class="col-lg-9 col-md-7 col-12">
                     <div class="all-order" data-aos="fade-up" data-aos-duration="1000">
-                        <h2 class="head-categ">كل الطلبات</h2>
+                        <div class="head-butn">
+                            <h2 class="head-categ">كل الطلبات</h2>
+                            <a target="_blank" class="btn first" href="create-order.html">انشاء طلب جديد</a>
+                        </div>
+
                         <!-- في حالة عدم وجود  طلبات -->
                         <!-- <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
                             <lottie-player src="json/lf30_editor_e2pyrplo.json" background="transparent" speed="1"
@@ -288,8 +294,16 @@
                                     <td data-label="حالة الطلب">
                                         <span class="new"> طلب جديد</span>
                                     </td>
-                                    <td data-label=" أعرض التفاصيل"><a target="_blank" href="show-order-new.html"><i
-                                                class="bi bi-three-dots"></i></a></td>
+                                    <td onmouseleave="hideDetials(6)" onmouseenter="showDetials(6)"
+                                        class="detials-table" data-label=" عرض التفاصيل"><i
+                                            class="bi bi-three-dots"></i>
+                                        <ul id="showdetial6" class="show-detials">
+                                            <li> <a target="_blank" href="show-order-new.html"> عرض التفاصيل</a>
+                                            </li>
+                                            <li onclick="puplishOrder()">نشر الطلب</li>
+                                            <li data-bs-toggle="modal" data-bs-target="#exampleModal">الغاء الطلب</li>
+                                        </ul>
+                                    </td>
                                 </tr>
                                 <!-- في حالة وجود طلب جديد -->
                                 <!-- في حالة وجود طلب منهي -->
@@ -305,8 +319,14 @@
                                     <td data-label=" التكلفة المفترضة">
                                         20ريال بالساعة </td>
                                     <td data-label="حالة الطلب"> <span class="success"> طلب منتهي</span> </td>
-                                    <td data-label=" عرض التغاصيل"><a target="_blank" href="show-order-success.html"><i
-                                                class="bi bi-three-dots"></i></a></td>
+                                    <td onmouseleave="hideDetials(1)" onmouseenter="showDetials(1)"
+                                        class="detials-table" data-label=" عرض التفاصيل"><i
+                                            class="bi bi-three-dots"></i>
+                                        <ul id="showdetial1" class="show-detials">
+                                            <li> <a target="_blank" href="show-order-success.html"> عرض التفاصيل</a>
+                                            </li>
+                                        </ul>
+                                    </td>
                                 </tr>
                                 <!-- في حالة وجود طلب منهي -->
                                 <!-- في حالة وجود طلب غير مكتمل -->
@@ -322,11 +342,17 @@
                                     <td data-label=" التكلفة المفترضة">
                                         20ريال بالساعة </td>
                                     <td data-label="حالة الطلب"> <span class="uncoplete"> طلب غير مكتمل</span> </td>
-                                    <td data-label="حالة الطلب"><a target="_blank" href="show-order-pending.html"><i
-                                                class="bi bi-three-dots"></i></a></td>
+                                    <td onmouseleave="hideDetials(2)" onmouseenter="showDetials(2)"
+                                        class="detials-table" data-label=" عرض التفاصيل"><i
+                                            class="bi bi-three-dots"></i>
+                                        <ul id="showdetial2" class="show-detials">
+                                            <li> <a target="_blank" href="show-order-wait.html"> عرض التفاصيل</a>
+                                            </li>
+                                        </ul>
+                                    </td>
                                 </tr>
                                 <!-- في حالة وجود طلب غير مكتمل -->
-                                <!-- في حالة وجود  انتظار الدفع   -->
+                                <!-- في حالة وجود طلب معلق   -->
                                 <tr>
                                     <td data-label="رقم الطلب">#251422 </td>
                                     <td data-label="تاريخ البداية">
@@ -339,18 +365,17 @@
                                     <td data-label=" التكلفة المفترضة">
                                         20ريال بالساعة </td>
                                     <td data-label="حالة الطلب"> <span class="pending"> طلب معلق </span> </td>
-                                    <td onmouseleave="hideDetials(1)" onmouseenter="showDetials(1)"
+                                    <td onmouseleave="hideDetials(3)" onmouseenter="showDetials(3)"
                                         class="detials-table" data-label=" عرض التفاصيل"><i
                                             class="bi bi-three-dots"></i>
-                                        <ul id="showdetial1" class="show-detials">
-                                            <li> <a target="_blank" href="show-order-wait.html"> عرض التفاصيل</a>
+                                        <ul id="showdetial3" class="show-detials">
+                                            <li> <a target="_blank" href="show-order-pending.html"> عرض التفاصيل</a>
                                             </li>
-                                            <li id="liveToastBtn">نشر الطلب</li>
                                             <li data-bs-toggle="modal" data-bs-target="#exampleModal">الغاء الطلب</li>
                                         </ul>
                                     </td>
                                 </tr>
-                                <!-- في حالة وجود  انتظار الدفع   -->
+                                <!-- في حالة وجود  طلب معلق   -->
                                 <!-- في حالة جاري المعالجة      -->
                                 <tr>
                                     <td data-label="رقم الطلب">#251422 </td>
@@ -364,14 +389,14 @@
                                     <td data-label=" التكلفة المفترضة">
                                         20ريال بالساعة </td>
                                     <td data-label="حالة الطلب"> <span class="revision"> جاري المعالجة </span> </td>
-                                    <td class="detials-table" data-label=" عرض التفاصيل"><a target="_blank"
-                                            href="show-order-revision.html"><i onmouseover="showDetials(2)"
-                                                onmouseleave="hideDetials(2)" class="bi bi-three-dots"></i></a>
-                                        <!-- <ul class="show-detials">
-                                            <li>عرض التفاصيل</li>
-                                            <li>نشر الطلب</li>
-                                            <li>الغاء الطلب</li>
-                                        </ul> -->
+
+                                    <td onmouseleave="hideDetials(4)" onmouseenter="showDetials(4)"
+                                        class="detials-table" data-label=" عرض التفاصيل"><i
+                                            class="bi bi-three-dots"></i>
+                                        <ul id="showdetial4" class="show-detials">
+                                            <li> <a target="_blank" href="show-order-revision.html"> عرض التفاصيل</a>
+                                            </li>
+                                        </ul>
                                     </td>
                                 </tr>
                                 <!-- في حالة جاري المعالجة      -->
@@ -388,37 +413,20 @@
                                     <td data-label=" التكلفة المفترضة">
                                         20ريال بالساعة </td>
                                     <td data-label="حالة الطلب"> <span class="work"> جاري العمل </span> </td>
-                                    <td data-label="عرض  التفاصيل"><a target="_blank" href="show-order-work.html"><i
-                                                class="bi bi-three-dots"></i></a></td>
+                                    <td onmouseleave="hideDetials(5)" onmouseenter="showDetials(5)"
+                                        class="detials-table" data-label=" عرض التفاصيل"><i
+                                            class="bi bi-three-dots"></i>
+                                        <ul id="showdetial5" class="show-detials">
+                                            <li> <a target="_blank" href="show-order-work.html"> عرض التفاصيل</a>
+                                            </li>
+                                        </ul>
+                                    </td>
                                 </tr>
                                 <!-- في حالة  جاري العمل      -->
                             </tbody>
                         </table>
 
                     </div>
-                    <!---------------------------- pagination ------------------------------->
-                    <!-- <nav class="pb-3 pt-5 mb-4" aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item active" aria-current="page"><a class="page-link " href="#">1</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <p class="summary">عرض 7 من اصل 250 طلب</p>
-                    </nav> -->
-                    <!---------------------------- pagination ------------------------------->
                     <!-- في حالة  وجود  طلبات -->
                 </div>
             </div>
@@ -434,8 +442,7 @@
                         <li><a href="privacy.html">سياسة الخصوصية</a></li>
                         <li><a href="condition.html">الشروط والاحكام</a></li>
                         <li><a href="common.html">الاسألة الشائعة</a></li>
-                        <li><a href="printer.html">شركاء النجاح</a></li>
-                        <li><a href="section.html"> القطاعات</a></li>
+
                     </ul>
                 </div>
                 <div class="col-lg-5 col-12">
@@ -447,18 +454,6 @@
         </div>
     </footer>
     <!---------------------- finish footer  -------------------------------------------->
-    <!---------------------- start tooster  -------------------------------------------->
-
-   <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-    <div id="liveToast" class="toast align-items-center text-white bg-sucess  " role="alert" aria-live="assertive" aria-atomic="true">
-      
-        <div class="toast-body">
-           تم نشر الطلب
-        </div>
-    </div>
-    </div>
-    <!---------------------- start tooster  -------------------------------------------->
-
     <!-- modal finish work -->
     <div class="modal fade modal-remove" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -524,9 +519,7 @@
     <script src="js/lottie.js"></script>
     <!-- lottie -->
     <!-- notify -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify.js/3.0.0/notify.js"
-        integrity="sha512-6kVzvonvbchZbuSJblyvD0FXdHfEQv011oSg/29GiGNbfVOJM2UrtJBFKNUlP34gQn+jjgwJhfWTVtYBbtZU7A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/tostify.js"></script>
     <!-- notify -->
     <!-- data table -->
     <script src="js/data-table.js"></script>
@@ -557,7 +550,6 @@
             $('#tableOrder').DataTable();
         });
     </script>
-
     <!-- data table -->
     <!-- show && hide detials -->
     <script>
@@ -600,12 +592,30 @@
         }
     </script>
     <!-- form withard for remove order -->
-    <!-- <script>
-        $('#removeOrder').on('click', function () {
-            $.notify("Alert!", {type:"info"});
+    <!-- Toastify of puplish order -->
+    <script>
+        function puplishOrder() {
+            Toastify({
+                text: "تم نشر الطلب",
+                duration: 2500,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                // close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #bf8c6d, #0c1321)",
+                    // width: '400px',
+                    // padding:'2% 1%',
+                    borderRaduis: '5px'
+                },
+                onClick: function () { } // Callback after click
+            }).showToast();
+        }
+    </script>
+    <!-- Toastify of puplish order -->
 
-        })
-    </script> -->
 
 </body>
 

@@ -131,6 +131,10 @@ ul {
   color: var(--iconcolor);
   font-family: "regular";
 }
+textarea.form-control{
+  padding-right: 2%;
+
+}
 .form-select {
   border-radius: 8px !important;
   padding: 0.375rem 2.25rem 0.375rem 1.4rem;
@@ -249,20 +253,23 @@ input::-webkit-inner-spin-button {
   font-family: "regular";
   font-size: 14px;
   transition: 0.25s all ease;
+  padding: 2% 0;
+
 }
 .pend:hover {
   background-color: var(--background2);
+  color: var(--color-secound);
 }
 .pending {
-  color: #c8cc71;
-  background-color: rgba(200, 204, 0, 0.1);
+  color: var(--color-secound);
+  background-color: rgba(200, 204, 0, 0.5);
 }
 .success {
   color: #26a565;
   background-color: rgba(38, 165, 101, 0.1);
 }
 .revision {
-  color: white;
+  color: var(--color-secound);
   background-color: rgba(27, 49, 46, 0.1);
 }
 .new {
@@ -309,16 +316,16 @@ input::-webkit-inner-spin-button {
   color: var(--color-secound);
   padding: 1% 3% 2%;
 }
-.head {
+.head-stat {
   position: relative;
   width: 50%;
 }
-.head span {
+.head-stat span {
   font-size: 0.875rem;
   color: var(--color-fourth);
   font-family: "regular";
 }
-.head h2 {
+.head-stat h2 {
   color: var(--color-primary);
   font-size: 2.5rem;
   font-family: "bold";
@@ -1782,6 +1789,7 @@ form .file-upload-wrapper input {
 .order .content .new-form .form-step-active .full .btn {
   width: 30%;
   transition: 0.25s all ease-in-out;
+  margin-bottom: 3%;
 }
 /* start main page */
 .order .main {
@@ -1955,7 +1963,7 @@ form .file-upload-wrapper input {
 
 .all-order .table tbody td span {
   font-size: 10px;
-  padding: 2% 2%;
+  padding: 7% 9%;
   border-radius: 13px;
 }
 .all-order .table td {
@@ -2126,11 +2134,11 @@ form .file-upload-wrapper input {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding: 3% 1%;
+  padding: 2% 1%;
 }
 .order .show-order .button .first,
 .order .show-order .button .second {
-  width: 40%;
+  width: 100%;
   margin: 1%;
 }
 .order .show-order .candidates {
@@ -2154,7 +2162,7 @@ form .file-upload-wrapper input {
   border-radius: 0;
 }
 .candidates .nav-cand li:last-child {
-  margin-right: 37%;
+  margin-right: 31%;
 }
 .candidates .nav-pay li:last-child {
   margin-right: 0 !important;
@@ -4314,11 +4322,11 @@ table.dataTable.no-footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100px;
-  height: 79px;
+  width: 150px;
+  height: fit-content;
   left: 3%;
   background-color: var(--background2);
-  padding: 4% 1%;
+  padding: 10% 1% 4%;
   box-shadow: var(--detialsshadow);
   z-index: 100;
   border-radius: 8px;
@@ -4326,7 +4334,7 @@ table.dataTable.no-footer {
 .all-order .table .show-detials::before {
   position: absolute;
   top: -7px;
-  left: 23%;
+  left: 16%;
   content: "";
   border-bottom: 0.5em solid;
   border-right: 0.5em solid transparent;
@@ -4336,21 +4344,199 @@ table.dataTable.no-footer {
 z-index: 110;
 }
 
-.all-order .table .show-detials li,
-.all-order .table .show-detials li a {
+.all-order .table .show-detials li
+ {
   font-size: 0.8rem;
   font-family: "regular";
-  color: var(--color-fourth);
+  color: var(--color-fourth) ;
   cursor: pointer;
   transition: 0.25s color ease;
+  margin: 8% 0;
+  width: 100%;
+  padding: 2% 0;
 }
-.all-order .table .show-detials li:hover,
-all-order .table .show-detials a:hover {
+.all-order .table .show-detials li a{
+  color: var(--color-fourth) !important;
+}
+.all-order .table .show-detials li:hover
+ {
+  background-color: var(--color-fourth) !important;
+  color: var(--color-secound);
+  border-radius: 5px;
+}
+.all-order .table .show-detials li:hover a{
   color: var(--color-secound) !important;
 }
 .all-order .table .bi-three-dots{
   cursor: pointer;
 }
+.all-order .table tbody td:nth-child(7){
+  padding: 15px 10px;
+}
+.head-butn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 0;
+}
+.head-butn .btn{
+  width: 30%;
+  padding: 1% 0;
+}
+
+.candidates .nav-cand li:last-child{
+  width: 20%;
+  text-align: center;
+}
+.candidates .nav-cand li:last-child .btn{
+  width: 100%;
+  padding: 6% 1%;
+}
 /* finish all order page */
+/* new order page */
+.order .hin-tabel{
+  color: var(--color-fourth);
+  background-color: rgba(191, 140, 109, 0.1);
+  padding: 2% 1%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+.order .hin-tabel.x{
+  color: var(--color-secound);
+}
+.order .hin-tabel.r{
+  color: #f24a4a;
+  background-color: rgba(242, 74, 74, 0.1);
+  margin-bottom: 0;
+  text-align: center;
+  width: 20%;
+  justify-content: center;
+  padding: 1% 1%;
+}
+.order .hin-tabel.r p{
+  color: #f24a4a;
+}
+.order .hin-tabel p{
+  font-family: 'regular';
+  font-size: 0.8rem;
+  padding-right: 2%;
+}
+.order .hin-tabel .btn{
+  width: 20%;
+  font-size: 10px;
+  padding: 1% 0;
+  margin-right: 25%;
+}
+.order .show-order .head .indection.r{
+  width: 11%;
+}
+.order .pattern .content h6{
+  color: var(--color-seven);
+  font-size: 1.8rem;
+}
+.order .pattern .content h6 span{
+  color: var(--color-secound);
+  font-size: 1.6rem;
+}
+.order .pattern .content p{
+  margin-bottom: 2%;
+}
+/* new order page */
+/* create order */
+.order .content .new-form .form-step-active  .info {
+  position: absolute;
+  left: 30%;
+  bottom: 20%;
+  background: var(--background2);
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  box-shadow: 0px 3px 24px rgba(134, 134, 134, 0.16);
+}
+.order .content .new-form .form-step-active  .info h6 {
+  font-size: 11px;
+  padding: 1%;
+  margin: 0;
+  text-align: center;
+}
+.order .content .new-form .form-step-active .info ul {
+  padding: 0% 5%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  border: none;
+}
+.order .content .new-form .form-step-active .info ul::before {
+  content: "";
+  color: var(--color-fourth);
+  top: -10px;
+  right: 5px;
+  position: absolute;
+  height: 73px;
+  width: 3px;
+  background-color: var(--color-fourth);
+}
+.order .content .new-form .form-step-active .info li {
+  width: 20%;
+}
+/* create order */
+/* revision page */
+.show-order .table .show-detials {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  left: 9%;
+  background-color: var(--background2);
+  padding: 4% 1%;
+  box-shadow: var(--detialsshadow);
+  z-index: 100;
+  border-radius: 8px;
+}
+.show-order .table .show-detials::before {
+  position: absolute;
+  top: -7px;
+  left: 16%;
+  content: "";
+  border-bottom: 0.5em solid;
+  border-right: 0.5em solid transparent;
+  border-top: 0;
+  border-left: 0.5em solid transparent;
+  color: var(--color-fourth);
+z-index: 110;
+}
+
+.show-order .table .show-detials li
+ {
+  font-size: 0.8rem;
+  font-family: "regular";
+  color: var(--color-fourth) ;
+  cursor: pointer;
+  transition: 0.25s color ease;
+  margin: 2% 0;
+  width: 100%;
+  padding: 2% 0;
+}
+
+.show-order .table .show-detials li:hover
+ {
+  background-color: var(--color-fourth) ;
+  color: var(--color-secound);
+  border-radius: 5px;
+}
+
+.show-order .table .bi-three-dots{
+  cursor: pointer;
+}
+/* revision page */
 
 /* =========================================== modifaction */

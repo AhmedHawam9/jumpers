@@ -14,10 +14,6 @@
     <!-- responsive -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- responsive -->
-    <!-- dark mood -->
-    <link rel="stylesheet" href="css/style-dark.css">
-    <!-- dark mood -->
-    
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
@@ -43,7 +39,7 @@
     <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
     <!---------------------- finish scroll-up -------------------------------------------->
     <!---------------------- start dark && light mood -------------------------------------------->
-     <div id="toggle">
+    <div id="toggle">
         <span class="light " id="light">
             <i class="bi bi-brightness-high" style=" color: yellow;"></i>
         </span>
@@ -52,10 +48,11 @@
         </span>
         <div class="indicator">
         </div>
-    </div> 
+    </div>
     <!---------------------- finish dark && light mood -------------------------------------------->
     <!---------------------- start navbar -------------------------------------------->
- <nav id="navbar" class="navbar navbar-expand-lg ">        <div class="container-fluid">
+    <nav id="navbar" class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
             <div class="logo">
                 <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
                     <img id="logoDark" src="image/logo-dark.png" alt="dark">
@@ -246,7 +243,19 @@
                 </div>
                 <div class="col-lg-9 col-md-7 col-12">
                     <h2 class="head-categ">كل الطلبات / عرض الطلب</h2>
+
                     <div class="show-order">
+                        <!-- في حاله عدم وجود طلبات -->
+                        <!-- <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
+                            <lottie-player src="json/lf30_editor_e2pyrplo.json" background="transparent" speed="1"
+                                style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                            <h6>عذرا ! ليس لديك طلبات </h6>
+                            <p>لم تقم بعمل أي طلبات بعد ! هي ابدأ الآن بانشاء
+                                أول طلب للتوظيف على منصة جمبرز واكتب مواصفات طلبك</p>
+                            <a class="btn first" href="order.html">انشاء طلب جديد</a>
+                        </div> -->
+                        <!-- في حاله عدم وجود طلبات -->
+                        <!-- في حاله  وجود طلبات -->
                         <div class="head" data-aos="fade-up" data-aos-duration="1000">
                             <p>رقم الطلب : #2515441221</p>
                             <p>تاريخ الطلب : فبراير 22 - 2022</p>
@@ -254,10 +263,9 @@
                         </div>
                         <div class="content" data-aos="fade-up" data-aos-duration="1000">
                             <div class="header">
-                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع
-                                    باستخدام </h6>
+                                <h6 class="head-small text-end ">مطلوب للعمل : <span>مصور فوتوغرافى</span> </h6>
                                 <div class="edit">
-                                    <a class="btn first" href="edit-order.html">
+                                    <a class="btn second" href="edit-order.html">
                                         <i class="bi bi-pencil"></i>
                                         تعديل
                                     </a>
@@ -287,7 +295,7 @@
                                 </li>
                                 <li>
                                     <p>
-                                        <i class="bi bi-briefcase"></i>                                        <span> نوع الدوام</span>
+                                        <i class="bi bi-briefcase"></i> <span> نوع الدوام</span>
                                         : دوام منتظم
                                     </p>
                                 </li>
@@ -346,7 +354,7 @@
                                 </li>
                                 <li>
                                     <p>
-                                        <i class="bi bi-briefcase"></i>   
+                                        <i class="bi bi-briefcase"></i>
                                         <span> نوع العمل</span>
                                         : التصميم
                                     </p>
@@ -374,10 +382,65 @@
                         </div>
                         <div class="button">
                             <button class=" btn first" type="button" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">الغاء التعليق</button>
+                                data-bs-target="#exampleModal"> نشر الطلب</button>
                             <button onclick="cancelAlert()" id="sweetalert" class="btn  second">الغاء الطلب</button>
                         </div>
                     </div>
+                    <div class="candidates" data-aos="fade-up" data-aos-duration="1000">
+                        <ul class="nav nav-pills  nav-cand mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">كل المرشحين (<span>0</span>)</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">المقبولين
+                                    (<span>0</span>)</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">المرفوضين
+                                    (<span>0</span>)</button>
+                            </li>
+                            <li>
+                                <button disabled class="btn first">طلب المزيد</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                aria-labelledby="pills-home-tab">
+                                <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
+                                    <lottie-player src="json/lf30_editor_e2pyrplo.json" background="transparent"
+                                        speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                                    <h6> عذرا ! ليس لديك موظفين </h6>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">
+                                <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
+                                    <lottie-player src="json/lf30_editor_e2pyrplo.json" background="transparent"
+                                        speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                                    <h6> عذرا ! ليس لديك موظفين </h6>
+
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                aria-labelledby="pills-contact-tab">
+                                <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
+                                    <lottie-player src="json/lf30_editor_e2pyrplo.json" background="transparent"
+                                        speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                                    <h6> عذرا ! ليس لديك موظفين </h6>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- في حاله  وجود طلبات -->
+
                 </div>
             </div>
         </div>
@@ -393,17 +456,17 @@
                 </div>
                 <div class="modal-body">
                     <div class="content">
-                        <lottie-player src="json/lf30_editor_z8wjogvb.json"
-                            background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay>
+                        <lottie-player src="json/lf30_editor_z8wjogvb.json" background="transparent" speed="1"
+                            style="width: 100px; height: 100px;" loop autoplay>
                         </lottie-player>
                         <h6 class="head-categ">تم الغاء تعليق الطلب بنجاح</h6>
                         <p>لقد قمت بإلغاء تعليق الطلب وسيتم عرضه على الادراة وسيتم الرد عليك
                             من فضلك قم بمتابعة الاشعارات وتلقى عروض الجمبرز</p>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn second" data-bs-dismiss="modal">Close</button>
-                    <a type="button" href="show-order-new.html" class="btn first">عرض تفاصيل الطلب </a>
+                <div class="modal-footer w-100">
+                    <a type="button" href="show-order-new.html" class="btn first w-50">عرض تفاصيل الطلب </a>
+                    <button type="button" class="btn second w-25" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -419,8 +482,7 @@
                         <li><a href="privacy.html">سياسة الخصوصية</a></li>
                         <li><a href="condition.html">الشروط والاحكام</a></li>
                         <li><a href="common.html">الاسألة الشائعة</a></li>
-                        <li><a href="printer.html">شركاء النجاح</a></li>
-                        <li><a href="section.html"> القطاعات</a></li>
+
                     </ul>
                 </div>
                 <div class="col-lg-5 col-12">

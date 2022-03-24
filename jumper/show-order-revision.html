@@ -14,21 +14,18 @@
     <!-- responsive -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- responsive -->
-    <!-- dark mood -->
-    <link rel="stylesheet" href="css/style-dark.css">
-    <!-- dark mood -->
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
-    <!-- swiper -->
-    <link rel="stylesheet" href="css/swiper-demos.css">
-    <!-- swiper -->
+    <!-- notify -->
+    <link rel="stylesheet" href="css/tostify.css">
+    <!-- notify -->
     <!-- hover -->
     <link rel="stylesheet" href="css/hover-min.css">
     <!-- hover -->
-    <!-- sweet alert -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- sweet alert -->
+    <!-- data table -->
+    <link rel="stylesheet" href="css/data-table.css">
+    <!-- data table -->
     <!-- ? Favicon -->
     <link rel="icon" href="./image/logo.png" type="image" />
     <!-- ? Favicon -->
@@ -42,7 +39,7 @@
     <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
     <!---------------------- finish scroll-up -------------------------------------------->
     <!---------------------- start dark && light mood -------------------------------------------->
-     <div id="toggle">
+    <div id="toggle">
         <span class="light " id="light">
             <i class="bi bi-brightness-high" style=" color: yellow;"></i>
         </span>
@@ -51,10 +48,11 @@
         </span>
         <div class="indicator">
         </div>
-    </div> 
+    </div>
     <!---------------------- finish dark && light mood -------------------------------------------->
     <!---------------------- start navbar -------------------------------------------->
- <nav id="navbar" class="navbar navbar-expand-lg ">        <div class="container-fluid">
+    <nav id="navbar" class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
             <div class="logo">
                 <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
                     <img id="logoDark" src="image/logo-dark.png" alt="dark">
@@ -245,18 +243,39 @@
                 </div>
                 <div class="col-lg-9 col-md-7 col-12">
                     <h2 class="head-categ">كل الطلبات / عرض الطلب</h2>
+                    <div class="hin-tabel x">
+                        <i class="bi bi-info-circle"></i>
+                        <p>
+                            لم نتمكن من ارسال الطلبات للجمبر حتي تقوم باستكمال عملية الدفع </p>
+                        <button class="first btn">أدفع الأن</button>
+                    </div>
                     <div class="show-order">
+                        <!-- في حاله عدم وجود طلبات -->
+                        <!-- <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
+                            <lottie-player src="json/lf30_editor_e2pyrplo.json" background="transparent" speed="1"
+                                style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                            <h6>عذرا ! ليس لديك طلبات </h6>
+                            <p>لم تقم بعمل أي طلبات بعد ! هي ابدأ الآن بانشاء
+                                أول طلب للتوظيف على منصة جمبرز واكتب مواصفات طلبك</p>
+                            <a class="btn first" href="order.html">انشاء طلب جديد</a>
+                        </div> -->
+                        <!-- في حاله عدم وجود طلبات -->
+                        <!-- في حاله  وجود طلبات -->
                         <div class="head" data-aos="fade-up" data-aos-duration="1000">
                             <p>رقم الطلب : #2515441221</p>
                             <p>تاريخ الطلب : فبراير 22 - 2022</p>
-                            <div class="indection"> <span class="revision"> جاري المراجعة</span></div>
+                            <div class="hin-tabel r">
+                                <i class="bi bi-info-circle"></i>
+                                <p> لم يتم الدفع بعد </p>
+                            </div>
+                            <div class="indection r"> <span class="revision"> جاري المراجعة</span></div>
                         </div>
                         <div class="content" data-aos="fade-up" data-aos-duration="1000">
                             <div class="header">
-                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع
-                                    باستخدام </h6>
+                                <h6 class="head-small text-end ">مطلوب للعمل : <span>مصور فوتوغرافى</span> </h6>
+
                                 <div class="edit">
-                                    <a class="first btn" href="edit-order.html">
+                                    <a class="second btn" href="edit-order.html">
                                         <i class="bi bi-pencil"></i>
                                         تعديل
                                     </a>
@@ -286,7 +305,7 @@
                                 </li>
                                 <li>
                                     <p>
-                                        <i class="bi bi-briefcase"></i>                                        <span> نوع الدوام</span>
+                                        <i class="bi bi-briefcase"></i> <span> نوع الدوام</span>
                                         : دوام منتظم
                                     </p>
                                 </li>
@@ -345,7 +364,7 @@
                                 </li>
                                 <li>
                                     <p>
-                                        <i class="bi bi-briefcase"></i>   
+                                        <i class="bi bi-briefcase"></i>
                                         <span> نوع العمل</span>
                                         : التصميم
                                     </p>
@@ -397,7 +416,8 @@
                             <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                     aria-labelledby="pills-home-tab">
-                                    <table class="tabel-cand table-responsive table">
+                                    <table id="tableOrder" style="width:100%"
+                                        class="display tabel-cand table-responsive table">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -407,6 +427,7 @@
                                                 <th>المهنة</th>
                                                 <th>العنوان</th>
                                                 <th>الحالة</th>
+                                                <th> </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -430,10 +451,14 @@
                                                 <td data-label="الحالة">
                                                     <span class="new case">مرشح جديد</span>
                                                 </td>
-                                                <td data-label="عرض التفاصيل"><button type="button" class="btn"
-                                                        data-bs-toggle="modal" data-bs-target="#exampleModal-1">
-                                                        <i class="bi bi-three-dots"></i>
-                                                    </button></td>
+                                                <td onmouseleave="hideDetials(1)" onmouseenter="showDetials(1)"
+                                                    class="detials-table" data-label=" عرض التفاصيل"><i
+                                                        class="bi bi-three-dots"></i>
+                                                    <ul id="showdetial1" class="show-detials">
+                                                        <li onclick="puplishOrder()"> قبول</li>
+                                                        <li onclick="rejectOrder()"> رفض</li>
+                                                    </ul>
+                                                </td>
                                                 <!-- في حالة موظف جديد -->
                                             </tr>
                                             <tr>
@@ -453,10 +478,14 @@
                                                 <td data-label="العنوان">
                                                     .....الرياض , شارع السيدة عائشة , الدور الاول</td>
                                                 <td data-label="الحالة"><span class="success case"> مقبول</span></td>
-                                                <td data-label="عرض التفاصيل"><button type="button" class="btn"
-                                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                        <i class="bi bi-three-dots"></i>
-                                                    </button> </td>
+                                                <td onmouseleave="hideDetials(2)" onmouseenter="showDetials(2)"
+                                                    class="detials-table" data-label=" عرض التفاصيل"><i
+                                                        class="bi bi-three-dots"></i>
+                                                    <ul id="showdetial2" class="show-detials">
+                                                        <li onclick="puplishOrder()"> قبول</li>
+                                                        <li onclick="rejectOrder()"> رفض</li>
+                                                    </ul>
+                                                </td>
                                                 <!-- في حالة موظف مقبول -->
                                             </tr>
                                             <tr>
@@ -476,10 +505,14 @@
                                                 <td data-label="العنوان">
                                                     .....الرياض , شارع السيدة عائشة , الدور الاول</td>
                                                 <td data-label="الحالة"> <span class="reject case"> مرفوض</span> </td>
-                                                <td data-label="عرض التفاصيل"><button type="button" class="btn"
-                                                        data-bs-toggle="modal" data-bs-target="#exampleModal-1">
-                                                        <i class="bi bi-three-dots"></i>
-                                                    </button></td>
+                                                <td onmouseleave="hideDetials(3)" onmouseenter="showDetials(3)"
+                                                class="detials-table" data-label=" عرض التفاصيل"><i
+                                                    class="bi bi-three-dots"></i>
+                                                <ul id="showdetial3" class="show-detials">
+                                                    <li onclick="puplishOrder()"> قبول</li>
+                                                    <li onclick="rejectOrder()"> رفض</li>
+                                                </ul>
+                                            </td>
                                                 <!-- في حالة موظف مرفوض -->
                                             </tr>
                                         </tbody>
@@ -487,7 +520,8 @@
                                 </div>
                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                                     aria-labelledby="pills-profile-tab">
-                                    <table class="tabel-cand table-responsive table">
+                                    <table id="tableOrder1" style="width:100%"
+                                        class="tabel-cand table-responsive table display">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -497,9 +531,10 @@
                                                 <th>المهنة</th>
                                                 <th>العنوان</th>
                                                 <th>الحالة</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
-                                        <tbody>    
+                                        <tbody>
                                             <tr>
                                                 <!-- في حالة موظف مقبول -->
                                                 <td data-label="#">1</td>
@@ -522,13 +557,14 @@
                                                         <i class="bi bi-three-dots"></i>
                                                     </button> </td>
                                                 <!-- في حالة موظف مقبول -->
-                                            </tr>      
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                                     aria-labelledby="pills-contact-tab">
-                                    <table class="tabel-cand table-responsive table">
+                                    <table id="tableOrder2" style="width:100%"
+                                        class="tabel-cand table-responsive table display">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -538,6 +574,7 @@
                                                 <th>المهنة</th>
                                                 <th>العنوان</th>
                                                 <th>الحالة</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -595,30 +632,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!---------------------------- pagination ------------------------------->
-                        <nav class=" py-4" aria-label="Page navigation example">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item active" aria-current="page"><a class="page-link " href="#">1</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <p class="summary">عرض 7 من اصل 250 طلب</p>
-                        </nav>
-                        <!---------------------------- pagination ------------------------------->
-
+                        <!-- في حاله  وجود طلبات -->
                     </div>
                 </div>
             </div>
@@ -634,8 +648,7 @@
                         <li><a href="privacy.html">سياسة الخصوصية</a></li>
                         <li><a href="condition.html">الشروط والاحكام</a></li>
                         <li><a href="common.html">الاسألة الشائعة</a></li>
-                        <li><a href="printer.html">شركاء النجاح</a></li>
-                        <li><a href="section.html"> القطاعات</a></li>
+
                     </ul>
                 </div>
                 <div class="col-lg-5 col-12">
@@ -647,50 +660,6 @@
         </div>
     </footer>
     <!---------------------- finish footer -------------------------------------------->
-    <!-- modal for accepted clerck -->
-    <div class="modal fade modal-accept" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="button">
-                        <a href="accepted-clerk.html" class="first btn">عرض التفاصيل</a>
-                        <button id="sweetalert" onclick="favlAlert()" class="first btn">اضف للمفضلة</button>
-                        <button class="first btn">تحميل السيرة الذاتية</button>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn second" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- modal  for accepted clerck  -->
-    <!-- modal for rejected clerck -->
-    <div class="modal fade modal-reject" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel-1"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="button">
-                        <a href="rejected-clerk.html" class="first btn">عرض التفاصيل</a>
-                        <button id="sweetalert" onclick="favlAlert()" class="first btn">اضف للمفضلة</button>
-                        <button class="first btn">تحميل السيرة الذاتية</button>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn second" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- modal  for rejected clerck  -->
     <!-- main js -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -702,9 +671,26 @@
         AOS.init();
     </script>
     <!-- animation -->
-    <!-- sweet alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- sweet alert -->
+    <!-- notify -->
+    <script src="js/tostify.js"></script>
+    <!-- notify -->
+    <!-- data table -->
+    <script src="js/data-table.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#tableOrder').DataTable();
+        });
+
+        $(document).ready(function () {
+            $('#tableOrder1').DataTable();
+        });
+
+        $(document).ready(function () {
+            $('#tableOrder2').DataTable();
+        });
+    </script>
+    <!-- data table -->
     <!-- sidebar -->
     <script>
         var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -725,24 +711,63 @@
         }
     </script>
     <!-- sidebar -->
-    <!-- sweet alert for add favourit -->
+    <!-- show && hide detials -->
     <script>
-        function favlAlert() {
-            Swal.fire({
-                title: 'Your order has been added',
-                icon: 'success',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                },
-                showConfirmButton: false,
-                timer: 1500
-            })
-        };
+        function showDetials(id) {
+            $(`#showdetial${id}`).css({ "display": "flex" })
+
+        }
+        function hideDetials(id) {
+            $(`#showdetial${id}`).css("display", "none");
+        }
     </script>
-    <!-- sweet alert for favourit -->
+    <!-- show && hide detials -->
+    <!-- Toastify of accept clerk  -->
+    <script>
+        function puplishOrder() {
+            Toastify({
+                text: "تم نشر الطلب",
+                duration: 2500,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                // close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #bf8c6d, #0c1321)",
+                    // width: '400px',
+                    // padding:'2% 1%',
+                    borderRaduis: '5px'
+                },
+                onClick: function () { } // Callback after click
+            }).showToast();
+        }
+    </script>
+    <!-- Toastify of accept clerk -->
+    <!-- Toastify of reject clerk -->
+    <script>
+        function rejectOrder() {
+            Toastify({
+                text: "تم نشر الطلب",
+                duration: 2500,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                // close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #bf8c6d, #0c1321)",
+                    // width: '400px',
+                    // padding:'2% 1%',
+                    borderRaduis: '5px'
+                },
+                onClick: function () { } // Callback after click
+            }).showToast();
+        }
+    </script>
+    <!-- Toastify of reject clerk -->
 
 </body>
 
