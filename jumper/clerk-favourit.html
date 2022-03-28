@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الموظفين السابقيين</title>
+    <title> الموظفين المفضلين</title>
     <!-- main css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
@@ -14,9 +14,9 @@
     <!-- responsive -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- responsive -->
-    <!-- dark mood -->
-    <link rel="stylesheet" href="css/style-dark.css">
-    <!-- dark mood -->
+    <!-- notify -->
+    <link rel="stylesheet" href="css/tostify.css">
+    <!-- notify -->
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
@@ -33,7 +33,7 @@
     <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
     <!---------------------- finish scroll-up -------------------------------------------->
     <!---------------------- start dark && light mood -------------------------------------------->
-     <div id="toggle">
+    <div id="toggle">
         <span class="light " id="light">
             <i class="bi bi-brightness-high"></i>
         </span>
@@ -42,10 +42,11 @@
         </span>
         <div class="indicator">
         </div>
-    </div> 
+    </div>
     <!---------------------- finish dark && light mood -------------------------------------------->
     <!---------------------- start navbar -------------------------------------------->
- <nav id="navbar" class="navbar navbar-expand-lg ">        <div class="container-fluid">
+    <nav id="navbar" class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
             <div class="logo">
                 <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
                     <img id="logoDark" src="image/logo-dark.png" alt="dark">
@@ -200,20 +201,10 @@
                                 </a>
                             </li>
                             <li class="side-item">
-                                <button class="dropdown-btn btn">
+                                <a class="side-link" href="chat-room.html">
                                     <i class="bi bi-chat-dots"></i>
                                     الدردشة
-                                    <span>
-                                        <i class="bi bi-chevron-left"></i>
-                                    </span>
-                                </button>
-                                <!-- drop-menu -->
-                                <div class="dropdown-container">
-                                    <a class="side-link" href="chat-admin.html"> تواصل مع الادارة</a>
-                                    <a class="side-link" href="chat-room.html"> غرف الدردشة</a>
-
-                                </div>
-                                <!-- drop-menu -->
+                                </a>
                             </li>
                             <li class="side-item">
                                 <button class="dropdown-btn btn actives">
@@ -225,8 +216,8 @@
                                 </button>
                                 <!-- drop-menu -->
                                 <div class="dropdown-container">
-                                    <a class="side-link " href="clerk.html"> الموظفين الحاليين </a>
-                                    <a class="side-link active " href="ex-clerk.html"> الموظفين السابقين</a>
+                                    <a class="side-link " href="clerk.html"> كل الموظفين </a>
+                                    <a class="side-link active " href="clerk-favourit.html"> الموظفين المفضلين</a>
                                     <!-- drop-menu -->
                             </li>
                         </ul>
@@ -234,9 +225,31 @@
                     <!-- strat side bar -->
                 </div>
                 <div class="col-lg-9 col-md-7 col-12">
-                    <h2 class="head-categ">
-                        الموظفين السابقين
-                    </h2>
+                    <div class="header-all-clerk">
+                        <h2 class="head-categ">
+                            كل الموظفين
+                        </h2>
+                        <div class="input-group position-relative">
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" placeholder="ابحث بالإسم" id="">
+                                <span class="search"><i class="bi bi-search"></i> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- في حالة عدم وجود  موظفين -->
+                    <!-- <div class="non-exist" data-aos="fade-up" data-aos-duration="1000">
+                        <lottie-player src="json/lf30_editor_e2pyrplo.json" background="transparent" speed="1"
+                            style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                        <h6>  عذرا ! ليس لديك قوائم مفضلة بعد   </h6>
+                        <p>
+                            لم تقم بحفظ اى موظفين في قوائم المفضلة لديك
+قم الآن بحفظ من تريد في القائمة للعودة اليه بكل سهولة في اى وقت
+                        </p>
+                        
+                    </div> -->
+                    <!-- في حالة عدم وجود  موظفين -->
+                    <!-- في حالة  وجود  موظفين -->
                     <div class="ex-clerck team-work">
                         <div class="container">
                             <div class="row">
@@ -246,7 +259,16 @@
                                         <div class="content">
                                             <div class="img d-flex justify-content-between w-100">
                                                 <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
+                                                <div class="detials-table" onmouseleave="hideDetials(1)"
+                                                    onmouseenter="showDetials(1)"> <i class="bi bi-three-dots"></i>
+                                                    <ul id="showdetial1" class="show-detials">
+                                                        <li> <a target="_blank" href="show-order-new.html"> عرض
+                                                                التفاصيل</a>
+                                                        </li>
+                                                        <li onclick="deleteOrder()"> حذف من للمفضلة</li>
+
+                                                    </ul>
+                                                </div>
                                             </div>
                                             <h6>Mohamed Tark</h6>
                                             <span>فلاتر ديفيلوبر</span>
@@ -258,12 +280,21 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="swiper-slide" data-aos="zoom-in-up" data-aos-easing="linear"
+                                    <div class="swiper-slide" data-aos="zoom-in-down" data-aos-easing="linear"
                                         data-aos-duration="1500">
                                         <div class="content">
                                             <div class="img d-flex justify-content-between w-100">
                                                 <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
+                                                <div class="detials-table" onmouseleave="hideDetials(2)"
+                                                    onmouseenter="showDetials(2)"> <i class="bi bi-three-dots"></i>
+                                                    <ul id="showdetial2" class="show-detials">
+                                                        <li> <a target="_blank" href="show-order-new.html"> عرض
+                                                                التفاصيل</a>
+                                                        </li>
+                                                        <li onclick="deleteOrder()"> حذف من للمفضلة</li>
+
+                                                    </ul>
+                                                </div>
                                             </div>
                                             <h6>Mohamed Tark</h6>
                                             <span>فلاتر ديفيلوبر</span>
@@ -280,125 +311,30 @@
                                         <div class="content">
                                             <div class="img d-flex justify-content-between w-100">
                                                 <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
-                                            </div>
-                                            <h6>Mohamed Tark</h6>
-                                            <span>فلاتر ديفيلوبر</span>
-                                            <p> <i class="bi bi-geo-alt"></i>
-                                                الرياض , شارع السيدة عائشة
-                                                , عمارة الدالى
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="swiper-slide" data-aos="zoom-in-left" data-aos-easing="linear"
-                                        data-aos-duration="1500">
-                                        <div class="content">
-                                            <div class="img d-flex justify-content-between w-100">
-                                                <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
-                                            </div>
-                                            <h6>Mohamed Tark</h6>
-                                            <span>فلاتر ديفيلوبر</span>
-                                            <p> <i class="bi bi-geo-alt"></i>
-                                                الرياض , شارع السيدة عائشة
-                                                , عمارة الدالى
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="swiper-slide" data-aos="zoom-in-up" data-aos-easing="linear"
-                                        data-aos-duration="1500">
-                                        <div class="content">
-                                            <div class="img d-flex justify-content-between w-100">
-                                                <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
-                                            </div>
-                                            <h6>Mohamed Tark</h6>
-                                            <span>فلاتر ديفيلوبر</span>
-                                            <p> <i class="bi bi-geo-alt"></i>
-                                                الرياض , شارع السيدة عائشة
-                                                , عمارة الدالى
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="swiper-slide" data-aos="zoom-in-right" data-aos-easing="linear"
-                                        data-aos-duration="1500">
-                                        <div class="content">
-                                            <div class="img d-flex justify-content-between w-100">
-                                                <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
-                                            </div>
-                                            <h6>Mohamed Tark</h6>
-                                            <span>فلاتر ديفيلوبر</span>
-                                            <p> <i class="bi bi-geo-alt"></i>
-                                                الرياض , شارع السيدة عائشة
-                                                , عمارة الدالى
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="swiper-slide" data-aos="zoom-in-left" data-aos-easing="linear"
-                                        data-aos-duration="1500">
-                                        <div class="content">
-                                            <div class="img d-flex justify-content-between w-100">
-                                                <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
-                                            </div>
-                                            <h6>Mohamed Tark</h6>
-                                            <span>فلاتر ديفيلوبر</span>
-                                            <p> <i class="bi bi-geo-alt"></i>
-                                                الرياض , شارع السيدة عائشة
-                                                , عمارة الدالى
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="swiper-slide" data-aos="zoom-in-up" data-aos-easing="linear"
-                                        data-aos-duration="1500">
-                                        <div class="content">
-                                            <div class="img d-flex justify-content-between w-100">
-                                                <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
-                                            </div>
-                                            <h6>Mohamed Tark</h6>
-                                            <span>فلاتر ديفيلوبر</span>
-                                            <p> <i class="bi bi-geo-alt"></i>
-                                                الرياض , شارع السيدة عائشة
-                                                , عمارة الدالى
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="swiper-slide" data-aos="zoom-in-right" data-aos-easing="linear"
-                                        data-aos-duration="1500">
-                                        <div class="content">
-                                            <div class="img d-flex justify-content-between w-100">
-                                                <img src="./image/per1.png" alt="person">
-                                                <a href="profile-ex-clerk.html"> <i class="bi bi-three-dots"></i></a>
-                                            </div>
-                                            <h6>Mohamed Tark</h6>
-                                            <span>فلاتر ديفيلوبر</span>
-                                            <p> <i class="bi bi-geo-alt"></i>
-                                                الرياض , شارع السيدة عائشة
-                                                , عمارة الدالى
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                                <div class="detials-table" onmouseleave="hideDetials(3)"
+                                                    onmouseenter="showDetials(3)"> <i class="bi bi-three-dots"></i>
+                                                    <ul id="showdetial3" class="show-detials">
+                                                        <li> <a target="_blank" href="show-order-new.html"> عرض
+                                                                التفاصيل</a>
+                                                        </li>
+                                                        <li onclick="deleteOrder()"> حذف من للمفضلة</li>
 
-
-
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <h6>Mohamed Tark</h6>
+                                            <span>فلاتر ديفيلوبر</span>
+                                            <p> <i class="bi bi-geo-alt"></i>
+                                                الرياض , شارع السيدة عائشة
+                                                , عمارة الدالى
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- في حالة  وجود  موظفين -->
                 </div>
             </div>
         </div>
@@ -413,7 +349,7 @@
                         <li><a href="privacy.html">سياسة الخصوصية</a></li>
                         <li><a href="condition.html">الشروط والاحكام</a></li>
                         <li><a href="common.html">الاسألة الشائعة</a></li>
-                     
+
                     </ul>
                 </div>
                 <div class="col-lg-5 col-12">
@@ -425,7 +361,7 @@
         </div>
     </footer>
     <!---------------------- finish footer -------------------------------------------->
-
+  
 
     <!-- main js -->
     <script src="js/bootstrap.min.js"></script>
@@ -438,7 +374,12 @@
         AOS.init({ disable: 'mobile' });
     </script>
     <!-- animation -->
-   
+    <!-- lottie -->
+    <script src="js/lottie.js"></script>
+    <!-- lottie -->
+    <!-- notify -->
+    <script src="js/tostify.js"></script>
+    <!-- notify -->
     <!-- sidebar -->
     <script>
         var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -459,6 +400,42 @@
         }
     </script>
     <!-- sidebar -->
+    <!-- show && hide detials -->
+    <script>
+        function showDetials(id) {
+            $(`#showdetial${id}`).css({ "display": "flex" })
+
+        }
+        function hideDetials(id) {
+            $(`#showdetial${id}`).css("display", "none");
+        }
+    </script>
+    <!-- show && hide detials -->
+   
+    <!-- Toastify of remove from favourit-->
+    <script>
+        function deleteOrder() {
+            Toastify({
+                text: "تم  حذف  من المفضله",
+                duration: 2500,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                // close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "rgba(242, 74, 74, 0.5)",
+                    color: "#f24a4a",
+                    // width: '400px',
+                    // padding:'2% 1%',
+                    borderRaduis: '10px'
+                },
+                onClick: function () { } // Callback after click
+            }).showToast();
+        }
+    </script>
+    <!-- Toastify of remove from favourit -->
 </body>
 
 </html>

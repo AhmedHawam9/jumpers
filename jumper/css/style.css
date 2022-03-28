@@ -131,9 +131,8 @@ ul {
   color: var(--iconcolor);
   font-family: "regular";
 }
-textarea.form-control{
+textarea.form-control {
   padding-right: 2%;
-
 }
 .form-select {
   border-radius: 8px !important;
@@ -254,7 +253,6 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
   transition: 0.25s all ease;
   padding: 2% 0;
-
 }
 .pend:hover {
   background-color: var(--background2);
@@ -4333,60 +4331,58 @@ table.dataTable.no-footer {
   border-top: 0;
   border-left: 0.5em solid transparent;
   color: var(--color-fourth);
-z-index: 110;
+  z-index: 110;
 }
 
-.all-order .table .show-detials li
- {
+.all-order .table .show-detials li {
   font-size: 0.8rem;
   font-family: "regular";
-  color: var(--color-fourth) ;
+  color: var(--color-fourth);
   cursor: pointer;
   transition: 0.25s color ease;
   margin: 8% 0;
   width: 100%;
   padding: 2% 0;
 }
-.all-order .table .show-detials li a{
+.all-order .table .show-detials li a {
   color: var(--color-fourth) !important;
 }
-.all-order .table .show-detials li:hover
- {
+.all-order .table .show-detials li:hover {
   background-color: var(--color-fourth) !important;
   color: var(--color-secound);
   border-radius: 5px;
 }
-.all-order .table .show-detials li:hover a{
+.all-order .table .show-detials li:hover a {
   color: var(--color-secound) !important;
 }
-.all-order .table .bi-three-dots{
+.all-order .table .bi-three-dots {
   cursor: pointer;
 }
-.all-order .table tbody td:nth-child(7){
+.all-order .table tbody td:nth-child(7) {
   padding: 15px 10px;
 }
-.head-butn{
+.head-butn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3% 0;
 }
-.head-butn .btn{
+.head-butn .btn {
   width: 30%;
   padding: 1% 0;
 }
 
-.candidates .nav-cand li:last-child{
+.candidates .nav-cand li:last-child {
   width: 20%;
   text-align: center;
 }
-.candidates .nav-cand li:last-child .btn{
+.candidates .nav-cand li:last-child .btn {
   width: 100%;
   padding: 6% 1%;
 }
 /* finish all order page */
 /* new order page */
-.order .hin-tabel{
+.order .hin-tabel {
   color: var(--color-fourth);
   background-color: rgba(191, 140, 109, 0.1);
   padding: 2% 1%;
@@ -4396,10 +4392,10 @@ z-index: 110;
   border-radius: 10px;
   margin-bottom: 5%;
 }
-.order .hin-tabel.x{
+.order .hin-tabel.x {
   color: var(--color-secound);
 }
-.order .hin-tabel.r{
+.order .hin-tabel.r {
   color: #f24a4a;
   background-color: rgba(242, 74, 74, 0.1);
   margin-bottom: 0;
@@ -4408,37 +4404,37 @@ z-index: 110;
   justify-content: center;
   padding: 1% 1%;
 }
-.order .hin-tabel.r p{
+.order .hin-tabel.r p {
   color: #f24a4a;
 }
-.order .hin-tabel p{
-  font-family: 'regular';
+.order .hin-tabel p {
+  font-family: "regular";
   font-size: 0.8rem;
   padding-right: 2%;
 }
-.order .hin-tabel .btn{
+.order .hin-tabel .btn {
   width: 20%;
   font-size: 10px;
   padding: 1% 0;
   margin-right: 25%;
 }
-.order .show-order .head .indection.r{
+.order .show-order .head .indection.r {
   width: 11%;
 }
-.order .pattern .content h6{
+.order .pattern .content h6 {
   color: var(--color-seven);
   font-size: 1.8rem;
 }
-.order .pattern .content h6 span{
+.order .pattern .content h6 span {
   color: var(--color-secound);
   font-size: 1.6rem;
 }
-.order .pattern .content p{
+.order .pattern .content p {
   margin-bottom: 2%;
 }
 /* new order page */
 /* create order */
-.order .content .new-form .form-step-active  .info {
+.order .content .new-form .form-step-active .info {
   position: absolute;
   left: 30%;
   bottom: 20%;
@@ -4448,7 +4444,7 @@ z-index: 110;
   border: 1px solid transparent;
   box-shadow: 0px 3px 24px rgba(134, 134, 134, 0.16);
 }
-.order .content .new-form .form-step-active  .info h6 {
+.order .content .new-form .form-step-active .info h6 {
   font-size: 11px;
   padding: 1%;
   margin: 0;
@@ -4504,42 +4500,40 @@ z-index: 110;
   border-top: 0;
   border-left: 0.5em solid transparent;
   color: var(--color-fourth);
-z-index: 110;
+  z-index: 110;
 }
 
-.show-order .table .show-detials li
- {
+.show-order .table .show-detials li {
   font-size: 0.8rem;
   font-family: "regular";
-  color: var(--color-fourth) ;
+  color: var(--color-fourth);
   cursor: pointer;
   transition: 0.25s color ease;
   margin: 2% 0;
   width: 100%;
   padding: 2% 0;
 }
-.show-order .table .show-detials li a{
+.show-order .table .show-detials li a {
   color: var(--color-fourth);
 }
 
-.show-order .table .show-detials li:hover
- {
-  background-color: var(--color-fourth) ;
+.show-order .table .show-detials li:hover {
+  background-color: var(--color-fourth);
   color: var(--color-secound);
   border-radius: 5px;
 }
-.show-order .table .show-detials li:hover a{
+.show-order .table .show-detials li:hover a {
   color: var(--color-secound);
 }
-.show-order .table .bi-three-dots{
+.show-order .table .bi-three-dots {
   cursor: pointer;
 }
 /* revision page */
 /* work page */
-.order .attend .input-group{
+.order .attend .input-group {
   margin: 2% 0;
 }
-.order .attend .form-select{
+.order .attend .form-select {
   border: none;
   background-color: transparent;
   border-bottom: 1px solid var(--color-secound);
@@ -4547,14 +4541,14 @@ z-index: 110;
   margin-right: 2%;
 }
 /* modal */
-.modal.clerk-detials .modal-body .content{
+.modal.clerk-detials .modal-body .content {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
 }
-.modal.clerk-detials .modal-body .info{
+.modal.clerk-detials .modal-body .info {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -4564,11 +4558,11 @@ z-index: 110;
   border: 1px solid var(--color-secound);
   margin-top: 4%;
 }
-.modal.clerk-detials .modal-body .duration{
+.modal.clerk-detials .modal-body .duration {
   background-color: rgba(191, 140, 109, 0.1);
   color: var(--color-secound);
   font-size: 14px;
-  font-family: 'light';
+  font-family: "light";
   border-radius: 10px;
   padding: 2%;
 }
@@ -4583,22 +4577,178 @@ z-index: 110;
   height: 60px;
   margin-left: 2%;
 }
-.modal.clerk-detials .modal-body .information .text{
+
+.modal.clerk-detials .modal-body .information .text {
   width: 100%;
 }
-.modal.clerk-detials .modal-body .information h6{
+.modal.clerk-detials .modal-body .information h6 {
   font-size: 1rem;
   color: var(--color-secound);
-  font-family: 'semibold';
+  font-family: "semibold";
 }
 .modal.clerk-detials .modal-body .information p {
-  font-size: .6rem;
+  font-size: 0.6rem;
   color: var(--color-fourth);
-  font-family: 'regular';
+  font-family: "regular";
 }
+.modal.clerk-detials .modal-body .data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+.modal.clerk-detials .modal-body .data li {
+  background-color: var(--color-light);
+  border-radius: 10px;
+  padding: 4% 2%;
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 2%;
+}
+.modal.clerk-detials .modal-body .data img {
+  width: 50px;
+  height: 50px;
+  margin-left: 5%;
+}
+.modal.clerk-detials .modal-body .data h6 {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-family: "regular";
+}
+.modal.clerk-detials .modal-body .data p {
+  font-size: 1.2rem;
+  color: var(--color-secound);
+  font-family: "meduim";
+}
+.show-order .table .holidays {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 50px;
+  left: 0%;
+  background-color: var(--background2);
+  padding: 4% 1%;
+  box-shadow: var(--detialsshadow);
+  z-index: 100;
+  border-radius: 8px;
+}
+.show-order .table .holidays::before {
+  position: absolute;
+  top: -7px;
+  left: 16%;
+  content: "";
+  border-bottom: 0.5em solid;
+  border-right: 0.5em solid transparent;
+  border-top: 0;
+  border-left: 0.5em solid transparent;
+  color: var(--color-fourth);
+  z-index: 110;
+}
+
+.show-order .table .show-detials .btn {
+  font-size: 0.8rem;
+  font-family: "regular";
+  color: var(--color-fourth);
+  cursor: pointer;
+  transition: 0.25s color ease;
+  margin: 2% 0;
+  width: 100%;
+  padding: 2% 0;
+}
+.show-order .table .holidays .btn:hover {
+  background-color: var(--color-fourth);
+  color: var(--color-secound);
+  border-radius: 5px;
+}
+
 /* modal */
 /* work page */
+/* all clerk page */
+.order .header-all-clerk {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 3% 0;
+}
+.order .header-all-clerk h2 {
+  width: 80%;
+  margin: 0;
+  font-size: 1.4rem;
+}
+.order .header-all-clerk .form-control , .order .header-all-clerk .form-select{
+  background-color: var(--colorfirstbtn) !important;
+  border: none;
+}
+.order .header-all-clerk .input-group span {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  cursor: pointer;
+}
+.team-work .detials-table {
+  position: relative;
+}
+.team-work .show-detials {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: fit-content;
+  left: 0%;
+  background-color: var(--background);
+  padding: 10% 1% 4%;
+  box-shadow: var(--detialsshadow);
+  z-index: 100;
+  border-radius: 8px;
+}
+.team-work .show-detials::before {
+  position: absolute;
+  top: -7px;
+  left: 5%;
+  content: "";
+  border-bottom: 0.5em solid;
+  border-right: 0.5em solid transparent;
+  border-top: 0;
+  border-left: 0.5em solid transparent;
+  color: var(--color-fourth);
+  z-index: 110;
+}
 
-
+.team-work .show-detials li {
+  font-size: 0.8rem;
+  font-family: "regular";
+  color: var(--color-fourth);
+  cursor: pointer;
+  transition: 0.25s color ease;
+  margin: 3% 0;
+  width: 100%;
+  padding: 2% 0;
+}
+.team-work .show-detials li a {
+  color: var(--color-fourth) !important;
+}
+.team-work .show-detials li:hover {
+  background-color: var(--color-fourth) !important;
+  color: var(--color-secound);
+  border-radius: 5px;
+}
+.team-work .show-detials li:hover a {
+  color: var(--color-secound) !important;
+}
+.team-work .bi-three-dots {
+  cursor: pointer;
+}
+/* all clerk page */
 
 /* =========================================== modifaction */

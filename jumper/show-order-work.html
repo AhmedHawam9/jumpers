@@ -210,22 +210,12 @@
                                     المفضلة
                                 </a>
                             </li>
-                            <li class="side-item">
-                                <button class="dropdown-btn btn">
+                                                     <li class="side-item">
+                                <a class="side-link" href="chat-room.html">
                                     <i class="bi bi-chat-dots"></i>
                                     الدردشة
-                                    <span>
-                                        <i class="bi bi-chevron-left"></i>
-                                    </span>
-                                </button>
-                                <!-- drop-menu -->
-                                <div class="dropdown-container">
-                                    <a class="side-link" href="chat-admin.html"> تواصل مع الادارة</a>
-                                    <a class="side-link" href="chat-room.html"> غرف الدردشة</a>
-
-                                </div>
-                                <!-- drop-menu -->
-                            </li>
+                                </a>
+                            </li> 
                             <li class="side-item">
                                 <button class="dropdown-btn btn">
                                     <i class="bi bi-bounding-box-circles"></i>
@@ -451,18 +441,21 @@
                                                 onmouseenter="showDetials(1)">
                                                 <i class="bi bi-x"></i>
                                                 <!-- hint -->
-                                                <div class="hint holiday" id="showdetial1">
-                                                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"> عرض
+                                                <div class="holidays" id="showdetial1">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal"> عرض
                                                         التفاصيل</button>
                                                 </div>
                                                 <!-- hint -->
                                             </td>
-                                            <td data-label="2 Jan">
+                                            <td data-label="2 Jan" onmouseleave="hideDetials(2)"
+                                                onmouseenter="showDetials(2)">
                                                 <i class="bi bi-check2"></i>
                                                 <!-- hint -->
-                                                <div class="hint">
-                                                    <p>وقت الحضور : 8 صباحا</p>
-                                                    <span>1 يوليو</span>
+                                                <div class="holidays" id="showdetial2">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal"> عرض
+                                                        التفاصيل</button>
                                                 </div>
                                                 <!-- hint -->
                                             </td>
@@ -577,19 +570,20 @@
     </footer>
     <!---------------------- finish footer -------------------------------------------->
     <!-- Modal of detials -->
-    <div class="modal clerk-detials fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal clerk-detials fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
 
                 <div class="modal-body">
                     <div class="content">
-                        <lottie-player src="json/lf30_editor_uifnhabj.json"
-                            background="transparent" speed="1.5" style="width: 100px; height: 100px;" loop autoplay>
+                        <lottie-player src="json/lf30_editor_uifnhabj.json" background="transparent" speed="1.5"
+                            style="width: 100px; height: 100px;" loop autoplay>
                         </lottie-player>
                     </div>
                     <div class="text text-end">
                         <h4 class="head-categ">سجل نشاط الجمبر </h4>
-                        <p class="head-small">عرض لسجل نشاط الجمبر  في الفترة من 5/5/2021 الى 5/7/2021 </p>
+                        <p class="head-small">عرض لسجل نشاط الجمبر في الفترة من 5/5/2021 الى 5/7/2021 </p>
                     </div>
                     <div class="info">
                         <div class="information">
@@ -603,9 +597,39 @@
                             5/5/2021 منذ
                         </div>
                     </div>
+                    <ul class="data">
+                        <li>
+                            <img src="image/ul1.png" alt="">
+                            <div class="text">
+                                <h6> أيام الحضور</h6>
+                                <p> 20 يوم</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/ul2.png" alt="">
+                            <div class="text">
+                                <h6> أيام الغياب</h6>
+                                <p> 20 يوم</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/ul3.png" alt="">
+                            <div class="text">
+                                <h6> اذن انصراف</h6>
+                                <p> 20 يوم</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/ul4.png" alt="">
+                            <div class="text">
+                                <h6> اذن وقت اضافي</h6>
+                                <p> 20 يوم</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn first" data-bs-dismiss="modal">حسنا</button>
+                <div class="modal-footer text-center justify-content-center w-100">
+                    <button type="button" class="btn first w-50" data-bs-dismiss="modal">حسنا</button>
                 </div>
             </div>
         </div>
