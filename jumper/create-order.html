@@ -107,7 +107,7 @@
             </div> -->
                 <!-- في حالة تم تسجيل الدخول -->
                 <div class="notify">
-                    <a href="#">
+                    <a href="#" onclick="openNotification()">
                         <i class="bi bi-bell-fill"></i>
                     </a>
                 </div>
@@ -201,12 +201,12 @@
                                     المفضلة
                                 </a>
                             </li>
-                                                     <li class="side-item">
+                            <li class="side-item">
                                 <a class="side-link" href="chat-room.html">
                                     <i class="bi bi-chat-dots"></i>
                                     الدردشة
                                 </a>
-                            </li> 
+                            </li>
                             <li class="side-item">
                                 <button class="dropdown-btn btn">
                                     <i class="bi bi-bounding-box-circles"></i>
@@ -424,22 +424,22 @@
                                             <option value="20"> دوام متقطع</option>
                                         </select>
                                         <span class="icon icons"> <img src="image/img6.png" alt=""></span>
-                                      <div id="dialouge" class="info">
-                                        <ul>
-                                            <li><span>Mon</span>
-                                                <p>يوليو6</p>
-                                            </li>
-                                            <li><span>Mon</span>
-                                                <p>يوليو6</p>
-                                            </li>
-                                            <li><span>Mon</span>
-                                                <p>يوليو6</p>
-                                            </li>
-                                            <li><span>Mon</span>
-                                                <p>يوليو6</p>
-                                            </li>
-                                        </ul>
-                                      </div>
+                                        <div id="dialouge" class="info">
+                                            <ul>
+                                                <li><span>Mon</span>
+                                                    <p>يوليو6</p>
+                                                </li>
+                                                <li><span>Mon</span>
+                                                    <p>يوليو6</p>
+                                                </li>
+                                                <li><span>Mon</span>
+                                                    <p>يوليو6</p>
+                                                </li>
+                                                <li><span>Mon</span>
+                                                    <p>يوليو6</p>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <label class="form-label " for="service"> وقت الدوام</label>
@@ -533,8 +533,10 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <!---------------------- finish footer -------------------------------------------->
+          </footer>
+    <!---------------------- finish footer -------------------------------------------->                          <!-- notfication -->
+    
+    <!-- notfication -->
     <!-- في حالة التكلفة اقل من الحد الأدني سيظهر هذا المودال -->
     <!-- <div class="modal fade modal-remove" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -627,6 +629,66 @@
         </div>
     </section>
     <!-- celander -->
+    <!-- notfication -->
+    <section class="notfication-pop ">
+        <div class="container">
+            <div class="notfication-sec">
+                <div class="header">
+                    <h2 class="head-categ">الإشعارات </h2>
+                    <a onclick="readAll()" href="#">تحديد الكل كمقروء</a>
+                </div>
+                <div class="content-notfication">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد تم تزويدك ب 200 جمبر استكمالا للعدد المطلوب
+                            لطلبك , تابع
+                            <a target="_blank" href="#"> تفاصيل طلبك </a> من هنا
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication active-not">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد قمت بعملية دفع ناجحة , يمكنك الآن البدأ
+                            في استقبال الطلبات تابع
+                            <a target="_balnk" href="#">من هنا</a>
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication active-not">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد قمت بعملية دفع ناجحة , يمكنك الآن البدأ
+                            في استقبال الطلبات تابع
+                            <a target="_balnk" href="#">من هنا</a>
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد تم تزويدك ب 200 جمبر استكمالا للعدد المطلوب
+                            لطلبك , تابع
+                            <a target="_blank" href="#"> تفاصيل طلبك </a> من هنا
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- notfication -->
 
     <!-- main js -->
     <script src="js/bootstrap.min.js"></script>
@@ -859,7 +921,7 @@
     <!-- show && hide diouge -->
     <script>
         function showDetials() {
-            $(`#dialouge`).css({ "display": "flex"})
+            $(`#dialouge`).css({ "display": "flex" })
 
         }
         function hideDailouge(id) {
@@ -867,8 +929,6 @@
         }
     </script>
     <!-- show && hide diouge -->
-
-
 </body>
 
 </html>

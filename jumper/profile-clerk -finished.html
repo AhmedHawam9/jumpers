@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>طلبات تحت القيد</title>
+    <title> (منتهي)ملف الموظف</title>
     <!-- main css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
@@ -13,19 +14,21 @@
     <!-- responsive -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- responsive -->
-    <!-- dark mood -->
-    <link rel="stylesheet" href="css/style-dark.css">
-    <!-- dark mood -->
-    
+    <!-- hover -->
+    <link rel="stylesheet" href="css/hover-min.css">
+    <!-- hover -->
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
+    <!-- notify -->
+    <link rel="stylesheet" href="css/tostify.css">
+    <!-- notify -->
     <!-- swiper -->
     <link rel="stylesheet" href="css/swiper-demos.css">
     <!-- swiper -->
-    <!-- sweet alert -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- sweet alert -->
+    <!-- light box -->
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- light box -->
     <!-- ? Favicon -->
     <link rel="icon" href="./image/logo.png" type="image" />
     <!-- ? Favicon -->
@@ -39,19 +42,20 @@
     <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
     <!---------------------- finish scroll-up -------------------------------------------->
     <!---------------------- start dark && light mood -------------------------------------------->
-    - <div id="toggle">
+    <div id="toggle">
         <span class="light " id="light">
-            <i class="bi bi-brightness-high" style=" color: #F2E938;"></i>
+            <i class="bi bi-brightness-high"></i>
         </span>
         <span class="dark" id="dark">
             <i class="bi bi-moon-fill "></i>
         </span>
         <div class="indicator">
         </div>
-    </div> 
+    </div>
     <!---------------------- finish dark && light mood -------------------------------------------->
     <!---------------------- start navbar -------------------------------------------->
- <nav id="navbar" class="navbar navbar-expand-lg ">        <div class="container-fluid">
+    <nav id="navbar" class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
             <div class="logo">
                 <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
                     <img id="logoDark" src="image/logo-dark.png" alt="dark">
@@ -183,8 +187,8 @@
                                     حسابي
                                 </a>
                             </li>
-                            <li class="side-item  ">
-                                <button class="dropdown-btn btn actives ">
+                            <li class="side-item ">
+                                <button class="dropdown-btn btn">
                                     <i class="bi bi-view-list"></i>
                                     الطلبات
                                     <span>
@@ -194,26 +198,26 @@
                                 <!-- drop-menu -->
                                 <div class="dropdown-container">
                                     <a class="side-link" href="create-order.html">انشاء طلب جديد</a>
-                                    <a class="side-link active " href="all-order.html">كل الطلبات </a>
+                                    <a class="side-link  " href="all-order.html">كل الطلبات </a>
                                     <a class="side-link" href="new-order.html">الطلبات الجديدة</a>
                                     <a class="side-link" href="old-order.html">الطلبات المنتهية</a>
                                 </div>
                                 <!-- drop-menu -->
                             </li>
                             <li class="side-item">
-                                <a class="side-link" href="#">
+                                <a class="side-link" href="favourit.html">
                                     <i class="bi bi-heart"></i>
                                     المفضلة
                                 </a>
                             </li>
-                                                     <li class="side-item">
+                            <li class="side-item">
                                 <a class="side-link" href="chat-room.html">
                                     <i class="bi bi-chat-dots"></i>
                                     الدردشة
                                 </a>
-                            </li> 
+                            </li>
                             <li class="side-item">
-                                <button class="dropdown-btn btn">
+                                <button class="dropdown-btn btn actives">
                                     <i class="bi bi-bounding-box-circles"></i>
                                     الموظفين
                                     <span>
@@ -222,7 +226,7 @@
                                 </button>
                                 <!-- drop-menu -->
                                 <div class="dropdown-container">
-                                    <a class="side-link" href="clerk.html"> الموظفين الحاليين </a>
+                                    <a class="side-link active" href="clerk.html"> الموظفين الحاليين </a>
                                     <a class="side-link" href="ex-clerk.html"> الموظفين السابقين</a>
                                 </div>
                                 <!-- drop-menu -->
@@ -232,7 +236,7 @@
                     <!-- strat side bar -->
                 </div>
                 <div class="col-lg-9 col-md-7 col-12">
-                    <div class="clark-section">
+                    <div class="clark-section show-order">
                         <div class="container">
                             <div class="head" data-aos="fade-up" data-aos-duration="1000">
                                 <div class="info">
@@ -244,8 +248,10 @@
                                     </div>
                                 </div>
                                 <div class="button">
-                                    <button id="sweetalert" onclick="acceptAlert()" class="btn first">قبول</button>
-                                    <button id="sweetalert" onclick="cancelAlert()" class="btn second">رفض</button>
+                                    <button class="btn first" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal-1">تمديد</button>
+                                    <button onclick="puplishOrder()" class="btn second">اضف
+                                        للمفضلة</button>
                                 </div>
                             </div>
                             <div class="about" data-aos="fade-up" data-aos-duration="1000">
@@ -261,36 +267,114 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-6 col-12">
                                             <div class="card">
-                                                <i class="bi bi-briefcase"></i>
+                                                <i class="bi bi-phone"></i>
                                                 <div class="text">
-                                                    <h6 class="head-small">الخدمة المقدمة</h6>
-                                                    <p>سنيور فرونت ايند ديفلوبر</p>
+                                                    <h6 class="head-small"> رقم الجوال</h6>
+                                                    <p> 0101010101</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-12">
                                             <div class="card">
-                                                <i class="bi bi-bookmark-check"></i>
+                                                <i class="bi bi-envelope"></i>
                                                 <div class="text">
-                                                    <h6 class="head-small"> المهارات</h6>
-                                                    <p>...الإنجليزية,البرمجة,الرسم </p>
+                                                    <h6 class="head-small"> البريد الالكتروني</h6>
+                                                    <p>someone@gmail.com</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-12">
                                             <div class="card">
-                                                <i class="bi bi-geo-alt"></i>
+                                                <i class="bi bi-clock"></i>
                                                 <div class="text">
-                                                    <h6 class="head-small"> الموقع</h6>
-                                                    <p> ...الرياض,شارع السيدة عائ</p>
+                                                    <h6 class="head-small"> عدد ساعات العمل</h6>
+                                                    <p> 72ساعة</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="about" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small"> المهارات</h6>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى
+                                    زيادة عدد الحروف التى يولدها التطبيق.
+                                    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
+                                    تريد، النص لن يبدو</p>
+                            </div>
+                            <div class="work-detials py-4" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small"> المعلومات الشخصية</h6>
+                                <ul>
+                                    <li>
+                                        <p>
+                                            <span> الجنسية</span>
+                                            : غير سعودي
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+
+                                            <span>النوع </span>
+                                            : ذكر
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+
+                                            <span> العمر</span>
+                                            : 11
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+
+                                            <span> المدينة</span>
+                                            : الرياض
+                                    </li>
+                                    <li>
+                                        <p>
+
+                                            <span> العنوان</span>
+                                            : الرياض, المنطقة الجنوبية ,شابي بكر الصديق
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p> <span></span> </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- في حالة وجود معرض للصور -->
+                            <div class="gellary-work py-4" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small"> معرض اعمال الموظف</h6>
+                                <div class="gallery">
+                                    <a href="image/light1.png" data-lightbox="models" data-title="Caption1">
+                                        <img src="image/light1.png">
+                                    </a>
+                                    <a href="image/light2.png" data-lightbox="models" data-title="Caption2">
+                                        <img src="image/light2.png">
+                                    </a>
+                                    <a href="image/light3.png" data-lightbox="models" data-title="Caption3">
+                                        <img src="image/light3.png">
+                                    </a>
+                                    <a href="image/light4.png" data-lightbox="models" data-title="Caption4">
+                                        <img src="image/light4.png">
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- في حالة وجود معرض للصور -->
+                            <div class="skills-req py-4" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small">
+                                    اللغات
+                                </h6>
+                                <ul>
+                                    <li class="hvr-float-shadow">اللغة العربية </li>
+                                    <li class="hvr-float-shadow">اللغة الإنجليزية</li>
+                                </ul>
+                            </div>
                             <div class="certfication skills" data-aos="fade-up" data-aos-duration="1000">
-                                <h6 class="head-small">شهادات </h6>
+                                <h6 class="head-small">الشهادات المهنية </h6>
                                 <div class="card">
                                     <i class="bi bi-bookmark-check"></i>
                                     <div class="text">
@@ -306,6 +390,61 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                            <div class="certfication skills" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small">الشهادات العلمية </h6>
+                                <div class="card">
+                                    <i class="bi bi-bookmark-check"></i>
+                                    <div class="text">
+                                        <h6 class="head-small"> ماركتنج ومحاسبة</h6>
+                                        <p> جامعة المنصوره - جيد جدا</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <i class="bi bi-bookmark-check"></i>
+                                    <div class="text">
+                                        <h6 class="head-small"> فرونت ايند ادفانسيد</h6>
+                                        <p> جامعة المنصوره - جيد جدا</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="certfication skills" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small">الخبرات العلمية </h6>
+                                <div class="card">
+                                    <i class="bi bi-bookmark-check"></i>
+                                    <div class="text">
+                                        <h6 class="head-small"> ماركتنج ومحاسبة</h6>
+                                        <p> جامعة المنصوره - جيد جدا</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <i class="bi bi-bookmark-check"></i>
+                                    <div class="text">
+                                        <h6 class="head-small"> فرونت ايند ادفانسيد</h6>
+                                        <p> جامعة المنصوره - جيد جدا</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="certfication skills" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small">دورات تدريبية </h6>
+                                <div class="card">
+                                    <i class="bi bi-bookmark-check"></i>
+                                    <div class="text">
+                                        <h6 class="head-small"> ماركتنج ومحاسبة</h6>
+                                        <p> جامعة المنصوره - جيد جدا</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <i class="bi bi-bookmark-check"></i>
+                                    <div class="text">
+                                        <h6 class="head-small"> فرونت ايند ادفانسيد</h6>
+                                        <p> جامعة المنصوره - جيد جدا</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
                             <div class="download">
                                 <h6 class="head-small">روابط للتحميل</h6>
                                 <div class="content">
@@ -319,10 +458,10 @@
                             </div>
                         </div>
                     </div>
-                      <!---------------------- start team work -------------------------------------------->
-                      <div class="team-work" data-aos="fade-up" data-aos-duration="1000">
+                    <!---------------------- start team work -------------------------------------------->
+                    <div class="team-work" data-aos="fade-up" data-aos-duration="1000">
                         <div class="container px-0j ">
-                            <h4 class="head-categ">  متقدمين اخرين </h4>
+                            <h4 class="head-categ"> متقدمين اخرين </h4>
                             <div class="swiper mySwiper-1">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -431,7 +570,7 @@
                         <li><a href="privacy.html">سياسة الخصوصية</a></li>
                         <li><a href="condition.html">الشروط والاحكام</a></li>
                         <li><a href="common.html">الاسألة الشائعة</a></li>
-                     
+
                     </ul>
                 </div>
                 <div class="col-lg-5 col-12">
@@ -502,25 +641,191 @@
         </div>
     </section>
     <!-- notfication -->
-
-
+    <!-- modal finish work -->
+    <div class="modal fade modal-remove" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!---------------------- start confirm -------------------------------------------->
+                    <form class="form-remove">
+                        <div class="container">
+                            <!-- first step -->
+                            <div class="form-step-remove form-step-remove-active ">
+                                <div class="show text-center">
+                                    <lottie-player src="json/lf30_editor_tv0a4st4.json" background="transparent"
+                                        speed=".5" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                                    <h6> هل انت حقا تريد انهاء العمل مع هذا الموظف ؟</h6>
+                                    <div class="py-3 full text-center">
+                                        <a class="btn btn-next-remove first" href="#"> نعم </a>
+                                        <button type="button" class="btn second" data-bs-dismiss="modal">لا</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first step -->
+                            <!-- second step -->
+                            <div class="form-step-remove ">
+                                <div class="show text-center">
+                                    <lottie-player src="json/lf30_editor_tv0a4st4.json" background="transparent"
+                                        speed=".5" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                                    <h6> هل انت حقا تريد انهاء العمل مع هذا الموظف ؟</h6>
+                                    <input required type="text" class="form-control" placeholder="أدخل السبب "></input>
+                                    <div class="py-3 full text-center">
+                                        <button class="btn first"> ارسال </button>
+                                        <button type="button" class="btn second" data-bs-dismiss="modal">لا</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second step -->
+                        </div>
+                    </form>
+                    <!---------------------- finish confirm -------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal finish work -->
+    <!-- modal extension work -->
+    <div class="modal fade modal-extension" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!---------------------- start confirm -------------------------------------------->
+                    <form class="form-extension">
+                        <div class="container">
+                            <!-- first step -->
+                            <div class="form-step-extension form-step-extension-active ">
+                                <div class="show ">
+                                    <h6> من فضلك قم باستكمال البيانات التالية لتمديد
+                                        العمل للموظف </h6>
+                                    <div class="input-group">
+                                        <label for="duration" class="form-label">المدة المضافة</label>
+                                        <input required type="text" id="duration" class="form-control">
+                                        <span class="icon"> <i class="bi bi-clock"></i></span>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label"> نوع الدوام</label>
+                                        <select required class="form-select" aria-label="Default select example">
+                                            <option selected>اختر نوع الدوام</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <span class="icon"> <i class="bi bi-clock"></i></span>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="form-label"> وقت الدوام</label>
+                                        <div class="col-lg-6 col-12 my-3">
+                                            <select required class="form-select" aria-label="Default select example">
+                                                <option selected> من</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-12 my-sm-3">
+                                            <select required class="form-select" aria-label="Default select example">
+                                                <option selected> الي</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="py-3 full text-center">
+                                        <a class="btn btn-next-extension first" href="#"> حفظ </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first step -->
+                            <!-- second step -->
+                            <div class="form-step-extension ">
+                                <div class="show text-center">
+                                    <lottie-player src="json/lf30_editor_kaucmnli.json" background="transparent"
+                                        speed=".5" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                                    <h6> تم تمديد العمل للموظف بنجاح </h6>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <p><i class="bi bi-clock"></i>
+                                            <span> المدة المضافة</span>
+                                            : 4أيام
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p><i class="bi bi-briefcase"></i>
+                                            <span> نوع الدوام</span>
+                                            : دوام متقطع
+                                        </p>
+                                    </li>
+                                    <li style="cursor: pointer;" onmouseover="showDate()" onmouseleave="hideDate()">
+                                        <p><i class="bi bi-clock"></i>
+                                            <span> وقت الدوام</span>
+                                            : صباحا 8 - 4مساءا
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="info" id="date">
+                                    <h6>ايام الدوام</h6>
+                                    <ul>
+                                        <li><span>Mon</span>
+                                            <p>يوليو6</p>
+                                        </li>
+                                        <li><span>Mon</span>
+                                            <p>يوليو6</p>
+                                        </li>
+                                        <li><span>Mon</span>
+                                            <p>يوليو6</p>
+                                        </li>
+                                        <li><span>Mon</span>
+                                            <p>يوليو6</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="py-3 full text-center w-100">
+                                    <button type="submit" class="btn first"> حفظ </button>
+                                </div>
+                            </div>
+                            <!-- second step -->
+                        </div>
+                    </form>
+                    <!---------------------- finish confirm -------------------------------------------->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal extension work -->
     <!-- main js -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
     <!-- main js -->
-      <!-- slider -->
-      <script src="js/swiper-demos.js"></script>
-      <!-- slider -->
+    <!-- slider -->
+    <script src="js/swiper-demos.js"></script>
+    <!-- slider -->
+    <!-- lottie -->
+    <script src="js/lottie.js"></script>
+    <!-- lottie -->
     <!-- animation -->
     <script src="js/aos-anmite.js"></script>
     <script>
         AOS.init();
     </script>
     <!-- animation -->
-    <!-- sweet alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- sweet alert -->
+    <!-- notify -->
+    <script src="js/tostify.js"></script>
+    <!-- notify -->
+    <!-- light box -->
+    <script src="js/lightbox-plus-jquery.js"></script>
+    <!-- light box -->
+
     <!-- sidebar -->
     <script>
         var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -541,44 +846,91 @@
         }
     </script>
     <!-- sidebar -->
-    <!-- sweet alert for accept -->
+    <!-- Toastify of add  clerk to favourit  -->
     <script>
-        function acceptAlert() {
-            Swal.fire({
-                title: 'Your order has been accept',
-                icon: 'success',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
+        function puplishOrder() {
+            Toastify({
+                text: "تم   أضافة الموظف الي المفضلة",
+                duration: 2500,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                // close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #bf8c6d, #0c1321)",
+                    // width: '400px',
+                    // padding:'2% 1%',
+                    borderRaduis: '5px'
                 },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                },
-                showConfirmButton: false,
-                timer: 1500
-            })
-        };
+                onClick: function () { } // Callback after click
+            }).showToast();
+        }
     </script>
-    <!-- sweet alert for accept -->
-    <!-- sweet alert for cancel -->
+    <!-- Toastify of add clerk to favourit -->
+    <!-- form withard for remove clerk -->
     <script>
-        function cancelAlert() {
-            Swal.fire({
-                title: 'Your order has been canceled',
-                icon: 'error',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                },
-                showConfirmButton: false,
-                timer: 1500
-            })
-        };
+        const prevBtns = document.querySelectorAll(".btn-prev-remove");
+        const nextBtns = document.querySelectorAll(".btn-next-remove");
+        const formSteps = document.querySelectorAll(".form-step-remove");
+        let formStepsNum = 0;
+
+        nextBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNum++;
+                updateFormSteps();
+                // updateProgressbar();
+            });
+        });
+        prevBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNum--;
+                updateFormSteps();
+                // updateProgressbar();
+            });
+        });
+        function updateFormSteps() {
+            formSteps.forEach((formStep) => {
+                formStep.classList.contains("form-step-remove-active") &&
+                    formStep.classList.remove("form-step-remove-active");
+            });
+            formSteps[formStepsNum].classList.add("form-step-remove-active");
+        }
     </script>
-    <!-- sweet alert for cancel -->
-      <!-- slider team work -->
-      <script>
+    <!-- form withard for remove clerk -->
+    <!-- form withard for extension clerk -->
+    <script>
+        const prevBtnsex = document.querySelectorAll(".btn-prev-extension");
+        const nextBtnsex = document.querySelectorAll(".btn-next-extension");
+        const formStepsex = document.querySelectorAll(".form-step-extension");
+        let formStepsNumss = 0;
+
+        nextBtnsex.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNumss++;
+                updateformStepsex();
+                // updateProgressbar();
+            });
+        });
+        prevBtnsex.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNumss--;
+                updateformStepsex();
+                // updateProgressbar();
+            });
+        });
+        function updateformStepsex() {
+            formStepsex.forEach((formStep) => {
+                formStep.classList.contains("form-step-extension-active") &&
+                    formStep.classList.remove("form-step-extension-active");
+            });
+            formStepsex[formStepsNumss].classList.add("form-step-extension-active");
+        }
+    </script>
+    <!-- form withard for extension clerk -->
+    <!-- slider team work -->
+    <script>
         var swiper = new Swiper(".mySwiper-1", {
             slidesPerView: 1,
             spaceBetween: 10,
@@ -612,6 +964,20 @@
         });
     </script>
     <!-- slider team work -->
+    <!-- show && hide date -->
+    <script>
+        function showDate() {
+            $(`#date`).css({ "display": "block" })
+
+        }
+        function hideDate(id) {
+            $(`#date`).css("display", "none");
+        }
+    </script>
+
+
+    <!-- show && hide date -->
+
              
 </body>
 

@@ -2436,14 +2436,14 @@ nav {
   width: 20%;
 }
 .clark-section .button .finish {
-  color: var(--background2);
-  background-color: #707070;
-  border: 1px solid #707070;
+  color: #f24a4a;
+  background-color: rgba(242, 74, 74, 0.3);
+  border: 1px solid #f24a4a;
   transition: 0.25s all ease;
 }
 .clark-section .button .finish:hover {
-  background-color: var(--background2);
-  color: #707070;
+  background-color: rgba(242, 74, 74, 0.5);
+  color: var(--color-light);
 }
 .modal-remove .modal-header {
   border-bottom: none;
@@ -2535,9 +2535,10 @@ nav {
 }
 .form-extension .form-step-extension-active .info {
   position: absolute;
-  left: 30%;
+  display: none;
+  left: 6%;
   bottom: 20%;
-  background: var(--background2);
+  background: var(--background);
   width: 50%;
   border-radius: 10px;
   border: 1px solid transparent;
@@ -3206,7 +3207,7 @@ table {
   font-family: "bold";
   margin-bottom: 5%;
 }
-.accordion-button {
+.common-answer .accordion-button {
   background-color: var(--color-fourth);
 }
 .common-answer .accordion-item {
@@ -3214,26 +3215,26 @@ table {
   border: 1px solid var(--color-secound);
   font-family: "light";
   font-size: 14px;
-  background-color: var(--background2) !important;
+  background-color: var(--background2);
 }
 .common-answer .accordion-item p {
   font-family: "light";
   font-size: 14px;
   color: var(--color-secound);
 }
-.accordion-button::after {
+.common-answer .accordion-button::after {
   margin-right: auto;
   margin-left: 0;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>');
 }
-.accordion-button.collapsed::after {
+.common-answer .accordion-button.collapsed::after {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/></svg>');
 }
 
-.accordion-button:not(.collapsed)::after {
+.common-answer .accordion-button:not(.collapsed)::after {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/></svg>');
 }
-.accordion-button:not(.collapsed) {
+.common-answer .accordion-button:not(.collapsed) {
   color: var(--color-fourth);
   background-color: var(--color-fourth);
 }
@@ -4684,7 +4685,8 @@ table.dataTable.no-footer {
   margin: 0;
   font-size: 1.4rem;
 }
-.order .header-all-clerk .form-control , .order .header-all-clerk .form-select{
+.order .header-all-clerk .form-control,
+.order .header-all-clerk .form-select {
   background-color: var(--colorfirstbtn) !important;
   border: none;
 }
@@ -4749,6 +4751,204 @@ table.dataTable.no-footer {
 .team-work .bi-three-dots {
   cursor: pointer;
 }
+/* light box */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+
+.gallery img {
+  width: 185px;
+  height: 200px;
+}
+.gallery img:hover {
+  opacity: 0.5;
+}
+.lb-data .lb-close {
+  position: absolute;
+  top: 0;
+  left: 27%;
+}
+
+.lightbox .lb-image {
+  width: 500px !important ;
+  height: 500px !important;
+}
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+  opacity: 0.6;
+}
+/* light box */
 /* all clerk page */
+/* account page */
+.order .account .accordion-button {
+  background-color: var(--color-fourth);
+  color: var(--color-secound);
+  font-size: 1.2rem;
+  font-family: "semibold";
+}
+.order .account .accordion-item {
+  margin-bottom: 3%;
+  border: none;
+  border-bottom: 1px solid var(--color-seven);
+  background-color: var(--background2);
+  border-radius: 0px;
+}
+.order .account .accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+}
+.order .account .form-control,
+.order .account .form-select {
+  width: 97%;
+}
+.order form .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 1%;
+}
+.order form .header .btn {
+  padding: 1% 0;
+  width: 30%;
+}
+/* account page */
+/* notifcation */
+.notfication-pop {
+  width: 100%;
+  height: 100vh;
+  color: var(--background2);
+  display: none;
+  position: fixed;
+  visibility: visible;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 65%;
+  z-index: 900;
+  left: 50%;
+  background: rgb(255, 255, 255, 0.7);
+  overflow-x: hidden;
+  transform: translate(-50%, -50%);
+  transition: 5s all ease-in;
+  animation: close .5s linear;
+    padding: 20px 0;
+}
+.active-notfication{
+  display: flex;
+  animation: move .5s linear;
+
+}
+@keyframes move {
+  0% {
+    transform: translate(-50%, -10%);
+  }
+  25% {
+    transform: translate(-50%, -25%);
+  }
+  75% {
+    transform: translate(-50%, -45%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes close {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(-50%, -45%);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(-50%, -25%);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -10%);
+    opacity: 0;
+  }
+}
+.notfication-sec {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 400px;
+  max-height:400px;
+  overflow-y: scroll;
+  height: fit-content;
+  background-color: var(--background2);
+  color: var(--color-secound);
+  margin: 0 auto 0 0;
+  
+  border: 1px solid transparent;
+  box-shadow: var(--detialsshadow);
+  border-radius: 10px;
+  z-index: 1000;
+
+}
+.notfication-sec .header {
+  padding: 5% 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.notfication-sec .header a {
+  color: var(--color-third);
+  font-family: "light";
+  font-size: 1rem;
+  border-bottom: 1px solid var(--color-third);
+  transition: 0.25s all ease-in-out;
+}
+.notfication-sec .header a:hover {
+  border-bottom: none;
+}
+.content-notfication {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5% 1%;
+  margin-bottom: 2%;
+}
+.content-notfication.active-not{
+  background-color: rgba(191, 140, 109, 0.5);
+
+}
+.content-notfication .alarm {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 50%;
+  margin-left: 5%;
+}
+.content-notfication .alarm i {
+  font-size: 1.4rem;
+}
+.content-notfication .text{
+  width: 50%;
+  text-align: start;
+}
+.content-notfication h5 {
+  font-size: 1rem;
+  font-family: "meduim";
+  color: var(--color-primary);
+}
+.content-notfication h5 a {
+  color: var(--color-fourth);
+  border-bottom: 1px solid var(--color-fourth);
+}
+.content-notfication span {
+  font-size: 1rem;
+  font-family: "light";
+  color: var(--color-seven);
+}
+/* notifcation */
 
 /* =========================================== modifaction */

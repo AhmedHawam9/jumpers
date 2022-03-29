@@ -102,3 +102,22 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 //    light&& dark
+
+//  notfication 
+
+function openNotification() {
+  document.querySelector(".notfication-pop").classList.toggle('active-notfication');
+
+}
+/* notfication  */
+/* read all notifiction  */
+
+function readAll() {
+  $(".content-notfication").removeClass("active-not");
+
+}
+
+    // read all notifiction 
+
+
+

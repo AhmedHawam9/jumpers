@@ -105,11 +105,12 @@
                 <a href="login.html">تسجيل الدخول</a>
             </div> -->
                 <!-- في حالة تم تسجيل الدخول -->
-                <div class="notify">
-                    <a href="#">
+                    <div class="notify">
+                    <a href="#" onclick="openNotification()">
                         <i class="bi bi-bell-fill"></i>
                     </a>
                 </div>
+
 
                 <div class="dropdown dropdown-sign">
                     <a class=" dropdown-toggle sign" href="#" role="button" id="dropdownMenuLink5"
@@ -262,7 +263,7 @@
                                                 <div class="detials-table" onmouseleave="hideDetials(1)"
                                                     onmouseenter="showDetials(1)"> <i class="bi bi-three-dots"></i>
                                                     <ul id="showdetial1" class="show-detials">
-                                                        <li> <a target="_blank" href="show-order-new.html"> عرض
+                                                        <li> <a target="_blank" href="profile-clerk -new.html"> عرض
                                                                 التفاصيل</a>
                                                         </li>
                                                         <li onclick="deleteOrder()"> حذف من للمفضلة</li>
@@ -288,7 +289,7 @@
                                                 <div class="detials-table" onmouseleave="hideDetials(2)"
                                                     onmouseenter="showDetials(2)"> <i class="bi bi-three-dots"></i>
                                                     <ul id="showdetial2" class="show-detials">
-                                                        <li> <a target="_blank" href="show-order-new.html"> عرض
+                                                        <li> <a target="_blank" href="profile-clerk -new.html"> عرض
                                                                 التفاصيل</a>
                                                         </li>
                                                         <li onclick="deleteOrder()"> حذف من للمفضلة</li>
@@ -314,7 +315,7 @@
                                                 <div class="detials-table" onmouseleave="hideDetials(3)"
                                                     onmouseenter="showDetials(3)"> <i class="bi bi-three-dots"></i>
                                                     <ul id="showdetial3" class="show-detials">
-                                                        <li> <a target="_blank" href="show-order-new.html"> عرض
+                                                        <li> <a target="_blank" href="profile-clerk -new.html"> عرض
                                                                 التفاصيل</a>
                                                         </li>
                                                         <li onclick="deleteOrder()"> حذف من للمفضلة</li>
@@ -359,8 +360,67 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <!---------------------- finish footer -------------------------------------------->
+          </footer>
+    <!---------------------- finish footer -------------------------------------------->                          <!-- notfication -->
+    <section class="notfication-pop ">
+        <div class="container">
+            <div class="notfication-sec">
+                <div class="header">
+                    <h2 class="head-categ">الإشعارات </h2>
+                    <a onclick="readAll()" href="#">تحديد الكل كمقروء</a>
+                </div>
+                <div class="content-notfication">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد تم تزويدك ب 200 جمبر استكمالا للعدد المطلوب
+                            لطلبك , تابع
+                            <a target="_blank" href="#"> تفاصيل طلبك </a> من هنا
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication active-not">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد قمت بعملية دفع ناجحة , يمكنك الآن البدأ
+                            في استقبال الطلبات تابع
+                            <a target="_balnk" href="#">من هنا</a>
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication active-not">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد قمت بعملية دفع ناجحة , يمكنك الآن البدأ
+                            في استقبال الطلبات تابع
+                            <a target="_balnk" href="#">من هنا</a>
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد تم تزويدك ب 200 جمبر استكمالا للعدد المطلوب
+                            لطلبك , تابع
+                            <a target="_blank" href="#"> تفاصيل طلبك </a> من هنا
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- notfication -->
   
 
     <!-- main js -->
@@ -436,6 +496,7 @@
         }
     </script>
     <!-- Toastify of remove from favourit -->
+             
 </body>
 
 </html>

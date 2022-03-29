@@ -20,12 +20,15 @@
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
+    <!-- notify -->
+    <link rel="stylesheet" href="css/tostify.css">
+    <!-- notify -->
     <!-- swiper -->
     <link rel="stylesheet" href="css/swiper-demos.css">
     <!-- swiper -->
-    <!-- sweet alert -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- sweet alert -->
+    <!-- light box -->
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- light box -->
     <!-- ? Favicon -->
     <link rel="icon" href="./image/logo.png" type="image" />
     <!-- ? Favicon -->
@@ -111,11 +114,12 @@
                 <a href="login.html">تسجيل الدخول</a>
             </div> -->
                 <!-- في حالة تم تسجيل الدخول -->
-                <div class="notify">
-                    <a href="#">
+                    <div class="notify">
+                    <a href="#" onclick="openNotification()">
                         <i class="bi bi-bell-fill"></i>
                     </a>
                 </div>
+
 
                 <div class="dropdown dropdown-sign">
                     <a class=" dropdown-toggle sign" href="#" role="button" id="dropdownMenuLink5"
@@ -248,7 +252,7 @@
                                         data-bs-target="#exampleModal-1">تمديد</button>
                                     <button data-bs-toggle="modal" data-bs-target="#exampleModal"
                                         class="btn finish">انهاء العمل</button>
-                                    <button id="sweetalert" onclick="acceptAlert()" class="btn second">اضف
+                                    <button onclick="puplishOrder()" class="btn second">اضف
                                         للمفضلة</button>
                                 </div>
                             </div>
@@ -283,33 +287,6 @@
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-12">
                                             <div class="card">
-                                                <i class="bi bi-geo-alt"></i>
-                                                <div class="text">
-                                                    <h6 class="head-small"> الموقع</h6>
-                                                    <p> ...الرياض,شارع السيدة عائ</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="card">
-                                                <i class="bi bi-briefcase"></i>
-                                                <div class="text">
-                                                    <h6 class="head-small">الخدمة المقدمة</h6>
-                                                    <p>سنيور فرونت ايند ديفلوبر</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="card">
-                                                <i class="bi bi-bookmark-check"></i>
-                                                <div class="text">
-                                                    <h6 class="head-small"> المهارات</h6>
-                                                    <p>...الإنجليزية,البرمجة,الرسم </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-12">
-                                            <div class="card">
                                                 <i class="bi bi-clock"></i>
                                                 <div class="text">
                                                     <h6 class="head-small"> عدد ساعات العمل</h6>
@@ -329,39 +306,39 @@
                                     تريد، النص لن يبدو</p>
                             </div>
                             <div class="work-detials py-4" data-aos="fade-up" data-aos-duration="1000">
-                                <h6 class="head-small">  المعلومات الشخصية</h6>
+                                <h6 class="head-small"> المعلومات الشخصية</h6>
                                 <ul>
                                     <li>
                                         <p>
-                                            <span>  الجنسية</span>
-                                            : غير سعودي 
+                                            <span> الجنسية</span>
+                                            : غير سعودي
                                         </p>
                                     </li>
                                     <li>
                                         <p>
-                                          
+
                                             <span>النوع </span>
-                                            : ذكر 
+                                            : ذكر
                                         </p>
                                     </li>
                                     <li>
                                         <p>
-                                           
+
                                             <span> العمر</span>
-                                            : 11 
+                                            : 11
                                         </p>
                                     </li>
                                     <li>
                                         <p>
-                                            
+
                                             <span> المدينة</span>
-                                            : الرياض 
+                                            : الرياض
                                     </li>
                                     <li>
                                         <p>
-                                            
-                                            <span>  العنوان</span>
-                                            :  الرياض, المنطقة الجنوبية ,شابي بكر الصديق 
+
+                                            <span> العنوان</span>
+                                            : الرياض, المنطقة الجنوبية ,شابي بكر الصديق
                                         </p>
                                     </li>
                                     <li>
@@ -369,6 +346,26 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!-- في حالة وجود معرض للصور -->
+                            <div class="gellary-work py-4" data-aos="fade-up" data-aos-duration="1000">
+                                <h6 class="head-small"> معرض اعمال الموظف</h6>
+                                <div class="gallery">
+                                    <a href="image/light1.png" data-lightbox="models" data-title="Caption1">
+                                        <img src="image/light1.png">
+                                    </a>
+                                    <a href="image/light2.png" data-lightbox="models" data-title="Caption2">
+                                        <img src="image/light2.png">
+                                    </a>
+                                    <a href="image/light3.png" data-lightbox="models" data-title="Caption3">
+                                        <img src="image/light3.png">
+                                    </a>
+                                    <a href="image/light4.png" data-lightbox="models" data-title="Caption4">
+                                        <img src="image/light4.png">
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- في حالة وجود معرض للصور -->
                             <div class="skills-req py-4" data-aos="fade-up" data-aos-duration="1000">
                                 <h6 class="head-small">
                                     اللغات
@@ -585,8 +582,67 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <!---------------------- finish footer -------------------------------------------->
+          </footer>
+    <!---------------------- finish footer -------------------------------------------->                          <!-- notfication -->
+    <section class="notfication-pop ">
+        <div class="container">
+            <div class="notfication-sec">
+                <div class="header">
+                    <h2 class="head-categ">الإشعارات </h2>
+                    <a onclick="readAll()" href="#">تحديد الكل كمقروء</a>
+                </div>
+                <div class="content-notfication">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد تم تزويدك ب 200 جمبر استكمالا للعدد المطلوب
+                            لطلبك , تابع
+                            <a target="_blank" href="#"> تفاصيل طلبك </a> من هنا
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication active-not">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد قمت بعملية دفع ناجحة , يمكنك الآن البدأ
+                            في استقبال الطلبات تابع
+                            <a target="_balnk" href="#">من هنا</a>
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication active-not">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد قمت بعملية دفع ناجحة , يمكنك الآن البدأ
+                            في استقبال الطلبات تابع
+                            <a target="_balnk" href="#">من هنا</a>
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+                <div class="content-notfication">
+                    <div class="alarm">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <div class="text">
+                        <h5>لقد تم تزويدك ب 200 جمبر استكمالا للعدد المطلوب
+                            لطلبك , تابع
+                            <a target="_blank" href="#"> تفاصيل طلبك </a> من هنا
+                        </h5>
+                        <span>منذ 24 دقيقة ماضية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- notfication -->
     <!-- modal finish work -->
     <div class="modal fade modal-remove" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -711,14 +767,14 @@
                                             : دوام متقطع
                                         </p>
                                     </li>
-                                    <li>
+                                    <li style="cursor: pointer;" onmouseover="showDate()" onmouseleave="hideDate()">
                                         <p><i class="bi bi-clock"></i>
                                             <span> وقت الدوام</span>
                                             : صباحا 8 - 4مساءا
                                         </p>
                                     </li>
                                 </ul>
-                                <div class="info">
+                                <div class="info" id="date">
                                     <h6>ايام الدوام</h6>
                                     <ul>
                                         <li><span>Mon</span>
@@ -765,9 +821,13 @@
         AOS.init();
     </script>
     <!-- animation -->
-    <!-- sweet alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- sweet alert -->
+    <!-- notify -->
+    <script src="js/tostify.js"></script>
+    <!-- notify -->
+    <!-- light box -->
+    <script src="js/lightbox-plus-jquery.js"></script>
+    <!-- light box -->
+
     <!-- sidebar -->
     <script>
         var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -788,24 +848,29 @@
         }
     </script>
     <!-- sidebar -->
-    <!-- sweet alert for add favorit -->
+    <!-- Toastify of add  clerk to favourit  -->
     <script>
-        function acceptAlert() {
-            Swal.fire({
-                title: 'Your order has been add to favourit',
-                icon: 'success',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
+        function puplishOrder() {
+            Toastify({
+                text: "تم   أضافة الموظف الي المفضلة",
+                duration: 2500,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                // close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #bf8c6d, #0c1321)",
+                    // width: '400px',
+                    // padding:'2% 1%',
+                    borderRaduis: '5px'
                 },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                },
-                showConfirmButton: false,
-                timer: 1500
-            })
-        };
+                onClick: function () { } // Callback after click
+            }).showToast();
+        }
     </script>
-    <!-- sweet alert for add favorit -->
+    <!-- Toastify of add clerk to favourit -->
     <!-- form withard for remove clerk -->
     <script>
         const prevBtns = document.querySelectorAll(".btn-prev-remove");
@@ -901,6 +966,21 @@
         });
     </script>
     <!-- slider team work -->
+    <!-- show && hide date -->
+    <script>
+ function showDate() {
+        $(`#date`).css({ "display": "block" })
+
+    }
+    function hideDate(id) {
+        $(`#date`).css("display", "none");
+    }
+    </script>
+   
+    
+    <!-- show && hide date -->
+
+             
 </body>
 
 </html>
