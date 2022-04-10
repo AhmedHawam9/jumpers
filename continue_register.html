@@ -10,7 +10,7 @@
     <!-- ? Main CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+     <link rel="stylesheet" href="scss/main.min.css" />
     <!-- <link rel="stylesheet" href="css/dark.css" /> -->
     <!-- ? Main CSS -->
 
@@ -53,59 +53,132 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" class="body">
+     <!---------------------- start loader -------------------------------------------->
     <div id="preloader"></div>
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+    <!---------------------- start dark && light mood -------------------------------------------->
     <div id="toggle">
-    <span class="light" id="light">
-      <i class="fa-solid fa-sun"></i>
-    </span>
-    <span class="dark" id="dark">
-      <i class="fa-solid fa-moon"></i>
-    </span>
-    <div class="indicator">
+        <span class="light " id="light">
+            <i class="bi bi-brightness-high"></i>
+        </span>
+        <span class="dark" id="dark">
+            <i class="bi bi-moon-fill "></i>
+        </span>
+        <div class="indicator">
+        </div>
     </div>
-  </div>
-
-    <!-- =========== ? NavBar =========== -->
-    <nav class="navbar navbar-expand-lg">
+    <!---------------------- finish dark && light mood -------------------------------------------->
+    <!---------------------- start navbar -------------------------------------------->
+    <nav id="navbar" class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="media/image/logo.png" id="logoLight" alt="logo">
-                <img src="media/image/logo-dark.png" id="logoDark" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="logo">
+                <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
+                    <img id="logoDark" src="image/logo-dark.png" alt="dark">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">الرئيسية</a>
+                        <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">من نحن</a>
+                        <a class="nav-link" href="#about">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">الخدمات</a>
+                        <a class="nav-link" href="#service"> الخدمات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">تواصل معنا</a>
+                        <a class="nav-link" href="#printer">شركاء النجاح</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog"> أخر الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="section.html"> القطاعات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"> تواصل معنا</a>
                     </li>
                 </ul>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                <!-- lang dropdown -->
+                <div class="dropdown dropdown-lang">
+                    <a class=" dropdown-toggle lang-menu" href="#" role="button" id="dropdownMenuLink5"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        العربية
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">عربي</a></li>
-                        <li><a class="dropdown-item" href="#">أنجليزي</a></li>
+                        <div class="content">
+                            <h6> العربية</h6>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu selected-lang" aria-labelledby="dropdownMenuLink5">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="content">
+                                    <h6>English</h6>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <a href="login.html" class="btn login-button">تسجيل الدخول</a>
+                <!-- lang dropdown -->
+                <!-- sign up -->
+                <!-- <div class="btn-sign first trans">
+                <a href="login.html">تسجيل الدخول</a>
+            </div> -->
+                <!-- في حالة تم تسجيل الدخول -->
+                    <div class="notify">
+                    <a href="#" onclick="openNotification()">
+                        <i class="bi bi-bell-fill"></i>
+                    </a>
+                </div>
+
+
+                <div class="dropdown dropdown-sign">
+                    <a class=" dropdown-toggle sign" href="#" role="button" id="dropdownMenuLink5"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="content">
+                            <h6>أحمد ابراهيم</h6>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu selected-sign" aria-labelledby="dropdownMenuLink5">
+                        <li>
+                            <a class="dropdown-item" href="account.html">
+                                <div class="content">
+                                    <i class="bi bi-person-circle"></i>
+                                    <h6>حسابي</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="all-order.html">
+                                <div class="content">
+                                    <i class="bi bi-view-list"></i>
+                                    <h6>طلباتي</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <div class="content">
+                                    <i class="bi bi-box-arrow-left"></i>
+                                    <h6>تسجيل الخروج</h6>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- في حالة تم تسجيل الدخول -->
+                <!-- sign up -->
             </div>
         </div>
     </nav>
-    <!-- =========== ? NavBar =========== -->
+    <!---------------------- finish navbar -------------------------------------------->
 
     <!-- ? ======= Login =========== -->
     <section class="continue_register">

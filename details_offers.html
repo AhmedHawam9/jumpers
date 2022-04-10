@@ -10,7 +10,7 @@
     <!-- ? Main CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="scss/main.min.css" />
     <!-- <link rel="stylesheet" href="css/dark.css" /> -->
     <!-- ? Main CSS -->
 
@@ -54,361 +54,443 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" class="body">
+    <!---------------------- start loader -------------------------------------------->
     <div id="preloader"></div>
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+    <!---------------------- start dark && light mood -------------------------------------------->
     <div id="toggle">
-    <span class="light" id="light">
-      <i class="fa-solid fa-sun"></i>
-    </span>
-    <span class="dark" id="dark">
-      <i class="fa-solid fa-moon"></i>
-    </span>
-    <div class="indicator">
-    </div>
-  </div>
-
-    <!-- =========== ? NavBar =========== -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="media/image/logo.png" id="logoLight" alt="logo">
-                <img src="media/image/logo-dark.png" id="logoDark" alt="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">الرئيسية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">من نحن</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">الخدمات</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">تواصل معنا</a>
-                    </li>
-                </ul>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        العربية
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">عربي</a></li>
-                        <li><a class="dropdown-item" href="#">أنجليزي</a></li>
-                    </ul>
-                </div>
-                <a href="login.html" class="btn login-button">تسجيل الدخول</a>
-            </div>
+        <span class="light " id="light">
+            <i class="bi bi-brightness-high"></i>
+        </span>
+        <span class="dark" id="dark">
+            <i class="bi bi-moon-fill "></i>
+        </span>
+        <div class="indicator">
         </div>
-    </nav>
-    <!-- =========== ? NavBar =========== -->
-
-    <!-- ? ======= home =========== -->
-    <section class="home">
-        <div class="container">
-            <div class="row flex-nowrap">
-                <div class="col-auto col-md-3 col-xl-3 p-0 sidebar">
-                    <div class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100 side_width">
-                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                            id="menu">
-                            <div class="personal_data">
-                                <img src="media/image/person.jpg" alt="person">
-                                <p class="name">أحمد السيد</p>
-                                <p class="title">جرافيك ديزاينر</p>
+    </div>
+    <!---------------------- finish dark && light mood -------------------------------------------->
+    <!---------------------- start navbar -------------------------------------------->
+    <section class="awab">
+        <nav id="navbar" class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a class="navbar-brand" href="index.html"><img id="logoLight" src="image/logo.png" alt="light">
+                        <img id="logoDark" src="image/logo-dark.png" alt="dark">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#service"> الخدمات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#printer">شركاء النجاح</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog"> أخر الأخبار</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="section.html"> القطاعات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html"> تواصل معنا</a>
+                        </li>
+                    </ul>
+                    <!-- lang dropdown -->
+                    <div class="dropdown dropdown-lang">
+                        <a class=" dropdown-toggle lang-menu" href="#" role="button" id="dropdownMenuLink5"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="content">
+                                <h6> العربية</h6>
                             </div>
-                            <li class="nav-item">
-                                <a href="index.html" class="nav-link align-middle">
-                                    <img src="media/icon/home.svg" alt="icon"> <span
-                                        class="d-none d-sm-inline">الرئيسية</span>
+                        </a>
+                        <ul class="dropdown-menu selected-lang" aria-labelledby="dropdownMenuLink5">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="content">
+                                        <h6>English</h6>
+                                    </div>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="account.html" class="nav-link align-middle">
-                                    <img src="media/icon/account.svg" alt="icon"> <span
-                                        class="d-none d-sm-inline">حسابي</span></a>
+                        </ul>
+                    </div>
+                    <!-- lang dropdown -->
+                    <!-- sign up -->
+                    <!-- <div class="btn-sign first trans">
+                    <a href="login.html">تسجيل الدخول</a>
+                </div> -->
+                    <!-- في حالة تم تسجيل الدخول -->
+                    <div class="notify">
+                        <a href="#" onclick="openNotification()">
+                            <i class="bi bi-bell-fill"></i>
+                        </a>
+                    </div>
+
+
+                    <div class="dropdown dropdown-sign">
+                        <a class=" dropdown-toggle sign" href="#" role="button" id="dropdownMenuLink5"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="content">
+                                <h6>أحمد ابراهيم</h6>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu selected-sign" aria-labelledby="dropdownMenuLink5">
+                            <li>
+                                <a class="dropdown-item" href="account.html">
+                                    <div class="content">
+                                        <i class="bi bi-person-circle"></i>
+                                        <h6>حسابي</h6>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="work_offers.html" class="nav-link align-middle">
-                                    <img src="media/icon/bag.svg" alt="icon"> <span class="d-none d-sm-inline">عروض
-                                        العمل</span></a>
+                            <li>
+                                <a class="dropdown-item" href="all-order.html">
+                                    <div class="content">
+                                        <i class="bi bi-view-list"></i>
+                                        <h6>طلباتي</h6>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#submenu1" data-bs-toggle="collapse"
-                                    class="nav-link accordion-button align-middle">
-                                    <img src="media/icon/order.svg" alt="icon"> <span
-                                        class="d-none d-sm-inline">الطلبات</span> </a>
-                                <ul class="collapse flex-column" id="submenu1" data-bs-parent="#menu">
-                                    <li class="w-100">
-                                        <a href="order.html" class="nav-link px-0"> <span>كل الطلبات</span></a>
-                                    </li>
-                                    <li class="w-100">
-                                        <a href="new_order.html" class="nav-link px-0"> <span>الطلبات الجديدة</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="completed_order.html" class="nav-link px-0"> <span>الطلبات المنتهية</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="favourite.html" class="nav-link align-middle">
-                                    <img src="media/icon/favourite.svg" alt="icon"> <span
-                                        class="d-none d-sm-inline">المفضلة</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link align-middle">
-                                    <img src="media/icon/chat.svg" alt="icon"> <span
-                                        class="d-none d-sm-inline">الدردشة</span></a>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="content">
+                                        <i class="bi bi-box-arrow-left"></i>
+                                        <h6>تسجيل الخروج</h6>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
-                        <div class="complete_data">
-                            <h5>استكمال البيانات</h5>
-                            <div class="progress">
-                                <div class="progress-done" data-done="70">
-                                    70%
+                    </div>
+                    <!-- في حالة تم تسجيل الدخول -->
+                    <!-- sign up -->
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!---------------------- finish navbar -------------------------------------------->
+    <main class="hawam">
+        <!-- ? ======= home =========== -->
+        <section class="home">
+            <div class="container">
+                <div class="row flex-nowrap">
+                    <div class="col-auto col-md-3 col-xl-3 p-0 sidebar">
+                        <div
+                            class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100 side_width">
+                            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                                id="menu">
+                                <div class="personal_data">
+                                    <img src="media/image/person.jpg" alt="person">
+                                    <p class="name">أحمد السيد</p>
+                                    <p class="title">جرافيك ديزاينر</p>
                                 </div>
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link align-middle">
+                                        <img src="media/icon/home.svg" alt="icon"> <span
+                                            class="d-none d-sm-inline">الرئيسية</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="account.html" class="nav-link align-middle">
+                                        <img src="media/icon/account.svg" alt="icon"> <span
+                                            class="d-none d-sm-inline">حسابي</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="work_offers.html" class="nav-link align-middle">
+                                        <img src="media/icon/bag.svg" alt="icon"> <span class="d-none d-sm-inline">عروض
+                                            العمل</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#submenu1" data-bs-toggle="collapse"
+                                        class="nav-link accordion-button align-middle">
+                                        <img src="media/icon/order.svg" alt="icon"> <span
+                                            class="d-none d-sm-inline">الطلبات</span> </a>
+                                    <ul class="collapse flex-column" id="submenu1" data-bs-parent="#menu">
+                                        <li class="w-100">
+                                            <a href="order.html" class="nav-link px-0"> <span>كل الطلبات</span></a>
+                                        </li>
+                                        <li class="w-100">
+                                            <a href="new_order.html" class="nav-link px-0"> <span>الطلبات
+                                                    الجديدة</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="completed_order.html" class="nav-link px-0"> <span>الطلبات
+                                                    المنتهية</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="favourite.html" class="nav-link align-middle">
+                                        <img src="media/icon/favourite.svg" alt="icon"> <span
+                                            class="d-none d-sm-inline">المفضلة</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle">
+                                        <img src="media/icon/chat.svg" alt="icon"> <span
+                                            class="d-none d-sm-inline">الدردشة</span></a>
+                                </li>
+                            </ul>
+                            <div class="complete_data">
+                                <h5>استكمال البيانات</h5>
+                                <div class="progress">
+                                    <div class="progress-done" data-done="70">
+                                        70%
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <a href="#" class="data">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    <span>أضف سيرتك الذاتية</span>
+                                    <span>+10%</span>
+                                </a>
+                                <a href="#" class="data">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    <span>أضف شهادات</span>
+                                    <span>+10%</span>
+                                </a>
                             </div>
-                            <script>
-                                const progress = document.querySelector('.progress-done');
-                                progress.style.width = progress.getAttribute('data-done') + '%';
-                                progress.style.opacity = 1;
-                            </script>
-                            <a href="#" class="data">
-                                <i class="fa-solid fa-circle-plus"></i>
-                                <span>أضف سيرتك الذاتية</span>
-                                <span>+10%</span>
-                            </a>
-                            <a href="#" class="data">
-                                <i class="fa-solid fa-circle-plus"></i>
-                                <span>أضف شهادات</span>
-                                <span>+10%</span>
-                            </a>
-                        </div>
-                        <div class="effective">
-                            <h5>الطلبات الفعالة</h5>
-                            <canvas id="chart"></canvas>
-                            <p>مصممين واجهة مستخدم لانشاء عدة تطبيقات</p>
-                            <script>
-                                var data = {
-                                    labels: ["Jan"],
-                                    datasets: [{
-                                        label: "Dataset #1",
-                                        backgroundColor: "rgba(191,140,109,.8)",
-                                        borderColor: "rgba(191,140,109,.8)",
-                                        borderWidth: 2,
-                                        hoverBackgroundColor: "rgba(191,140,109,1)",
-                                        hoverBorderColor: "rgba(191,140,109,1)",
-                                        data: [50],
-                                    }]
-                                };
+                            <div class="effective">
+                                <h5>الطلبات الفعالة</h5>
+                                <canvas id="chart"></canvas>
+                                <p>مصممين واجهة مستخدم لانشاء عدة تطبيقات</p>
+                                <script>
+                                    var data = {
+                                        labels: ["Jan"],
+                                        datasets: [{
+                                            label: "Dataset #1",
+                                            backgroundColor: "rgba(191,140,109,.8)",
+                                            borderColor: "rgba(191,140,109,.8)",
+                                            borderWidth: 2,
+                                            hoverBackgroundColor: "rgba(191,140,109,1)",
+                                            hoverBorderColor: "rgba(191,140,109,1)",
+                                            data: [50],
+                                        }]
+                                    };
 
-                                var options = {
-                                    maintainAspectRatio: false,
-                                };
+                                    var options = {
+                                        maintainAspectRatio: false,
+                                    };
 
-                                new Chart('chart', {
-                                    type: 'doughnut',
-                                    options: options,
-                                    data: data
-                                });
+                                    new Chart('chart', {
+                                        type: 'doughnut',
+                                        options: options,
+                                        data: data
+                                    });
 
-                            </script>
+                                </script>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="index_cards">
-                        <h4>تفاصيل العرض</h4>
-                        <div class="details_offers">
-                            <h4>مصممين واجهة مستخدم لانشاء عدة تطبيقات
-                                ومواقع باستخدام XD ,فيجما</h4>
-                            <div class="d-flex info">
-                                <span>
-                                    <i class="fa-solid fa-building-columns"></i>
-                                    السعودية للتصميمات الحديثة
-                                </span>
-                                <span>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    الرياض
-                                </span>
-                                <span> العدد المطلوب : 200</span>
-                            </div>
-                            <h6>نظرة عامة </h6>
-                            <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادةهذا
-                                النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                                العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
-                            </p>
-                            <hr>
-                            <h6>المهارات المطلوبة</h6>
-                            <div class="tags d-flex">
-                                <a href="#" class="tag">Responsive grid</a>
-                                <a href="#" class="tag">Figma</a>
-                                <a href="#" class="tag">Mobile app ui design</a>
-                            </div>
-                            <hr>
-                            <h6>التفاصيل</h6>
-                            <div class="row details">
-                                <div class="col-6 text-center py-3 border border-dark">
+                    <div class="col">
+                        <div class="index_cards">
+                            <h4>تفاصيل العرض</h4>
+                            <div class="details_offers">
+                                <h4>مصممين واجهة مستخدم لانشاء عدة تطبيقات
+                                    ومواقع باستخدام XD ,فيجما</h4>
+                                <div class="d-flex info">
                                     <span>
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        تاريخ العمل
+                                        <i class="fa-solid fa-building-columns"></i>
+                                        السعودية للتصميمات الحديثة
                                     </span>
-                                    <p>فبراير 22 - 22مارس</p>
-                                </div>
-                                <div class="col-6 text-center py-3 border border-dark">
                                     <span>
-                                        <i class="fa-solid fa-briefcase"></i>
-                                        نوع الدوام
-                                    </span>
-                                    <p>دوام منتظم</p>
-                                </div>
-                                <div class="col-6 text-center py-3 border border-dark">
-                                    <span>
-                                        <i class="fa-solid fa-clock"></i>
-                                        وقت الدوام
-                                    </span>
-                                    <p>صباحا 8 - 4مساءا</p>
-                                </div>
-                                <div class="col-6 text-center py-3 border border-dark">
-                                    <span>
-                                        <i class="fa-solid fa-money-bill-1"></i>
-                                        التكلفة المفترضة
-                                    </span>
-                                    <p>15ريال بالساعة</p>
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <button class="btn accept">قبول</button>
-                                <button class="btn reject">رفض</button>
-                            </div>
-                        </div>
-                        <div class="new_order">
-                            <div class="d-flex justify-content-between align-items-center mb-5">
-                                <h4>عروض عمل مشابهة</h4>
-                            </div>
-                            <!-- for loop this new order -->
-                            <div class="new_order_card">
-                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
-                                <div class="d-flex">
-                                    <div class="info_order">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        <span>مدة العمل</span>
-                                        <h6>: شهرين</h6>
-                                    </div>
-                                    <div class="info_order">
-                                        <i class="fa-solid fa-money-bill-wave"></i>
-                                        <span> التكلفة المفترضة</span>
-                                        <h6>: 15ريال بالساعة</h6>
-                                    </div>
-                                    <div class="info_order">
                                         <i class="fa-solid fa-location-dot"></i>
-                                        <span>موقع العمل</span>
-                                        <h6>: الرياض</h6>
-                                    </div>
+                                        الرياض
+                                    </span>
+                                    <span> العدد المطلوب : 200</span>
                                 </div>
-                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
-                                    من مولد
-                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
-                                    إضافة إلى
-                                    زيادة <a href="details_offers.html">عرض المزيد</a></p>
+                                <h6>نظرة عامة </h6>
+                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                    النص
+                                    العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
+                                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+                                    النص
+                                    العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادةهذا
+                                    النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                                    العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
+                                </p>
+                                <hr>
+                                <h6>المهارات المطلوبة</h6>
                                 <div class="tags d-flex">
                                     <a href="#" class="tag">Responsive grid</a>
                                     <a href="#" class="tag">Figma</a>
                                     <a href="#" class="tag">Mobile app ui design</a>
+                                </div>
+                                <hr>
+                                <h6>التفاصيل</h6>
+                                <div class="row details">
+                                    <div class="col-6 text-center py-3 border border-dark">
+                                        <span>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            تاريخ العمل
+                                        </span>
+                                        <p>فبراير 22 - 22مارس</p>
+                                    </div>
+                                    <div class="col-6 text-center py-3 border border-dark">
+                                        <span>
+                                            <i class="fa-solid fa-briefcase"></i>
+                                            نوع الدوام
+                                        </span>
+                                        <p>دوام منتظم</p>
+                                    </div>
+                                    <div class="col-6 text-center py-3 border border-dark">
+                                        <span>
+                                            <i class="fa-solid fa-clock"></i>
+                                            وقت الدوام
+                                        </span>
+                                        <p>صباحا 8 - 4مساءا</p>
+                                    </div>
+                                    <div class="col-6 text-center py-3 border border-dark">
+                                        <span>
+                                            <i class="fa-solid fa-money-bill-1"></i>
+                                            التكلفة المفترضة
+                                        </span>
+                                        <p>15ريال بالساعة</p>
+                                    </div>
                                 </div>
                                 <div class="buttons">
                                     <button class="btn accept">قبول</button>
                                     <button class="btn reject">رفض</button>
                                 </div>
                             </div>
-                            <!-- for loop this new order -->
-                            <!-- for loop this new order -->
-                            <div class="new_order_card">
-                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
-                                <div class="d-flex">
-                                    <div class="info_order">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        <span>مدة العمل</span>
-                                        <h6>: شهرين</h6>
+                            <div class="new_order">
+                                <div class="d-flex justify-content-between align-items-center mb-5">
+                                    <h4>عروض عمل مشابهة</h4>
+                                </div>
+                                <!-- for loop this new order -->
+                                <div class="new_order_card">
+                                    <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
+                                    <div class="d-flex">
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span>مدة العمل</span>
+                                            <h6>: شهرين</h6>
+                                        </div>
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-money-bill-wave"></i>
+                                            <span> التكلفة المفترضة</span>
+                                            <h6>: 15ريال بالساعة</h6>
+                                        </div>
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>موقع العمل</span>
+                                            <h6>: الرياض</h6>
+                                        </div>
                                     </div>
-                                    <div class="info_order">
-                                        <i class="fa-solid fa-money-bill-wave"></i>
-                                        <span> التكلفة المفترضة</span>
-                                        <h6>: 15ريال بالساعة</h6>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+                                        من مولد
+                                        النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
+                                        إضافة إلى
+                                        زيادة <a href="details_offers.html">عرض المزيد</a></p>
+                                    <div class="tags d-flex">
+                                        <a href="#" class="tag">Responsive grid</a>
+                                        <a href="#" class="tag">Figma</a>
+                                        <a href="#" class="tag">Mobile app ui design</a>
                                     </div>
-                                    <div class="info_order">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <span>موقع العمل</span>
-                                        <h6>: الرياض</h6>
+                                    <div class="buttons">
+                                        <button class="btn accept">قبول</button>
+                                        <button class="btn reject">رفض</button>
                                     </div>
                                 </div>
-                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
-                                    من مولد
-                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
-                                    إضافة إلى
-                                    زيادة <a href="details_offers.html">عرض المزيد</a></p>
-                                <div class="tags d-flex">
-                                    <a href="#" class="tag">Responsive grid</a>
-                                    <a href="#" class="tag">Figma</a>
-                                    <a href="#" class="tag">Mobile app ui design</a>
+                                <!-- for loop this new order -->
+                                <!-- for loop this new order -->
+                                <div class="new_order_card">
+                                    <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
+                                    <div class="d-flex">
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span>مدة العمل</span>
+                                            <h6>: شهرين</h6>
+                                        </div>
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-money-bill-wave"></i>
+                                            <span> التكلفة المفترضة</span>
+                                            <h6>: 15ريال بالساعة</h6>
+                                        </div>
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>موقع العمل</span>
+                                            <h6>: الرياض</h6>
+                                        </div>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+                                        من مولد
+                                        النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
+                                        إضافة إلى
+                                        زيادة <a href="details_offers.html">عرض المزيد</a></p>
+                                    <div class="tags d-flex">
+                                        <a href="#" class="tag">Responsive grid</a>
+                                        <a href="#" class="tag">Figma</a>
+                                        <a href="#" class="tag">Mobile app ui design</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="btn accept">قبول</button>
+                                        <button class="btn reject">رفض</button>
+                                    </div>
                                 </div>
-                                <div class="buttons">
-                                    <button class="btn accept">قبول</button>
-                                    <button class="btn reject">رفض</button>
+                                <!-- for loop this new order -->
+                                <!-- for loop this new order -->
+                                <div class="new_order_card">
+                                    <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
+                                    <div class="d-flex">
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span>مدة العمل</span>
+                                            <h6>: شهرين</h6>
+                                        </div>
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-money-bill-wave"></i>
+                                            <span> التكلفة المفترضة</span>
+                                            <h6>: 15ريال بالساعة</h6>
+                                        </div>
+                                        <div class="info_order">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>موقع العمل</span>
+                                            <h6>: الرياض</h6>
+                                        </div>
+                                    </div>
+                                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+                                        من مولد
+                                        النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
+                                        إضافة إلى
+                                        زيادة <a href="details_offers.html">عرض المزيد</a></p>
+                                    <div class="tags d-flex">
+                                        <a href="#" class="tag">Responsive grid</a>
+                                        <a href="#" class="tag">Figma</a>
+                                        <a href="#" class="tag">Mobile app ui design</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="btn accept">قبول</button>
+                                        <button class="btn reject">رفض</button>
+                                    </div>
                                 </div>
+                                <!-- for loop this new order -->
                             </div>
-                            <!-- for loop this new order -->
-                            <!-- for loop this new order -->
-                            <div class="new_order_card">
-                                <h6>مصممين واجهة مستخدم لانشاء عدة تطبيقات ومواقع باستخدام XD</h6>
-                                <div class="d-flex">
-                                    <div class="info_order">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        <span>مدة العمل</span>
-                                        <h6>: شهرين</h6>
-                                    </div>
-                                    <div class="info_order">
-                                        <i class="fa-solid fa-money-bill-wave"></i>
-                                        <span> التكلفة المفترضة</span>
-                                        <h6>: 15ريال بالساعة</h6>
-                                    </div>
-                                    <div class="info_order">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <span>موقع العمل</span>
-                                        <h6>: الرياض</h6>
-                                    </div>
-                                </div>
-                                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
-                                    من مولد
-                                    النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
-                                    إضافة إلى
-                                    زيادة <a href="details_offers.html">عرض المزيد</a></p>
-                                <div class="tags d-flex">
-                                    <a href="#" class="tag">Responsive grid</a>
-                                    <a href="#" class="tag">Figma</a>
-                                    <a href="#" class="tag">Mobile app ui design</a>
-                                </div>
-                                <div class="buttons">
-                                    <button class="btn accept">قبول</button>
-                                    <button class="btn reject">رفض</button>
-                                </div>
-                            </div>
-                            <!-- for loop this new order -->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- ? ======= home =========== -->
+    </main>
+    <section class="awab">
     </section>
-    <!-- ? ======= home =========== -->
-
     <!-- ? ======= footer =========== -->
     <footer>
         <div class="container">
@@ -432,7 +514,7 @@
     <script src="js/lottiefiles.js"></script>
     <script src="js/dark.js"></script>
     <script src="js/main.js"></script>
-             
+
 </body>
 
 </html>
