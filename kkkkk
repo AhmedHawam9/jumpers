@@ -1,0 +1,57 @@
+<ul class="menu-side-bar">
+    <li class="side-item">
+        <a class="side-link" href="main.html">
+            <img src="media/icon/home.svg" alt="icon">
+            الرئيسية
+        </a>
+    </li>
+    <li class="side-item">
+        <a class="side-link active" href="account-company.html">
+            <img src="media/icon/account.svg" alt="icon"> حسابي
+        </a>
+    </li>
+    <li class="side-item">
+        <button class="dropdown-btn btn ">
+            <img src="media/icon/order.svg" alt="icon">
+            الطلبات
+            <span>
+                <i class="bi bi-chevron-left"></i>
+            </span>
+        </button>
+        <!-- drop-menu -->
+        <div class="dropdown-container">
+            <a class="side-link " href="create-order.html">انشاء طلب جديد</a>
+            <a class="side-link " href="all-order.html">كل الطلبات </a>
+            <a class="side-link " href="new-order.html">الطلبات الجديدة</a>
+            <a class="side-link" href="old-order.html">الطلبات المنتهية</a>
+        </div>
+        <!-- drop-menu -->
+    </li>
+    <li class="side-item">
+        <a class="side-link" href="favourit.html">
+            <img src="media/icon/favourite.svg" alt="icon">
+            المفضلة
+        </a>
+    </li>
+    <li class="side-item">
+        <a class="side-link" href="chat-room.html">
+            <img src="media/icon/chat.svg" alt="icon">
+            الدردشة
+        </a>
+    </li>
+    <li class="side-item">
+        <button class="dropdown-btn btn">
+            <img src="media/icon/bag.svg" alt="icon">
+            الموظفين
+            <span>
+                <i class="bi bi-chevron-left"></i>
+            </span>
+        </button>
+        <!-- drop-menu -->
+        <div class="dropdown-container">
+            <a class="side-link " href="clerk.html"> كل الموظفين </a>
+            <a class="side-link active " href="clerk-favourit.html"> الموظفين المفضلين</a>
+        </div>
+        <!-- drop-menu -->
+    </li>
+</ul>

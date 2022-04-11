@@ -59,7 +59,7 @@ var image = $('#navbar .navbar-brand img');
 var btn = $('#button');
 
 $(window).scroll(function () {
-  if ($(window).scrollTop() > 75) {
+  if ($(window).scrollTop() > 80) {
     btn.addClass('show');
     navbar.addClass('change');
     image.addClass('resize');

@@ -11,12 +11,9 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="scss/main.min.css" />
     <!-- main css -->
-    <!-- responsive -->
- 
-    <!-- responsive -->
-   <!-- notify -->
-   <link rel="stylesheet" href="css/tostify.css">
-   <!-- notify -->
+    <!-- notify -->
+    <link rel="stylesheet" href="css/tostify.css">
+    <!-- notify -->
     <!-- animation -->
     <link rel="stylesheet" href="css/aos-anmite.css" />
     <!-- animation -->
@@ -32,7 +29,9 @@
     <!---------------------- start scroll-up -------------------------------------------->
     <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
     <!---------------------- finish scroll-up -------------------------------------------->
+    <main class="awab">
     <!---------------------- start dark && light mood -------------------------------------------->
+
     <div id="toggle">
         <span class="light " id="light">
             <i class="bi bi-brightness-high"></i>
@@ -40,8 +39,6 @@
         <span class="dark" id="dark">
             <i class="bi bi-moon-fill "></i>
         </span>
-        <div class="indicator">
-        </div>
     </div>
     <!---------------------- finish dark && light mood -------------------------------------------->
     <!---------------------- start navbar -------------------------------------------->
@@ -102,10 +99,10 @@
                 <!-- lang dropdown -->
                 <!-- sign up -->
                 <!-- <div class="btn-sign first trans">
-                <a href="login.html">تسجيل الدخول</a>
-            </div> -->
+                        <a href="login.html">تسجيل الدخول</a>
+                    </div> -->
                 <!-- في حالة تم تسجيل الدخول -->
-                    <div class="notify">
+                <div class="notify">
                     <a href="#" onclick="openNotification()">
                         <i class="bi bi-bell-fill"></i>
                     </a>
@@ -167,20 +164,19 @@
                         </header>
                         <ul class="menu-side-bar">
                             <li class="side-item">
-                                <a class="side-link " href="main.html">
-                                    <i class="bi bi-house-door"></i>
+                                <a class="side-link" href="main.html">
+                                    <img src="media/icon/home.svg" alt="icon">
                                     الرئيسية
                                 </a>
                             </li>
                             <li class="side-item">
-                                <a class="side-link" href="account.html">
-                                    <i class="bi bi-person-circle"></i>
-                                    حسابي
+                                <a class="side-link active" href="account-company.html">
+                                    <img src="media/icon/account.svg" alt="icon"> حسابي
                                 </a>
                             </li>
-                            <li class="side-item  ">
-                                <button class="dropdown-btn btn">
-                                    <i class="bi bi-view-list"></i>
+                            <li class="side-item">
+                                <button class="dropdown-btn btn ">
+                                    <img src="media/icon/order.svg" alt="icon">
                                     الطلبات
                                     <span>
                                         <i class="bi bi-chevron-left"></i>
@@ -188,28 +184,28 @@
                                 </button>
                                 <!-- drop-menu -->
                                 <div class="dropdown-container">
-                                    <a class="side-link" href="create-order.html">انشاء طلب جديد</a>
+                                    <a class="side-link " href="create-order.html">انشاء طلب جديد</a>
                                     <a class="side-link " href="all-order.html">كل الطلبات </a>
-                                    <a class="side-link" href="new-order.html">الطلبات الجديدة</a>
+                                    <a class="side-link " href="new-order.html">الطلبات الجديدة</a>
                                     <a class="side-link" href="old-order.html">الطلبات المنتهية</a>
                                 </div>
                                 <!-- drop-menu -->
                             </li>
                             <li class="side-item">
                                 <a class="side-link" href="favourit.html">
-                                    <i class="bi bi-heart"></i>
+                                    <img src="media/icon/favourite.svg" alt="icon">
                                     المفضلة
                                 </a>
                             </li>
                             <li class="side-item">
                                 <a class="side-link" href="chat-room.html">
-                                    <i class="bi bi-chat-dots"></i>
+                                    <img src="media/icon/chat.svg" alt="icon">
                                     الدردشة
                                 </a>
                             </li>
                             <li class="side-item">
-                                <button class="dropdown-btn btn actives">
-                                    <i class="bi bi-bounding-box-circles"></i>
+                                <button class="dropdown-btn btn">
+                                    <img src="media/icon/bag.svg" alt="icon">
                                     الموظفين
                                     <span>
                                         <i class="bi bi-chevron-left"></i>
@@ -217,9 +213,10 @@
                                 </button>
                                 <!-- drop-menu -->
                                 <div class="dropdown-container">
-                                    <a class="side-link active" href="clerk.html"> كل الموظفين </a>
-                                    <a class="side-link " href="clerk-favourit.html"> الموظفين المفضلين</a>
-                                    <!-- drop-menu -->
+                                    <a class="side-link " href="clerk.html"> كل الموظفين </a>
+                                    <a class="side-link active " href="clerk-favourit.html"> الموظفين المفضلين</a>
+                                </div>
+                                <!-- drop-menu -->
                             </li>
                         </ul>
                     </div>
@@ -328,7 +325,7 @@
                                                                 التفاصيل</a>
                                                         </li>
                                                         <li onclick="deleteOrder()"> حذف من للمفضلة</li>
-                                                       
+
                                                     </ul>
                                                 </div>
                                             </div>
@@ -369,8 +366,9 @@
                 </div>
             </div>
         </div>
-          </footer>
-    <!---------------------- finish footer -------------------------------------------->                          <!-- notfication -->
+    </footer>
+    <!---------------------- finish footer -------------------------------------------->
+    <!-- notfication -->
     <section class="notfication-pop ">
         <div class="container">
             <div class="notfication-sec">
@@ -460,7 +458,7 @@
                                 <div class="show text-center">
                                     <lottie-player src="json/lf30_editor_tv0a4st4.json" background="transparent"
                                         speed=".5" style="width: 100px; height: 100px;" loop autoplay></lottie-player>
-                                        <h6> هل انت حقا تريد انهاء المدة ؟</h6>
+                                    <h6> هل انت حقا تريد انهاء المدة ؟</h6>
                                     <input required type="text" class="form-control" placeholder="أدخل السبب "></input>
                                     <div class="py-3 full text-center">
                                         <button class="btn first"> ارسال </button>
@@ -477,7 +475,7 @@
         </div>
     </div>
     <!-- modal finish work -->
-
+</main>
     <!-- main js -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -556,8 +554,8 @@
         }
     </script>
     <!-- form withard for remove order -->
-      <!-- Toastify of add to favourit-->
-      <script>
+    <!-- Toastify of add to favourit-->
+    <script>
         function puplishOrder() {
             Toastify({
                 text: "تم  أضافة الي المفضله",
@@ -579,8 +577,8 @@
         }
     </script>
     <!-- Toastify of add to favourit -->
-     <!-- Toastify of remove from favourit-->
-     <script>
+    <!-- Toastify of remove from favourit-->
+    <script>
         function deleteOrder() {
             Toastify({
                 text: "تم  حذف  من المفضله",
@@ -593,7 +591,7 @@
                 stopOnFocus: true, // Prevents dismissing of toast on hover
                 style: {
                     background: "rgba(242, 74, 74, 0.5)",
-                     color:"#f24a4a",       
+                    color: "#f24a4a",
                     // width: '400px',
                     // padding:'2% 1%',
                     borderRaduis: '10px'
@@ -603,7 +601,7 @@
         }
     </script>
     <!-- Toastify of remove from favourit -->
-             
+
 </body>
 
 </html>
