@@ -210,7 +210,8 @@ input {
 
 /* delete arrow from input number */
 
-#showGinder ,#showCalender  {
+#showGinder,
+#showCalender {
   display: none;
   animation: ginder 1s linear;
   transition: 0.25s all ease;
@@ -884,11 +885,11 @@ p {
 
 /* finish preloader */
 /* notifcation */
-.datepicker-dropdown{
+.datepicker-dropdown {
   padding: 2% 1% !important;
   background-color: var(--color-fourth);
-  color:var(--color-third);
-  font-family: 'regular';
+  color: var(--color-third);
+  font-family: "regular";
 }
 /* =========================================== modifaction */
 .awab {
@@ -5825,6 +5826,103 @@ p {
   /* light box */
   /* all clerk page */
   /* account page */
+  // data complete new
+  form.data-complete {
+    .form-step {
+      display: none;
+      transform-origin: top;
+      animation: animate 0.5s;
+    }
+    .form-step-active {
+      padding: 40px 0px 10px;
+      display: flex;
+      flex-direction: column;
+      .side-content {
+        h2 {
+          font-family: "semibold";
+          font-size: 30px;
+          color: var(--color-secound);
+        }
+
+        p {
+          font-size: 14px;
+          color: var(--color-primary);
+          font-family: "regular";
+        }
+        .grp {
+          .btn {
+            font-family: "meduim";
+            font-size: 20px;
+            color: var(--color-secound);
+            text-align: start;
+            margin: 0;
+            padding: 3% 0;
+
+            &.active {
+              background-color: transparent;
+              color: var(--color-fourth);
+            }
+          }
+        }
+      }
+      .content,
+      .admin-responsable {
+        position: relative;
+        background-color: var(--background2);
+        h2 {
+          font-size: 20px;
+          font-family: "meduim";
+          color: var(--color-secound);
+          padding: 2% 1%;
+        }
+        .kind {
+          padding: 1% 4%;
+
+          .nav-pills {
+            padding: 1% 3%;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav-link {
+              width: 100%;
+              background-color: var(--color-seven);
+              text-align: center;
+              border-radius: 8px;
+              color: var(--color-light);
+            }
+
+            .nav-item {
+              width: 45%;
+            }
+
+            .nav-link.active {
+              background-color: var(--color-fourth);
+              color: var(--background2);
+            }
+          }
+        }
+        .btn-sign {
+          width: 100%;
+          margin: 2% 0 3%;
+        }
+        .form-check-input {
+          background-color: var(--color-fourth);
+          border-color: var(--color-fourth);
+          float: right;
+          margin-left: 1em;
+        }
+        .form-check-label {
+          font-family: "regular";
+          font-size: 14px;
+          a{
+            color: var(--color-fourth);
+          }
+        }
+      }
+    }
+  }
+  // data complete new
 
   /* ---------------------------------------------------------media query------------------------------------------- */
   /* Extra small devices (phones, 767px and down) */
