@@ -180,67 +180,74 @@
         <!---------------------- finish navbar -------------------------------------------->
     </section>
 
-    <main class="hawam">
+    <main class="hawam awab">
         <!-- ? ======= home =========== -->
         <section class="home">
             <div class="container">
-                <div class="row flex-nowrap">
-                    <div class="col-auto col-md-3 col-xl-3 p-0 sidebar">
-                        <div
-                            class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100 side_width">
-                            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
-                                id="menu">
+                <div class="row ">
+                    <div class="col-lg-3 col-md-5 col-12 ">
+                        
+                          <div class="sidebar">
                                 <div class="personal_data">
                                     <img src="media/image/person.jpg" alt="person">
                                     <p class="name">أحمد السيد</p>
                                     <p class="title">جرافيك ديزاينر</p>
                                 </div>
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link align-middle">
-                                        <img src="media/icon/home.svg" alt="icon"> <span
-                                            class="d-none d-sm-inline">الرئيسية</span>
+
+                               <ul class="menu-side-bar">
+                                <li class="side-item">
+                                    <a class="side-link active" href="index-person.html">
+                                        <img src="media/icon/home.svg" alt="icon">
+                                        الرئيسية
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="account.html" class="nav-link align-middle">
-                                        <img src="media/icon/account.svg" alt="icon"> <span
-                                            class="d-none d-sm-inline">حسابي</span></a>
+
+
+                                <li class="side-item">
+                                    <a class="side-link " href="account.html">
+                                        <img src="media/icon/account.svg" alt="icon"> حسابي
+                                    </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="work_offers.html" class="nav-link align-middle">
-                                        <img src="media/icon/bag.svg" alt="icon"> <span class="d-none d-sm-inline">عروض
-                                            العمل</span></a>
+
+                                 <li class="side-item">
+                                    <a class="side-link" href="work_offers.html">
+                                        <img src="media/icon/bag.svg" alt="icon"> عروض العمل
+                                    </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#submenu1" data-bs-toggle="collapse"
-                                        class="nav-link accordion-button align-middle">
-                                        <img src="media/icon/order.svg" alt="icon"> <span
-                                            class="d-none d-sm-inline">الطلبات</span> </a>
-                                    <ul class="collapse flex-column" id="submenu1" data-bs-parent="#menu">
-                                        <li class="w-100">
-                                            <a href="order.html" class="nav-link px-0"> <span>كل الطلبات</span></a>
-                                        </li>
-                                        <li class="w-100">
-                                            <a href="new_order.html" class="nav-link px-0"> <span>الطلبات
-                                                    الجديدة</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="completed_order.html" class="nav-link px-0"> <span>الطلبات
-                                                    المنتهية</span></a>
-                                        </li>
-                                    </ul>
+
+
+                                <li class="side-item">
+                                    <button class="dropdown-btn btn ">
+                                        <img src="media/icon/order.svg" alt="icon">
+                                        الطلبات
+                                        <span>
+                                            <i class="bi bi-chevron-left"></i>
+                                        </span>
+                                    </button>
+                                    <!-- drop-menu -->
+                                    <div class="dropdown-container">
+                                        <a class="side-link " href="order.html">كل الطلبات </a>
+                                        <a class="side-link " href="new_order.html">الطلبات الجديدة</a>
+                                        <a class="side-link" href="completed_order.html">الطلبات المنتهية</a>
+                                    </div>
+                                    <!-- drop-menu -->
                                 </li>
-                                <li class="nav-item">
-                                    <a href="favourite.html" class="nav-link align-middle">
-                                        <img src="media/icon/favourite.svg" alt="icon"> <span
-                                            class="d-none d-sm-inline">المفضلة</span></a>
+                                <li class="side-item">
+                                    <a class="side-link" href="favourite.html">
+                                        <img src="media/icon/favourite.svg" alt="icon"> 
+                                        المفضلة
+                                    </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link align-middle">
-                                        <img src="media/icon/chat.svg" alt="icon"> <span
-                                            class="d-none d-sm-inline">الدردشة</span></a>
+                                <li class="side-item">
+                                    <a class="side-link" href="chat-room.html">
+                                        <img src="media/icon/chat.svg" alt="icon"> 
+                                        الدردشة
+                                    </a>
                                 </li>
-                            </ul>
+                            
+                               </ul>
+                             
+                            
                             <div class="complete_data">
                                 <h5>استكمال البيانات</h5>
                                 <div class="progress">
@@ -264,9 +271,39 @@
                                     <span>+10%</span>
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col">
+                            <div class="effective">
+                                <h5>الطلبات الفعالة</h5>
+                                <canvas id="chart"></canvas>
+                                <p>مصممين واجهة مستخدم لانشاء عدة تطبيقات</p>
+                                <script>
+                                    var data = {
+                                        labels: ["Jan"],
+                                        datasets: [{
+                                            label: "Dataset #1",
+                                            backgroundColor: "rgba(191,140,109,.8)",
+                                            borderColor: "rgba(191,140,109,.8)",
+                                            borderWidth: 2,
+                                            hoverBackgroundColor: "rgba(191,140,109,1)",
+                                            hoverBorderColor: "rgba(191,140,109,1)",
+                                            data: [50],
+                                        }]
+                                    };
+
+                                    var options = {
+                                        maintainAspectRatio: false,
+                                    };
+
+                                    new Chart('chart', {
+                                        type: 'doughnut',
+                                        options: options,
+                                        data: data
+                                    });
+
+                                </script>
+                            </div>
+                            </div>
+                         </div>
+                    <div class="col-lg-9 col-md-7 col-12">
                         <div class="index_cards">
                             <div class="welcome_card">
                                 <h3>مرحبا بك في <h2> جمبرز 😄</h2>
@@ -563,7 +600,26 @@
             time: 1000
         });
     </script>
+<!-- sidebar -->
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
 
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "flex") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "flex";
+                // dropdownContent.animate([{ opacity: '0.0' }, { opacity: '1.0' }],
+                //     { duration: 1500, fill: 'forwards' })
+            }
+        });
+    }
+</script>
+<!-- sidebar -->
 </body>
 
 </html>
